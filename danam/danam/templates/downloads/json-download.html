@@ -1,0 +1,63 @@
+{% load staticfiles %}
+{% load template_tags %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Basic -->
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ app_settings.APP_NAME }} - Downloads</title>
+
+    <meta name="keywords" content="NHDP" />
+    <meta name="description" content="Nepal Heritage Documentation Project">
+    <meta name="author" content="NHDP">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+	<script type="text/javascript" src="{% static 'vendor/glossary/jquery.min.js' %}"></script>
+	<script src="{% static 'vendor/download/dwnld.js' %}"></script> 
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
+        rel="stylesheet" type="text/css">
+
+    {% include 'partials/css.htm' %}
+    <!-- Default css -->
+
+</head>
+
+<body data-spy="scroll" data-target="#navSecondary" data-offset="172">
+    <div class="body">
+        {% include "partials/danam_navbar.htm" %}
+		<section class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5"
+		style="background-image: url({% static 'img/patterns/random_grey_variations.png' %});">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 align-self-center p-static order-2 text-center">
+						<h1 class=" font-weight-bold text-8">JSON DUMPS</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+{% csrf_token %}
+        {% if user.username != 'anonymous' %}
+			<div class="container py-1">
+			
+					<div><h2>List of downloadble json dumps</h2></div><hr>
+					<div class = "list"></div>
+			</div>
+		{% else %}
+			<p>Login to to access the json dump </p>
+		{% endif %}
+	</div>
+</body>
+
+</html>

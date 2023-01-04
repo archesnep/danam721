@@ -26,7 +26,7 @@
     {# Global styles #}
     {% block site_css %}
 
-    {% include 'partials/new-css.htm' %}
+    {% include 'partials/css.htm' %}
 
     {% endblock site_css %}
 
@@ -40,8 +40,8 @@
         {% endblock %}
     </title>
      <!--Tinymce Text-Editor (Must be in Head Tag) -->
-     <script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
-     <script type="text/javascript" src="{% static 'js/tinymce/custom.js' %}"></script>
+     <script src="{% static 'vendor/tinymce/tinymce.min.js' %}"></script>
+     <script type="text/javascript" src="{% static 'vendor/tinymce/custom.js' %}"></script>
      <!-- WYSIWYG Editor -->
      {{ form.media }}
 </head>
@@ -75,7 +75,7 @@
     {# Global javascript #}
     {% block site_js %}
 
-    {% include 'partials/new-javascript.htm' %}
+    {% include 'partials/javascript.htm' %}
 
     {% endblock site_js %}
 
