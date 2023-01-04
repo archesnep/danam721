@@ -9,8 +9,8 @@ build/*
 arches.egg*
 arches/elasticsearch
 arches/uploadedfiles
-*arches/settings_local.py
-*tests/settings_local.py
+#arches/settings_local.py
+#tests/settings_local.py
 arches/logs/authority_file_errors.txt
 .coverage
 arches.log
@@ -28,7 +28,7 @@ arches/tileserver/cache
 docs/_build
 arches/logs/*.log
 arches/logs/*.prof
-arches/db/system_settings/Arches_System_Settings_Local.json
+#arches/db/system_settings/Arches_System_Settings_Local.json
 docker-compose-local.yml
 steps to release.txt
 dist

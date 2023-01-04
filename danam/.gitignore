@@ -8,8 +8,8 @@ danam/media/packages
 danam/media/node_modules
 danam/media/build/*
 danam/uploadedfiles/*
-*danam/settings_local.py
-*danam/webpack/webpack-stats.json
-*danam/webpack/webpack-user-config.js
+#danam/settings_local.py
+#danam/webpack/webpack-stats.json
+#danam/webpack/webpack-user-config.js
 .vscode/
 CACHE
