@@ -1,0 +1,70 @@
+{% extends 'news/base.htm' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<div class="body">
+  {% include 'news/alerts.htm' %}
+  {% include 'partials/danam_navbar.htm' %}
+  <div role="main" class="main">
+    <section
+      class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5"
+      style="background-image: url({% static 'img/patterns/wild_oliva.png' %});">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 align-self-center p-static order-2 text-center">
+            <h1 class="font-weight-bold text-8">NHDP News</h1>
+            <span class="sub-title">Check out our Latest News!</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container py-4">
+      <div class="row">
+        <div class="col">
+          <div class="blog-posts single-post">
+            <article class="post post-large blog-single-post border-0 m-0 pr-2">
+              <div class="post-image ml-0">
+                <div class="lightbox"
+                  data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+                  <div class="row mx-0">
+                    {% for p in post.images.all %}
+                    {% if p.image %}
+                    <div class="col-6 col-md-4 p-2">
+                      <a href="{{ p.image.url }}">
+                        <span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+                          <span class="thumb-info-wrapper">
+                            <img src="{{ p.image.url }}" class="img-fluid" style="height: 300px; width: auto" alt="" />
+                            <span class="thumb-info-action">
+                              <span class="thumb-info-action-icon thumb-info-action-icon-light"><i
+                                  class="fas fa-plus text-dark"></i></span>
+                            </span>
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              <div class="post-date ml-0">
+                <span class="day">{{ post.created_date|date:"d" }}</span>
+                <span class="month">{{ post.created_date|date:"M-Y" }}</span>
+              </div>
+
+              <div class="post-content ml-0 text-justify">
+
+                <h2 class="font-weight-semibold text-5 line-height-4 mt-2 mb-2">{{ post.title|capfirst }}
+                </h2>
+                <p>{{ post.content|safe }}</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

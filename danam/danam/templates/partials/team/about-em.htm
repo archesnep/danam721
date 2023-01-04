@@ -1,0 +1,48 @@
+{% extends 'partials/page-team.htm' %} {% load static %} {% block team_detail %}
+<div class="body">
+    {% include 'partials/danam_navbar.htm' with extra_links='partials/monument-link.htm' %}
+    <div role="main" class="main">
+
+        <div class="container pt-5">
+
+            <div class="row">
+                <div class="col-md-7 order-2">
+                    <div class="overflow-hidden">
+                        <h2 class="text-color-dark font-weight-bold text-8 mb-0 pt-0 mt-0 appear-animation"
+                            data-appear-animation="maskUp" data-appear-animation-delay="300">Elias Michaels
+                        </h2>
+                    </div>
+                    <div class="overflow-hidden">
+                        <p class="font-weight-bold text-primary text-uppercase appear-animation"
+                            data-appear-animation="maskUp" data-appear-animation-delay="500">
+                            HEIDELBERG TEAM
+                        </p>
+                    </div>
+                    <p class="lead appear-animation text-justify" data-appear-animation="fadeInUpShorter"
+                        data-appear-animation-delay="700">
+                        Elias Michaels holds an MA degree in Geography (focal area Geographical Development Research)
+                        from the Freie Universität Berlin. He has been working for the German United Nations Society and
+                        has spent several months in Nepal as an intern with the Deutsche Gesellschaft für Internationale
+                        Zusammenarbeit (GIZ). Within NHDP he is responsible for database management as well as GIS,
+                        mappings, and the development of the Heritage Walk App.
+                    </p>
+
+                    <hr class="solid appear-animation" data-appear-animation="fadeInUpShorter"
+                        data-appear-animation-delay="800">
+                    <div class="row align-items-center appear-animation" data-appear-animation="fadeInUpShorter"
+                        data-appear-animation-delay="900">
+                        <div class="col-lg-6">
+                            <a href="mailto:elias.michaels@hcts.uni-heidelberg.de" class="btn btn-modern btn-dark">
+                                Get In Touch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 order-md-2 mb-lg-0 appear-animation" data-appear-animation="fadeInRightShorter">
+                    <img src="{% static 'img/team/Elias Michael.JPG' %}" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'partials/javascript.htm' %} {% endblock %}

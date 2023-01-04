@@ -1,0 +1,290 @@
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+/* design 3 */
+
+.flyanimation, .flyanimation span {
+    animation-duration: 5s;
+    animation-fill-mode: both;
+}
+
+.flyanimation span {
+    display: inline-block
+}
+
+.leFlyInBottom span {
+    animation-name: leFlyInBottom
+}
+
+@keyframes leFlyInBottom {
+    0% {
+        transform: translate(0px, 80px);
+        opacity: 0
+    }
+    50% {
+        transform: translate(10px, -50px);
+        animation-timing-function: ease-in-out
+    }
+}
+
+.flyintext {
+    position: relative;
+    text-transform: uppercase;
+    margin: 1px 0px 0px -77px;
+    text-align: center;
+    font-style: normal;
+    letter-spacing: -0.5px;
+    color: red !important;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px !important;
+    line-height: 26px;
+}
+
+/* design 4 */
+
+.elevateright {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin: 1px 0px 0px;
+    color: #FF0000;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.elevateRight {
+    animation-name: elevateRight
+}
+
+@keyframes elevateRight {
+    from {
+        transform: translateY(100%) rotate(20deg);
+        transform-origin: left;
+    }
+    40% {
+        transform: rotate(-20deg);
+        transform-origin: left;
+    }
+    65% {
+        transform: rotate(0deg);
+        transform-origin: left;
+    }
+}
+
+/* row 3 */
+
+/* design 5 */
+
+.text1 {
+    color: black;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    background: white;
+    position: relative;
+    /*   shorthand animation property: name | duration | iteration count */
+    /*   animation: text 4s 1; */
+    animation-name: text;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes text {
+    0% {
+        color: black;
+        margin-bottom: -40px;
+    }
+    30% {
+        letter-spacing: 5px;
+        margin-bottom: -40px;
+    }
+    85% {
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+    100% {
+        margin-bottom: 10px;
+    }
+}
+
+/* design 6 */
+
+.bounce-me {
+    color: #ef08f7;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation-name: bounceIn;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    text-align: center;
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(-1.2);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* design 7 */
+
+.typewriter {
+    border-right: solid 3px #0088CC;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* Animation */
+
+.typewriter {
+    animation: animated-text 4s steps(29, end) 1s 1 normal both, animated-cursor 600ms steps(29, end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+    from {
+        width: 0;
+    }
+    to {
+        width: 360px;
+    }
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+    from {
+        border-right-color: #0088CC;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/* design 8 */
+
+#parent {
+    height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 2em;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#border {
+    border-bottom: solid 3px #0088CC;
+    position: absolute;
+    right: -7px;
+    width: 20px;
+}
+
+/* Animation */
+
+#parent {
+    animation: animated-text1 4s linear 1s 1 normal both
+}
+
+#border {
+    animation: animated-cursor1 600ms steps(30, end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text1 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 395px;
+    }
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor1 {
+    from {
+        border-bottom-color: #0088CC;
+    }
+    to {
+        border-bottom-color: transparent;
+    }
+}
+
+/* deign 9 */
+
+#blink_text {
+    font-size: 30px;
+    color: #fc0808;
+    text-transform: uppercase;
+    font-weight: bold;
+    animation: blink 1.3s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+/* design 10 */
+
+.blink {
+    width: fit-content;
+    height: auto;
+    background-color: blue;
+    padding: 15px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.blink_linear {
+    font-size: 2em;
+    color: white;
+    text-transform: uppercase;
+    animation: blink 1.5s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* extra css */
+.message {
+    font-size: 3em;
+    text-align: center;
+    color: white;
+}
+.card-body {
+    color : #1d2127 !important;
+}

@@ -1,0 +1,214 @@
+{% load static %}
+{% load template_tags %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+
+		<title>{{ app_settings.APP_NAME }} - News</title>	
+
+		<meta name="keywords" content="DANAM NEWS" />
+		<meta name="description" content="Nepal Heritage Documentation Project">
+		<meta name="author" content="NHDP">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+			
+			
+		<!-- Vendor CSS -->	
+		{% include 'partials/css.htm' %}
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+		
+		<!-- Head Libs -->
+		<script src="{% static 'js/vendor/modernizr/modernizr.min.js' %}"></script>
+
+	</head>
+	<body>
+
+		<div class="body">
+			{% include 'partials/danam_navbar.htm' %}
+			<div role="main" class="main">
+
+				<section class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5" style="background-image: url({% static 'img/patterns/wild_oliva.png' %});">
+					<div class="container">
+						<div class="row">
+
+							<div class="col-md-12 align-self-center p-static order-2 text-center">
+
+								<h1 class="font-weight-bold text-8">Danam News</h1>
+								<span class="sub-title">Check out our Latest News!</span>
+							</div>
+
+						 <!--	<div class="col-md-12 align-self-center order-1">
+
+								<ul class="breadcrumb d-block text-center">
+									<li><a href="#">Home</a></li>
+									<li class="active">Blog</li>
+								</ul>
+							</div> -->
+						</div>
+					</div>
+				</section>
+
+				<div class="container py-4">
+
+					<div class="row">
+						<div class="col">
+							<div class="blog-posts single-post">
+							
+								<article class="post post-large blog-single-post border-0 m-0 p-0">
+										<div class="post-image ml-0">
+										<div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+											<div class="row mx-0">
+												<div class="col-6 col-md-4 p-0">
+													<a href="{% static '/img/news-portal/r2c200.jpg' %}">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons"> 
+															<span class="thumb-info-wrapper">
+																<img src="{% static '/img/news-portal/r2c200.jpg' %}" class="img-fluid" alt="" />
+																
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+												<div class="col-6 col-md-4 p-0">
+													<a href="{% static '/img/news-portal/r2c201.jpg' %}">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="{% static '/img/news-portal/r2c201.jpg' %}" class="img-fluid" alt="" />
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+												<div class="col-6 col-md-4 p-0">
+													<a href="{% static '/img/news-portal/r2c202.jpg' %}">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="{% static '/img/news-portal/r2c202.jpg' %}" class="img-fluid" alt="" />
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+												<div class="col-6 col-md-4 p-0">
+													<a href="{% static '/img/news-portal/r2c203.jpg' %}">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="{% static '/img/news-portal/r2c203.jpg' %}" class="img-fluid" alt="" />
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+												<div class="col-6 col-md-4 p-0">
+													<a href="{% static '/img/news-portal/r2c205.jpg' %}">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="{% static '/img/news-portal/r2c205.jpg' %}" class="img-fluid" alt="" />
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+												<div class="col-6 col-md-4 p-0">
+													<a href="{% static '/img/news-portal/r2c206.jpg' %}">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="{% static '/img/news-portal/r2c206.jpg' %}" class="img-fluid" alt="" />
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+							
+									<div class="post-date ml-0">
+										<span class="day">22-23</span>
+										<span class="month">May</span>
+									</div>
+							
+									<div class="post-content ml-0">
+							
+										<h2 class="font-weight-bold"><a href="blog-post.html"> Project launch and joint fieldwork in Patan, Nepal </a></h2>
+							
+										<div class="post-meta">
+											<span><i class="far fa-user"></i> By <a href="#">NHDP</a> </span>
+											<span><i class="far fa-folder"></i> <a href="#">Danam</a>, <a href="#">Project</a> </span>
+											
+										</div>
+											<p>During December 2018, shortly after its launch, the project was getting attention from "Campus
+                        TV". The German television station produced a film portrait, that was broadcasted on German TV
+                        in December 2018 and is now available with English subtitles. The film portrait features project
+                        leader Prof. Christiane Brosius and the project's system administrator Ashish Karmacharya
+                        talking about the background and goals of the project. Images of Patan from before and after the
+                        2015 earthquake give a strong impression about the importance of sensitive documentation of
+                        cultural heritage for restoration purposes and also a wide variety of other purposes, such as
+                        research, tourism and urban development.</p>
+										
+									<!--	<div class="post-block mt-4 pt-2 post-author">
+											<h4 class="mb-3">Author</h4>
+											<div class="img-thumbnail img-thumbnail-no-borders d-block pb-3">
+												<a href="blog-post.html">
+													<img src="{% static 'img/avatars/avatar.jpg' %}" alt="">
+												</a>
+											</div>
+											<p><strong class="name"><a href="#" class="text-4 pb-2 pt-2 d-block">John Doe</a></strong></p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim ornare nisi, vitae mattis nulla ante id dui. </p>
+										</div> -->
+							
+									</div>
+								</article>
+							
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			
+		</div>
+
+		<!-- Vendor -->
+			{% include 'partials/javascript.htm' %}
+		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+			ga('create', 'UA-12345678-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		 -->
+
+	</body>
+</html>

@@ -1,0 +1,46 @@
+{% extends 'MoM/base.htm' %}
+{% load static %}
+{% load i18n %}
+
+
+{# Page-specific styles #}
+{% block page_css %}
+<!-- Skin CSS -->
+<link id="skinCSS" rel="stylesheet" href="{% static 'css/skins/default.css' %}">
+{% endblock page_css %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for monument in monument_list %}
+        <div class="col-sm-6 col-lg-4 pr-2 pl-2">
+            <a href="{{ monument.get_absolute_url }}">
+            <span class="thumb-info">
+                <span class="thumb-info">
+                    {% if monument.thumbnail %}
+                    <img src="{{monument.thumbnail.url}}" class="img-fuid" alt="{{monument.title}}">
+                    {% endif %} 
+                </span>
+            </a>
+                <span class="thumb-info-caption">
+                    <span class="thumb-info-caption-text text-center pt-1">{{monument.title}} ({{monument.date|date:'M Y'}})</span>
+                </span>
+            </span>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+    
+    {% endblock %}
+
+{% block footer %}
+{% endblock footer %}
+
+{# Page javascript #}
+{% block page_js %}
+
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'vendor/lazysizes/lazysizes.min.js' %}"></script>
+
+{% endblock page_js %}
+

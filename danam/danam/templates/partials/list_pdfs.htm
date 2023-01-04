@@ -1,0 +1,113 @@
+{% extends 'MoM/base.htm' %}
+{% load static %}
+{% load i18n %}
+
+{% block header %}
+<header id="header" class="header-effect-shrink"
+    data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 120, 'stickyHeaderContainerHeight': 70}">
+    <div class="header-body">
+        <div class="header-container container">
+            <div class="header-row">
+                <div class="header-column">
+                    <div class="header-row">
+                        <div class="header-logo">
+                            <a href="/">
+                                <img alt="Porto" width="140" height="90" data-sticky-width="100" data-sticky-height="66"
+                                    src="{% static 'img/logo/logotextdown.jpg' %}">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-column">
+                    <div class="header-row">
+                        <div class="col-md-12 align-self-center p-static order-2">
+                            <h1 class="font-weight-semibold text-8 text-uppercase">Reports</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock header %}
+{% block content %}
+<div role="main" class="main">
+    <section class="section section-default pt-5 m-0">
+        <div class="container">
+            {% if user.username != 'anonymous' %}
+            <p>
+                <a href="{% url 'pdf-upload' %}" rel="noopener noreferrer">
+                    <button type="button" class="btn btn-outline btn-rounded btn-primary  btn-with-arrow mb-2">Upload
+                        Document<span><i class="fas fa-chevron-right"></i></span></button>
+                </a>
+                {% endif %}
+            </p>
+            {% csrf_token %}
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            Document Name
+                        </th>
+                        <th>
+                            DANAM identifier (if applicable) 
+                        </th>
+                        <th>
+                            Author
+                        </th>
+                        <th>
+                            Publication Date
+                        </th>
+                        <th>
+                            Publisher
+                        </th>
+                        <th colspan="2">
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                {% for obj in pdfs %}
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{ obj.docfile.url }}" target="_blank" rel="noopener noreferrer">{{obj.title}}</a>
+                        </td>
+                        <td>
+                            {{obj.identifier}}
+                        </td>
+                        <td>
+                            {{obj.author}}
+                        </td>
+                        <td>
+                            {{obj.publication_date}}
+                        </td>
+                        <td>
+                            {{ obj.publisher }}
+                        </td>
+                        <td class="button-position">
+                            <a href="{% url 'pdf-edit' obj.id   %}">
+                                <i class="fas fa-solid fa-pen-to-square pr-0"></i>
+                            </a>
+                        </td>
+                        <td class="button-position">
+                            <a href="{% url 'pdf-delete' obj.id   %}">
+                                <i class="fa-solid fa-trash-can pl-0"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+
+            </table>
+        </div>
+    </section>
+</div>
+{% endblock content %}
+{# Page javascript #}
+{% block page_js %}
+
+<script src="{% static 'js/b6a5b6361a.js' %}"></script>
+
+{% endblock page_js %}
+{% block footer %}
+{% endblock footer %}

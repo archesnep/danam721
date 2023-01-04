@@ -1,0 +1,269 @@
+{% load static %}
+{% load template_tags %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+
+		<title>{{ app_settings.APP_NAME }} - News</title>	
+
+		<meta name="keywords" content="DANAM NEWS" />
+		<meta name="description" content="Nepal Heritage Documentation Project">
+		<meta name="author" content="NHDP">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+			
+			
+		<!-- Vendor CSS -->	
+		{% include 'partials/css.htm' %}
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+		
+		<!-- Head Libs -->
+		<script src="{% static 'js/vendor/modernizr/modernizr.min.js' %}"></script>
+
+	</head>
+	<body>
+
+		<div class="body">
+			{% include 'partials/danam_navbar.htm' %}
+			<div role="main" class="main">
+
+				<section class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5" style="background-image: url({% static 'img/patterns/wild_oliva.png' %});">
+					<div class="container">
+						<div class="row">
+
+							<div class="col-md-12 align-self-center p-static order-2 text-center">
+
+								<h1 class="font-weight-bold text-8">Danam News</h1>
+								<span class="sub-title">Check out our Latest News!</span>
+							</div>
+
+						 <!--	<div class="col-md-12 align-self-center order-1">
+
+							 	<ul class="breadcrumb d-block text-center">
+									<li><a href="#">Home</a></li>
+									<li class="active">Blog</li>
+								</ul>
+							</div> -->
+						</div>
+					</div>
+				</section>
+
+				<div class="container py-4">
+
+					<div class="row">
+						<div class="col">
+							<div class="blog-posts single-post">
+							
+								<article class="post post-large blog-single-post border-0 m-0 p-0">
+										<div class="post-image ml-0">
+										<div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+											<div class="row mx-0">
+												<div class="col-6 col-md-4 p-0">
+													<a href="{% static 'img/news-portal/Bruce1.jpg' %}">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="{% static 'img/news-portal/Bruce1.jpg' %}" class="img-fluid" alt="" />
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+												<div class="col-6 col-md-4 p-0">
+													<a href="{% static 'img/news-portal/Bruce2.jpg' %}">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="{% static 'img/news-portal/Bruce2.jpg' %}" class="img-fluid" alt="" />
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+												<div class="col-6 col-md-4 p-0">
+													<a href="{% static 'img/news-portal/Bruce3.jpg' %}">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="{% static 'img/news-portal/Bruce3.jpg' %}" class="img-fluid" alt="" />
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+												<div class="col-6 col-md-4 p-0">
+													<a href="{% static 'img/news-portal/BruceOwensWorkshop2019.png' %}">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="{% static 'img/news-portal/BruceOwensWorkshop2019.png' %}" class="img-fluid" alt="" />
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+											<!--	<div class="col-6 col-md-4 p-0">
+													<a href="{% static 'img/blog/square/blog-29.jpg' %}">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="{% static 'img/blog/square/blog-29.jpg' %}" class="img-fluid" alt="" />
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+												<div class="col-6 col-md-4 p-0">
+													<a href="{% static 'img/blog/square/blog-40.jpg' %}">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="{% static 'img/blog/square/blog-40.jpg' %}" class="img-fluid" alt="" />
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												     </div> -->
+											</div>
+										</div>
+									</div>
+							
+									<div class="post-date ml-0">
+										<span class="day">22-23</span>
+										<span class="month">May</span>
+									</div>
+							
+									<div class="post-content ml-0">
+							
+										<h2 class="font-weight-bold"><a href="#"> Workshop and Lecture with Bruce McCoy Owens</a></h2>
+							
+										<div class="post-meta">
+											<span><i class="far fa-user"></i> By <a href="#">NHDP</a> </span>
+											<span><i class="far fa-folder"></i> <a href="#">Danam</a>, <a href="#">Project</a> </span>
+											
+										</div>
+
+										<p>On May 22 and 23, Bruce McCoy Owens, associate professor of Anthropology at Wheaton
+                                College,
+                                visited the HCTS to participate in a workshop on DANAM and to give a lecture on
+                                “Intangible
+                                Heritage and Visual Repatriation”. He was hosted by the NHDP project and the
+                                professorship of
+                                Visual and Media Anthropology. </p>
+										<p>During a workshop on Wednesday, May 22, members of the Nepal Heritage Documentation Project
+                        introduced Bruce Owens to DANAM, the Digital Archive of Nepalese Arts and Monuments, which has
+                        been and continues to be developed by the NHDP. After testing DANAM and Abhilekha, the document
+                        database supporting the archive, further improvements were discussed, such as the implementation
+                        of glossaries, references and other resource models.
+										Also initiated by the NHDP, Bruce Owens then gave a lecture the following day on "Intangible
+                        Heritage and Visual Repatriation: an ethnography of three exhibitions in Nepal". The talk took
+                        place in the frame of Prof. Christiane Brosius´ student course "Collecting, mapping, archiving,
+                        exhibiting: practices of knowledge production".</p>
+										<p> The talk considered the various opportunities and challenges that are presented by displaying
+                        photographs that depict intangible heritage to those whose heritage is portrayed within them.
+                        Prof. Owens explored these issues as he engaged with them in the process of planning and
+                        mounting three exhibitions of photographs of the annual chariot festival of Rāto Matsyendranāth
+                        in the Kathmandu Valley in the fall of 2016.</p>
+						
+						<p> These exhibitions required that he negotiated the
+                        diverse interests of those represented as well as the interests of others he encountered in
+                        these representations. Among the issues considered were the tensions between aesthetic value and
+                        documentary accuracy; divergent aesthetic principles among viewers and subjects; privileging the
+                        past and honoring the present; practicing visual elicitation while in the process of visual
+                        repatriation; and the role of ethnographic photography in an age of photographic ubiquity and
+                        pervasive social mediatization.
+
+                        <a href="https://wheatoncollege.edu/academics/faculty-directory/bruce-owens/"
+                            target="_blank">Bruce McCoy Owens</a> is associate professor of Anthropology at the <a
+                            href="https://wheatoncollege.edu/" target="_blank">Wheaton
+                            College, Massachussets</a>,
+                        and coordinator of the <a
+                            href="https://www.rtc.bt/index.php/aboutrtc/accreditation/83-rtc/141-the-wheaton-rtc-study-abroad-program-wins-national-accolade-in-us"
+                            target="_blank">Wheaton/Royal Thimphu College Partnership Program.</a></p> 
+							
+							
+							
+						 <p>He presented his
+                        photographs about the celebrations of the Rāto Matsyendranāthko Rath Jātrā at <a
+                            href="http://www.photoktm.com/2016" target="_blank">Photo Kathmandu
+                            2016</a>.
+
+                        <a href="http://www.asia-europe.uni-heidelberg.de/en/hcts/hcts-projects/nhdp.html"
+                            target="_blank">The Nepal Heritage Documentation Project (NHDP)</a> is headed by <a
+                            href="http://www.asia-europe.uni-heidelberg.de/de/personen/person/persdetail/brosius.html"
+                            target="_blank">Prof. Christiane Brosius</a>, the HCTS
+                        professor of Visual and Media Anthropology, together with <a
+                            href="http://www.asia-europe.uni-heidelberg.de/en/people/person/persdetail/michaels.html"
+                            target="_blank">Prof. Axel Michaels</a>, former director
+                        of the Cluster of Excellence “Asia and Europe” and founding director of CATS, the Centre for
+                        Asian and Transcultural Studies. The project, based at the <a
+                            href="http://www.asia-europe.uni-heidelberg.de/en/hcts.html" target="_blank">Heidelberg
+                            Centre of Transcultural
+                            Studies (HCTS)</a> and in Kathmandu, focuses on the documentation of endangered historical
+                        monuments
+                        and aims at developing and implementing the first comprehensive inventory of endangered
+                        monuments.</p>
+							
+							
+										
+							
+									<!-- <div class="post-block mt-4 pt-2 post-author">
+											<h4 class="mb-3">Author</h4>
+											<div class="img-thumbnail img-thumbnail-no-borders d-block pb-3">
+												<a href="blog-post.html">
+													<img src="{% static 'img/avatars/avatar.jpg' %}" alt="">
+												</a>
+											</div>
+											<p><strong class="name"><a href="#" class="text-4 pb-2 pt-2 d-block">John Doe</a></strong></p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim ornare nisi, vitae mattis nulla ante id dui. </p>
+										</div> -->
+							
+									</div>
+								</article>
+							
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			
+		</div>
+
+		<!-- Vendor -->
+			{% include 'partials/javascript.htm' %}
+		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+			ga('create', 'UA-12345678-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		 -->
+
+	</body>
+</html>

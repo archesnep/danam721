@@ -1,0 +1,79 @@
+{% extends 'glossary/base.html' %}
+
+{% load static %}
+
+{% block css %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/glossary/easydbstyles.css' %}">
+<link rel="stylesheet" href="{% static 'css/glossary/editor.css' %}">
+<link rel="stylesheet" href="{% static 'css/glossary/glossaries.css' %}">
+{% endblock %}
+
+{% block title %} {{ block.super }} | Add new terms {% endblock %}
+
+{% block content %}
+{% include 'partials/danam_navbar.htm' %}
+<section
+	class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5"
+	style="background-image: url({% static 'img/patterns/random_grey_variations.png' %});">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 align-self-center p-static order-2 text-center">
+
+				<h1 class=" font-weight-bold text-8">NHDP Glossary</h1>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="mainbody">
+
+	{% csrf_token %}
+
+	<div class="main-content">
+		<div>
+			<label for="text-roman" font="2"><b>Anglicized term</b></label><br>
+			<input class="text-term-roman" type="text" height="20px" id="text-roman"></input><br>
+		</div>
+		<div>
+			<label for="text-dev" font="2"><b>Nepali term</b></label><br>
+			<input class="text-term-dev" id="text-dev" type="text" height="20px"></input><br>
+		</div>
+		<div>
+			<label for="text-desc" id="text-desc" font="2"><b>Definition</b></label>
+			<textarea class="text-description" name="description" , id="text-desc"></textarea>
+		</div>
+		<div class="div-img" id="div-image"></div>
+		<div><a href="#" class="removeimage" id="removeimage">remove image</a></div>
+		<div class="danam-image-picker">
+			<label for="form-input">DANAM heidICON Picker</label>
+			<form name="targetsystem-edit-mask" class="form-inputs">
+				<input type="text" id="easydb-picker-search-title" placeholder="heidICON Objects "> </input>
+				<button type="button" id="easydb-picker-button"> </input><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+	</div>
+	<div class="div-button">
+		<table class="buttons-table">
+			<tr>
+				<td align="left"><button class="add-glossary">Add the term</button></td>
+				<td align="right"><button class="reset-terms">Reset</button></td>
+			</tr>
+		</table>
+	</div>
+
+
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+<script type="text/javascript" src="{% static 'js/glossary/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/glossary/bootstrap.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/glossary/main.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
+<script src="{% static 'js/glossary/easydb/config.js' %}"></script>
+<script src="{% static 'js/glossary/easydb/easydbpicker.js' %}"></script>
+{% endblock %}

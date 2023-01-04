@@ -1,0 +1,219 @@
+{% load static %}
+{% load template_tags %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Basic -->
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ app_settings.APP_NAME }} - Welcome</title>
+
+    <meta name="keywords" content="NHDP" />
+    <meta name="description" content="Nepal Heritage Documentation Project">
+    <meta name="author" content="NHDP">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
+        rel="stylesheet" type="text/css">
+
+    {% include 'partials/css.htm' %}
+    <!-- Default css -->
+
+</head>
+
+<body data-spy="scroll" data-target="#navSecondary" data-offset="172">
+    <div class="body">
+        {% include "partials/danam_navbar.htm" with extra_links='partials/monument-link.htm' %}
+
+        <div class="container py-1">
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <aside class="sidebar" id="sidebar" data-plugin-sticky
+                        data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}">
+
+                        <h5 class="font-weight-normal">Categories</h5>
+                        <ul class="nav nav-list flex-column mb-5">
+                            <li class="nav-item">
+                                <a class="nav-link" data-hash data-hash-offset="95" href="#first">
+                                    {% trans "THE PROJECT" %}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-hash data-hash-offset="95" href="#second">
+                                    {% trans "MISSION STATEMENT" %}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-hash data-hash-offset="95" href="#third">
+                                    {% trans "NETWORK AND PARTNERS" %}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-hash data-hash-offset="95" href="#fourth">
+                                    {% trans "Extension phase (2020-2026)" %}
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="col-lg-9 text-justify">
+                    {# first menu #}
+                    <p class="font-weight-normal text-5 mb-2 lead mb-1" id="first">THE PROJECT
+                    </p>
+                    <p class="text-justify">
+                        NHDP’s first commitment is to historical monuments that are spread across the Kathmandu Valley.
+                        These monuments still play important roles in active social and religious habitats in the old
+                        town of Patan. However, many of them are endangered due to the aftermath of the 2015
+                        earthquakes, urban transformation, and dramatic demographic changes that come hand in hand with
+                        economically and socially changing lifeworlds. The project documents their historical and
+                        anthropological ‘biographies’ as well as their current states and uses.
+                    </p>
+                    <p>
+                        Supported by the charitable fund <a href="https://www.arcadiafund.org.uk/"
+                            target="_blank">Arcadia</a>, the project both produces and is founded on expertise
+                        in extensive heritage documentation fieldwork in Nepal, data management and the development of
+                        DANAM since October 2018. All of its content is available in an open access format and thus for
+                        free online. Unique material has been assembled and produced anew through the substantial
+                        efforts of the NHDP team and fellow experts/collectors. With more heritage documentation field
+                        work underway, the database accommodates a growing number of datasets that are being reviewed by
+                        renowned experts and scientific personnel from Nepal, Germany and internationally.
+                    </p>
+                    <p>
+                        The spirit of sharing and open access carries us forward: as happy as we are to share our own
+                        data, we are even further enriched by the spirit with which many researchers and institutions
+                        have so kindly shared their (mostly unpublished) historical or other material information
+                        related to intangible heritage with us. We are indebted to institutions such as the department
+                        of Archaeology (DoA), the Kathmandu Valley Preservation Trust (KVPT), the Nepal Picture Library,
+                        and numerous individual researchers such as Niels Gutschow, Wolfgang Korn, Rajendra Shakya,
+                        Nutan Sharma, Ulrich von Schröder and Bruce Owens, to mention but a few.
+                    </p>
+                    {# Second Menu #}
+                    <p class="font-weight-normal text-5 mb-2 lead mb-1" id="second">
+                        MISSION STATEMENT
+                    </p>
+                    <ul>
+                        <li>
+                            We commit to making publicly and freely available the digital documentation of predominantly
+                            unpublished endangered cultural heritage from core areas in the Kathmandu Valley, Nepal. The
+                            digitized material (originally produced as well as copyrighted) is sustained on a long-term
+                            basis at <a href="https://www.ub.uni-heidelberg.de/Englisch/Welcome.html"
+                                target="__blank">Heidelberg University Library</a>.
+                        </li>
+                        <li>
+                            With this documentation, we want to contribute to, expand and deepen the knowledge about
+                            Nepal’s
+                            rich tangible cultural heritage as well as the intangible heritage (such as rituals, social
+                            use
+                            but also the delicate craftsmanship) connected with the built monuments, we co-produce and
+                            share
+                            the documentation with heritage experts, scholars, architects and interested publics from
+                            and in
+                            Nepal as well as internationally.
+                        </li>
+                        <li>
+                            We envisage that the material on DANAM provides information by non-commercial means to
+                            organisations and individuals who aim at reconstructing and preserving endangered built
+                            heritage, for instance, after an earthquake, but also in the context of learning about
+                            Nepal’s
+                            rich heritage at institutions of Higher Education and schools (disciplines such as history
+                            and
+                            art history, engineering, art and architecture, urban planning and urban design).
+                        </li>
+                        <li>
+                            It is our aim to discourage theft and illicit-trafficking of artifacts and cultural objects
+                            from
+                            Nepal through documentation and communication with local stakeholders and public
+                            institutions
+                            such as the Department of Archaeology (DoA) with whom we partner, and to provide such
+                            information to enable the safe return of stolen objects and images to their place of origin.
+                        </li>
+                        <li>
+                            The NHDPs aspiration is also to train younger generations in heritage documentation (such as
+                            photography, but also Digital Humanities/IT), and to share knowledge with our network of
+                            partners and alliances.
+                        </li>
+                        <li>
+                            Since collaboration and sharing are relevant to us, we seek to work and partner with
+                            individuals, organizations, and public and private entities that share the goals of
+                            preserving
+                            and promoting awareness for the artistic and cultural heritage of Nepal.
+                        </li>
+                    </ul>
+
+                    {# Third Menu #}
+                    <p class="font-weight-normal text-5 mb-2 lead mb-1" id="third">
+                        NETWORK AND PARTNERS
+                    </p>
+                    <P class="text-justify">
+                        The Nepal Heritage Documentation Project is situated at the <a
+                            href="https://www.uni-heidelberg.de/courses/prospective/academicprograms/transcultural_studies.html"
+                            target="_blank">Heidelberg Centre for Transcultural
+                            Studies</a> at Heidelberg University and the <a
+                            href="https://www.haw.uni-heidelberg.de/index.en.html">Heidelberg Academy of Sciences and
+                            Humanities</a>. The
+                        NHDP’s key partners and representatives in Germany include the Heidelberg University Library
+                        and <a href="https://i3mainz.hs-mainz.de/en/institute" target="_blank">i3mainz - Institute for
+                            Spatial Information and Surveying Technology</a>, whilst the project is
+                        supported in Nepal by the <a href="http://www.doa.gov.np/" target="_blank">Department of
+                            Archaeology (DoA)</a> of the Government of Nepal and
+                        the <a href="http://thesaraffoundation.org/" target="_blank">Saraf Foundation of Himalayan
+                            Traditions and Culture</a>. We are also collaborating with
+                        the <a href="https://kvptnepal.org/" target="_blank">Kathmandu Valley Preservation Trust
+                            (KVPT)</a>, <a href="http://www.unesco.org/new/en/kathmandu/home" target="_blank">UNESCO
+                            Nepal</a>, and <a href="http://kuart.edu.np/" target="_blank">Kathmandu University (Centre
+                            for Art and Design )</a>. The project has brought together a team of professionals across
+                        the
+                        spectrum of heritage work: from architects and draftsmen, to historians and anthropologists, to
+                        specialists in Digital Humanities and IT development. With the help of our network and partners,
+                        we hope to continue to reach out to other organisations with an interest in heritage
+                        preservation and documentation, as well as to institutions of Higher Education in Nepal, to
+                        ensure that the database is used and further sustained.
+                    </P>
+
+                    {# Fourth Menu #}
+                    <p class="font-weight-normal text-5 mb-2 lead mb-1" id="fourth">
+                        Extension phase (2020-2026)
+                        <p>
+                            The project aims to widen its focus to include the entire Kathmandu Valley and a few selected
+                            sites beyond, which connect culturally and historically to the valley. The extension phase will
+                            also include monuments from West Nepal that entail art historical, archaeological as well as
+                            anthropological documentation. This ranges from memorial stones from 13-14th centuries, medieval
+                            stone temples, pavilions, water tanks, fortifications and stūpas.
+
+                            The data published in DANAM will consist of four interlinked databases: a) architectural
+                            monument database, b) art database with art objects, c) historical database with inscriptions,
+                            and d) anthropological database including intangible heritage.
+                        </p>
+                    </p>
+                    <p class="font-weight-normal text-5 mb-2 lead mb-1">
+                        PILOT PHASE (2018 – 2020)
+                        <p>
+                            The ancient city of Patan (Lalitpur) and two unique forms of cultural heritage – Buddhist
+                            monastic compounds (bāhī/bāhāh) and arcaded resthouses (phalcā) – have served as the main focus
+                            within the pilot phase. They Newar monastic compounds are the centres of what is arguably the
+                            world’s oldest continuously practised form of Buddhism, whilst the arcaded rest houses (Nevārī:
+                            phalcā), a semi-public ‘architectural genre’, reflect the ritual and social richness of urban
+                            Newar heritage.
+                        </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% include 'partials/javascript.htm' %}
+    </div>
+</body>
+
+</html>

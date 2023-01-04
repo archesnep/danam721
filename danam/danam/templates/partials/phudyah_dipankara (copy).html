@@ -1,0 +1,574 @@
+{% load staticfiles %}
+{% load template_tags %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Phudyah Dipankara </title>
+	<meta charset="UTF-8" />
+
+	<!-- leaflet css styles von externen file einbinden -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/leaflet.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/leaflet.groupedlayercontrol.css' %}" />
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'plugin\leaflet-sidebar-master\leaflet-sidebar-master\src\L.Control.Sidebar.css' %}" /> -->
+	<link rel="stylesheet" type="text/css" href="{% static 'plugin/brunob-leaflet.fullscreen-1742983/Control.FullScreen.css' %}" />
+
+
+	<!-- leaflet js styles von externen file einbinden -->
+	<script src="{% static 'js/leaflet.js' %}"></script>
+	<script src="{% static 'js/leaflet.groupedlayercontrol.js' %}"></script>
+	<!-- <script src="{% static 'plugin\leaflet-sidebar-master\leaflet-sidebar-master\src\L.Control.Sidebar.js' %}"></script> -->
+	<script src="{% static 'plugin/brunob-leaflet.fullscreen-1742983/Control.FullScreen.js' %}"></script>
+	<script src="{% static 'js/jquery/jquery-1.11.0.min.js' %}"></script>
+
+	<!-- Geojson -->
+	<script src="{% static 'data/path_phudyah_dipankara1.geojson' %}"></script>
+	<script src="{% static 'data/path_phudyah_dipankara2.geojson' %}"></script>
+	<script src="{% static 'data/panchadan_points_1.geojson' %}"></script>
+	<script src="{% static 'data/panchadan_points_2.geojson' %}"></script>
+
+
+	<style>
+		#karte {
+			width: 100%;
+			height: 200px
+		}
+
+		.popup {
+			text-align: center;
+			padding-bottom: 0px
+		}
+
+		.popup img {
+			width: 70%;
+			height: 70%;
+			z-index: 999;
+			cursor: zoom-in;
+		}
+
+		.popup .caption {
+			background: #deebf7;
+			padding: 30px 30px 10px;
+			width: 100%;
+			z-index: 998;
+		}
+
+		.popup .copyright {
+			background: #deebf7;
+			padding: 10px;
+			font-size: 9px;
+		}
+
+		.sidebar {
+			float: left;
+			width: 46%;
+			height: 600px;
+			background-color: white;
+			color: #a6bddb;
+		}
+
+		#wrapper {
+			margin: 0 auto;
+			width: 100%;
+		}
+
+
+		#footer {
+			float: left;
+			background-color: #a6bddb;
+			color: white;
+			width: 100%;
+			height: 20px
+		}
+
+		#middle {
+			float: left;
+			background-color: #a6bddb;
+			color: white;
+			width: 2%;
+			height: 640px
+		}
+
+		#panel {
+			float: left;
+			width: 100%;
+			height: 60px;
+			background-color: #a6bddb;
+			color: white;
+		}
+
+		#numbers {
+			float: left;
+			width: 100%;
+			height: 20px;
+			position: absolute;
+			top: 15px;
+			left: 14%;
+			background-color: transparent;
+			color: #08519c;
+		}
+
+
+		#numbers2 {
+			float: left;
+			width: 100%;
+			height: 20px;
+			position: absolute;
+			top: 15px;
+			left: 62%;
+			background-color: transparent;
+			color: #08519c;
+		}
+
+		#selectNumber {
+			float: left;
+			width: 50%;
+			height: 40px;
+			position: absolute;
+			background-color: transparent;
+			top: 40px;
+			left: 7%;
+			color: white;
+		}
+
+		#selectNumber2 {
+			float: left;
+			width: 50%;
+			height: 40px;
+			position: absolute;
+			background-color: transparent;
+			top: 40px;
+			left: 58%;
+			color: white;
+		}
+
+		.item {
+			float: left;
+			width: 6%;
+			height: 20px;
+			border: 1px, solid;
+			padding: 0px;
+			margin: 2px;
+			background-color: rgba(100, 100, 255, 0.5);
+			text-align: center;
+			cursor: pointer;
+		}
+
+		.activeNumber {
+			background-color: #084594;
+		}
+
+		.activeNumber2 {
+			background-color: #084594;
+		}
+
+
+
+		#map {
+			float: left;
+			width: 70%;
+			height: 540px;
+		}
+
+
+		.text-labels {
+			font-weight: bold;
+			color: #252525;
+			font-family: "Arial Black"
+				font-size: 20px;
+			line-height: 25px;
+			text-align: center;
+		}
+
+
+
+		table,
+		th,
+		td {
+			margin: 0px 5px;
+			/*border:solid 1px #333; */
+			padding: 2px 4px;
+			font: 10px Verdana;
+		}
+
+		th {
+			font-size: 12px;
+			font-weight: bold;
+			color: #252525
+		}
+
+		td {
+			font-size: 14px;
+			font-weight: normal;
+			color: #252525;
+		}
+
+
+		table {
+			border-collapse: collapse;
+		}
+
+		#f1 {
+			font-weight: bold
+		}
+
+		.p2 {
+			font-size: 24px;
+			font-weight: bold;
+			position: relative;
+			top: 11px;
+			left: 20px;
+			display: inline-block;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="panel">
+			<div id="txtboxes"></div>
+		</div>
+		<div id="karte" style="width:52%; height:640px; float: left"></div>
+		<div id="middle"> </div>
+	</div>
+	<div id="numbers"></div>
+	<div id="numbers2"></div>
+
+	<div id="selectNumber"> </div>
+	<div id="selectNumber2"> </div>
+
+
+	<div class="sidebar" style="overflow: scroll;">
+		<p style="text-align:center; font-size: 18px; color:#175B81; font-weight:bold; "> </p>
+		<table id="myTable" style="width:90%; "> </table>
+	</div>
+	<div id="footer"> </div>
+
+
+	<script>
+		var mymap = L.map('karte', {
+			center: [27.672506743089905, 85.32508099713573],
+			zoom: 16,
+			maxZoom: 21,
+			zoomControl: false,
+			fullscreenControl: false
+		});
+
+
+
+		new L.Control.Zoom({ position: 'topright' }).addTo(mymap);
+		new L.Control.FullScreen({ position: 'topright' }).addTo(mymap);
+
+
+		var image = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+			attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community. Design: E.Michaels'
+		}).addTo(mymap);
+
+
+		// icon
+		var icon_pray = L.icon({
+			iconUrl: "{% static 'images/icon_pray.png' %}",
+			iconSize: [45],
+			iconAnchor: [22, 30]
+		});
+
+		var icon_active = L.icon({
+			iconUrl: "{% static 'images/icon_pray_active.png' %}",
+			iconSize: [55],
+			iconAnchor: [28, 35]
+		});
+
+
+		// numbers
+		document.getElementById("numbers");
+		numbers.innerHTML = '<b> &nbsp; Processions first round (stop nr.) </b>'
+
+		document.getElementById("numbers2");
+		numbers2.innerHTML = '<b> &nbsp;Processions second round (stop nr.) </b>'
+
+
+		// polyline_yatra
+		var polyline1 = L.geoJson(polyline1, {
+			color: 'red',
+			smoothFactor: 1.0,
+			stroke: true,
+			dashArray: 5,
+		}
+		).bindPopup('This is the first circumambulation in the morning');
+
+
+
+		var polyline2 = L.geoJson(polyline2, {
+			color: 'orange',
+			smoothFactor: 1.0,
+			stroke: true,
+			dashArray: 5,
+		}
+		).bindPopup('The second circumambulation – from noon to evening – ');
+
+
+		// points
+		var points1 = L.geoJson(points1, {
+			pointToLayer: function (feature, latlng) {
+				return L.marker(latlng, { icon: icon_pray });
+			},
+			onEachFeature: onEachFeature1
+		});
+
+
+		var points2 = L.geoJson(points2, {
+			pointToLayer: function (feature, latlng) {
+				return L.marker(latlng, { icon: icon_pray });
+			},
+			onEachFeature: onEachFeature2
+		});
+
+
+		function onEachFeature1(feature, layer) {
+			layer.on({ click: showData1 });
+			layer.on({ click: updateMarker });
+
+			layer.fire(
+				$('#selectNumber').append(
+					'<div class="item" id="' + layer.feature.properties.id + '"> <b>' + layer.feature.properties.id + '</b> </div>'));
+			$('.item').on("mouseover", function () {
+				$('div').removeClass('activeNumber');
+				$(this).addClass('activeNumber');
+			});
+			$('#selectNumber').on("mouseout", function () {
+				$('div').removeClass('activeNumber');
+			});
+
+
+			$('#' + layer.feature.properties.id + '.item').mouseover(function (e) {
+				$('#' + layer.feature.properties.id + '.item').on({ click: showData1 })
+
+			});
+
+			$('#' + layer.feature.properties.id + '.item').click(function (e) {
+				lat = layer.feature.geometry.coordinates[1]
+				lon = layer.feature.geometry.coordinates[0]
+				var coords = ([lat, lon]);
+				mymap.setView(coords, 17);
+
+				if ((highlightMarker != undefined)) {
+					mymap.removeLayer(highlightMarker);
+				}
+
+				highlightMarker = L.marker([lat, lon], { icon: icon_active }).addTo(mymap)
+			});
+
+			function getAlert(image) {
+				alert('Here\'s an alert!')
+			}
+			function showData1(e) {
+
+				$("#myTable tr").remove();
+				$(".sidebar").scrollTop();
+				row = table.insertRow(-1);
+				var cell = row.insertCell(-1);
+				var baseURL = "{% static 'img/' %}"
+				cell.innerHTML = '<div id="' + layer.feature.properties.name + '" class="popup">' +
+					"<b> <font color='black'> " + layer.feature.properties.name + "<br></font><br> Description: </b>"
+					+ layer.feature.properties.descript + "<br><br><b>Danam-Identifier:</b> " + layer.feature.properties.lal_nr + "<br>" + '<a href ="'
+					+ layer.feature.properties.link + '"target="blank">Visit the monument in DANAM database</a><br><br>'
+
+				$('div').removeClass('activeNumber2');
+				$('#' + layer.feature.properties.id + '.item').addClass('activeNumber2');
+
+				if (layer.feature.properties && layer.feature.properties.name) {
+					var images = layer.feature.properties.img
+					var slideshowContent = '';
+
+					for (var i = 0; i < images.length; i++) {
+						var img = images[i];
+
+						slideshowContent += '<div class="popup">' +
+							'<div class="caption" id="bild">' + '<a href="' + img[0] + '" target="_blank"> <img src="' +baseURL + img[0] + '"/></a>'
+							+ '<br>' + img[1] +
+							'<div class="copyright"> © ' + img[2] + '</div>' + '</div>' + '<br>' +
+							'</div>';
+					}
+				}
+
+
+				row1 = table.insertRow(-1);
+				var cell1 = row1.insertCell(-1);
+				cell1.innerHTML = '<div class="slideshow">' +
+					slideshowContent
+
+			};
+		};
+
+		function onEachFeature2(feature, layer) {
+			layer.on({ click: showData2 });
+			//layer.on({click:numbers})
+			layer.on({ click: updateMarker });
+
+
+			layer.fire(
+				$('#selectNumber2').append(
+					'<div class="item" id="' + layer.feature.properties.lal_nr + '"> <b>' + layer.feature.properties.id + '</b> </div>'));
+			$('.item').on("mouseover", function () {
+				$('div').removeClass('activeNumber');
+				$(this).addClass('activeNumber');
+			});
+
+
+			$('#selectNumber2').on("mouseout", function () {
+				$('div').removeClass('activeNumber');
+			});
+
+
+			$('#' + layer.feature.properties.lal_nr + '.item').mouseover(function (e) {
+				$('#' + layer.feature.properties.lal_nr + '.item').on({ click: showData2 })
+			});
+
+			$('#' + layer.feature.properties.lal_nr + '.item').click(function (e) {
+				lat = layer.feature.geometry.coordinates[1]
+				lon = layer.feature.geometry.coordinates[0]
+				var coords = ([lat, lon]);
+				mymap.setView(coords, 17);
+
+				if ((highlightMarker != undefined)) {
+					mymap.removeLayer(highlightMarker);
+				}
+
+				highlightMarker = L.marker([lat, lon], { icon: icon_active }).addTo(mymap)
+
+
+			});
+
+			$('#' + layer.feature.properties.lal_nr + '.item').mouseover(function (x) {
+			});
+
+
+
+			function showData2(e) {
+
+				$("#myTable tr").remove();
+				$(".sidebar").scrollTop();
+				row = table.insertRow(-1);
+				var cell = row.insertCell(-1);
+				var baseURL = "{% static 'img/' %}";
+				cell.innerHTML = '<div id="' + layer.feature.properties.name + '" class="popup">' +
+					"<b> <font color='black'> " + layer.feature.properties.name + "<br></font><br> Description: </b>"
+					+ layer.feature.properties.descript + "<br><br><b>Danam-Identifier:</b> " + layer.feature.properties.lal_nr + "<br>" + '<a href ="'
+					+ layer.feature.properties.link + '"target="blank">Visit the monument in DANAM database</a><br><br>'
+
+				$('div').removeClass('activeNumber2');
+				$('#' + layer.feature.properties.lal_nr + '.item').addClass('activeNumber2');
+
+
+				if (layer.feature.properties && layer.feature.properties.name) {
+					var images = layer.feature.properties.img
+					var slideshowContent = '';
+
+					for (var i = 0; i < images.length; i++) {
+						var img = images[i];
+
+						slideshowContent += '<div class="popup' + (i === 0 ? ' active' : '') + '">' +
+							'<div class="caption" id="bild">' + '<a href="' + img[0] + '"target="_blank"> <img src="' +baseURL + img[0] + '"/></a>' + '<br>' + img[1] +
+							'<div class="copyright"> © ' + img[2] + '</div>' + '</div>' + '<br>' +
+							'</div>';
+					}
+				};
+
+
+				row1 = table.insertRow(-1);
+				var cell1 = row1.insertCell(-1);
+				cell1.innerHTML = '<div class="slideshow">' +
+					slideshowContent
+
+			};
+
+
+		}; // end of onEachFeature2
+
+
+		// hightlight marker
+		var highlightMarker;
+
+		function updateMarker(e) {
+
+			var lat = e.target.feature.geometry.coordinates[1];
+			var lon = e.target.feature.geometry.coordinates[0];
+
+			if ((highlightMarker != undefined)) {
+				mymap.removeLayer(highlightMarker);
+			}
+
+			highlightMarker = L.marker([lat, lon], { icon: icon_active }).addTo(mymap)
+		}
+
+
+		// the data table
+		var table = document.getElementById("myTable");
+		// header row.
+		var row = table.insertRow(-1);
+		var headerCell = document.createElement("th");
+		headerCell.innerHTML = "<br><b>HOW TO USE THIS MAP FOR THE HERITAGE WALK:</b> <br><br>Please click on the icons embedded in the map or the number on top of the map to get a datailed description on the procession's stops, as well as photographs taken during the procession in 2019 <br><br>You may chose different background layers for the map trough the selector in the upperleft corner of the map <br> <br> Scroll down in the window on the right hand to see all the pictures for the selected procession stops <br><br> More information about the monuments can be found in <a href='https://danam.cats.uni-heidelberg.de/' target='_blank'>DANAM</a> <br><br> <b> ENJOY YOUR WALK </b>";  //Fieldname
+		row.appendChild(headerCell);
+
+
+		// Layergroups
+		var round1_all = L.layerGroup([polyline1, points1]).addTo(mymap);
+		var round2_all = L.layerGroup([polyline2, points2]).addTo(mymap);
+
+
+		// WMS Basemaps
+		var wmsLayer = L.tileLayer.wms("http://188.68.54.174:8080/geoserver/cite/wms", {
+			layers: 'cite:Bhindyaḥ_Puja_Yatra_Map_17.01.21',
+			serverType: 'geoserver',
+			format: 'image/png',
+			transparent: true,
+			maxZoom: 21,
+			opacity: 1,
+			attribution: 'Base Map prepared by B.Basukala and N. Gutschow 1990'
+		});
+
+		var wmsLayer2 = L.tileLayer.wms("http://188.68.54.174:8080/geoserver/nhdp/wms", {
+			layers: 'nhdp:ktm_patan_merged',
+			serverType: 'geoserver',
+			format: 'image/png',
+			transparent: false,
+			sytles: 'Grey Line',
+			opacity: 1,
+			maxZoom: 21,
+			attribution: 'Base Map prepared by E.Michaels 2021 on the basis of various mappings from 1990-1992'
+		});
+
+		var wmsLayer4 = L.tileLayer.wms(":http//188.68.54.174:8080/geoserver/nhdp/wms", {
+			layers: 'nhdp:schneider_patan_test',
+			serverType: 'geoserver',
+			format: 'image/png',
+			transparent: false,
+			opacity: 1,
+			maxZoom: 21,
+			attribution: 'Aerial photo taken 1971/1972 by Erwin Schneider | Design: E.Michaels 2021'
+		});
+
+
+		//Layerswitch
+		var baseLayers = {
+			"Satellite": image,
+			"Abstact city structure": wmsLayer2,
+			"NHDP map": wmsLayer,
+			"Aerial picture 1971/72 <br> (please wait. will take time to load)": wmsLayer4
+		}
+			;
+		var groupedOverlays = {
+			"Procession": {
+				"<span style='color: red'>First round</span>": round1_all,
+				"<span style='color: orange'>Second round</span>": round2_all
+			}
+		};
+
+		L.control.groupedLayers(baseLayers, groupedOverlays, { collapsed: false, position: 'topleft' }).addTo(mymap);
+
+	</script>
+</body>
+
+</html>

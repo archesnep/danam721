@@ -1,0 +1,60 @@
+{% extends 'partials/page-team.htm' %}
+{% load static %}
+{% block team_detail %}
+<div class="body">
+	{% include 'partials/danam_navbar.htm' %}
+	<div role="main" class="main">
+		<div class="container pt-5">
+			<div class="row py-4 mb-2">
+				<div class="col-md-7 order-2">
+					<div class="overflow-hidden">
+						<h2 class="text-color-dark font-weight-bold text-8 mb-0 pt-0 mt-0 appear-animation"
+							data-appear-animation="maskUp" data-appear-animation-delay="300">Roshan Mishra</h2>
+					</div>
+					<div class="overflow-hidden mb-3">
+						<p class="font-weight-bold text-primary text-uppercase mb-2 appear-animation"
+							data-appear-animation="maskUp" data-appear-animation-delay="500">Directorate and
+							coordination</p>
+					</div>
+					<p class="lead appear-animation text-justify" data-appear-animation="fadeInUpShorter"
+						data-appear-animation-delay="700">Roshan is the Director at Taragaon Museum and a visual artist
+						based in Kathmandu. He also manages the Nepal Architecture Archive (NAA), which is run by the
+						Saraf Foundation for Himalayan Traditions and Culture, a patron organization of the Taragaon
+						Museum.<br />
+						Since 2014, he has been affiliated with the Museum and has been working with its
+						permanent collection, launching of the Contemporary Art Gallery and creation of a Library. He
+						has been curating the external and internal exhibitions those are organized at the Taragaon
+						Museum.<br />
+						Roshan is a visiting faculty at the Kathmandu University for research, archiving and
+						documentation program. He studied Fine Arts in Nepal and in the UK, and holds a Master’s Degree
+						in Digital Art.</p>
+
+					<hr class="solid my-4 appear-animation" data-appear-animation="fadeInUpShorter"
+						data-appear-animation-delay="800">
+					<div class="row align-items-center appear-animation" data-appear-animation="fadeInUpShorter"
+						data-appear-animation-delay="900">
+						<div class="col-lg-6">
+							<a href="mailto:roshanmishra@taragaonmuseum.com" class="btn btn-modern btn-dark mt-3">Get In
+								Touch</a>
+							<!---	<a href="#" class="btn btn-modern btn-primary mt-3">Website</a> -->
+						</div>
+						<!---	<div class="col-sm-6 text-lg-right my-4 my-lg-0">
+									<strong class="text-uppercase text-1 mr-3 text-dark">follow me</strong>
+									<ul class="social-icons d-none d-sm-block social-icons-clean float-lg-right">
+										<li class="social-icons-wikipedia-w"><a href="http://www.facebook.com/" target="_blank" title="Website"><i class="fab fa-wikipedia-w"></i></a></li>
+										<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+										<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+									</ul>
+								</div>  -->
+					</div>
+				</div>
+				<div class="col-md-5 order-md-2 mb-4 mb-lg-0 appear-animation"
+					data-appear-animation="fadeInRightShorter">
+					<img src="{% static 'img/team/RM.jpg' %}" class="img-fluid mb-2" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% include 'partials/javascript.htm' %}
+{% endblock %}

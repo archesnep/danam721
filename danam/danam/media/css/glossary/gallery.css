@@ -1,0 +1,64 @@
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#viewer {
+    width: 70%;
+    height: 100%;
+    right: 0;
+    left: 30%;
+    position: absolute;
+    border: none;
+    background: #111111;
+}
+
+#controls {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    color: #bbbbbb;
+    border: 2px grey;
+    /* font-size: 75%; */
+    text-align: center;
+    background: #111111;
+}
+
+[data-iip-image] {
+    cursor: pointer;
+}
+
+.metadata {
+    margin-top: 1rem;
+    height: 300px;
+    overflow: auto;
+}
+
+.slider-control {
+	background-color: #222222;
+	border-radius: 28px;
+	border: 1px solid #222222;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 1rem;
+    /* padding: 16px 31px; */
+    padding: 0.6rem 1rem;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #222222;
+}
+.slider-control:hover {
+	background-color:#292929;
+}
+.slider-control:active {
+	position: relative;
+    /* box-shadow: 0 3px 0 black; */
+    top: 2px;
+}
+
+.slider-control:focus {
+    outline: 0;
+}
+

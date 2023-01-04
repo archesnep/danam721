@@ -1,0 +1,198 @@
+{% load static %}
+{% load template_tags %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Basic -->
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ app_settings.APP_NAME }} - Welcome</title>
+
+    <meta name="keywords" content="NHDP" />
+    <meta name="description" content="Nepal Heritage Documentation Project">
+    <meta name="author" content="NHDP">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
+        rel="stylesheet" type="text/css">
+
+    {% include 'partials/css.htm' %}
+    <link rel="stylesheet" href="{% static 'css/design/vendor/font-awesome/css/font-awesome.min.css' %}">
+</head>
+
+<body data-spy="scroll" data-target="#navSecondary" data-offset="172">
+    <div class="body">
+        {% include "partials/danam_navbar.htm" with extra_links='partials/monument-link.htm' %}
+        <div role="main" class="main">
+            <section
+                class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5"
+                style="background-image: url({% static 'img/patterns/random_grey_variations.png' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 align-self-center p-static order-2 text-center">
+                            <h1><strong>Heritage Walks – come along!</strong></h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col">
+                        <p class="text-justify mt-0">
+                            NHDP not only documents individual sites of endangered heritage in the Kathmandu Valley or
+                            West Nepal, but also the usage of the sites and how they contribute to ritual practices –
+                            which is central in keeping the heritage alive. Sites are often related to each other, for
+                            instance, through processions. In fact, in places like the royal city of Patan processions
+                            still play an important role for communities. We have selected a few procession routes for
+                            you to come along. These will be shared over the next months.
+                        </p>
+                        <p class="text-justify">
+                            The NHDP <a href="{% url 'team' %}" target="_blank" rel="noopener noreferrer">team</a>
+                            invites you to join us in exploring the fascinating patterns of temples, monasteries and
+                            shrines, wells and fountains or arcaded platforms and rest houses.
+                        </p>
+                        <p class="text-justify">
+                            The maps were designed by Elias Michaels, who georeferenced the historic base maps and
+                            aerial pictures and integrated them in the interactive framework, allowing a multimedia
+                            perspective on the heritage walks and its locations.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h2 class="mb-0 text-5"><a href="{% url 'phudyah-dipankara' %}" target="_blank"
+                                rel="noopener noreferrer">Phudyaḥ (Dīpaṅkara) Jātrā of the Pañcadāna Festival in
+                                Patan</a></h2>
+                        <div class="lightbox float-center mr-4"
+                            data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+                            <a title="Panchadana Yatra"
+                                class="img-thumbnail d-inline-block mb-1 mr-1"
+                                href="{% static 'img/heritage_walks/Panchadana Yatra.webp' %}">
+                                <figure class="figure">
+                                    <img loading=lazy class="figure-img img-fluid"
+                                        src="{% static 'img/heritage_walks/Panchadana Yatra.webp' %}"
+                                        alt="NHDP Inscriptions Project" width="auto" height="400">
+                                    <figcaption class="figure-caption">
+                                        Statue of Dīpaṅkara; photo by Nutandhar Sharma, 2020
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+
+                        <p class="text-justify mt-1">
+                            The public and religious life in Nepal was terribly hit by the Covid-19 pandemic in the
+                            years 2020 and 2021, in a dramatic way. It restricted many ritual activities and altered
+                            them in interesting ways. Our research fellow Dr. Nutandhar Sharma, accompanied by
+                            photographer Nashib Kafle (2020) and architect Bijay Basukala (2021) documented some of the
+                            rituals performed during the Dīpaṅkara procession, connecting them to selected sites of
+                            cultural heritage that can be found on DANAM. Prof. Dr. Christiane Brosius edited the
+                            material and selected the photographs.
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col">
+                        <h2 class="mb-0 text-5">Following the Buddha: the festival for the Buddha of Light</h2>
+                        <p class="text-justify mt-0">
+                            The Dīpaṅkara Buddha, or ‘Maker of Light’, is said to predate the historical Gautama Buddha,
+                            and is often equated with the first Buddha (Michaels 2013: 2). Pañcadāna (literally, ‘five
+                            offerings’) is a festival in which the initiated Śākya and Vajrācārya males have to manifest
+                            their monastic status by collecting alms from at least seven houses. In the historic city of
+                            Patan, this festival is known as Yala (Patan) Pañcadāna. It is celebrated on the eighth
+                            lunar day of the bright fortnight of the Śrāvaṇa month according to the lunar calendar; in
+                            2020, that day fell on July 28.
+                        </p>
+
+                        <p class="text-justify">
+                            On the day of Pañcadāna, initiated male devotees offer alms to the Vajracārya priests and
+                            Sākya householder monks. Of central importance is Phudyaḥ, an approximately 60 cm high
+                            gold-plated copper icon of Dīpaṅkara Buddha. The icon of the deity is carried from house to
+                            house and, from monastery to monastery, by the Śākyas of Ukubahāl monastery. When the deity
+                            visits the selected places, it is worshipped with gifts (dāna). Offerings are mainly rice
+                            grains, wheat grains, salt, fruits, money and the likes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <h2 class="mb-0 text-5">The procession route</h2>
+                        <p class="text-justify mt-0">
+                            The Phudyaḥ jātrā (procession) begins in the morning and continues until late evening. The
+                            icon of Phudyaḥ, usually kept in the Ukubaha monastery is cleaned one day before and it is
+                            displayed in the northern wing of the monastery with its ornaments and full decorations on
+                            the next day morning, the very day of the jātrā, it. During this time, local residents,
+                            mainly Śākyas of the locality, come to offer their pūjā and alms to the deity. The
+                            jātrā begins its traditional route (see the route map) after.
+                        </p>
+                        <p class="text-justify">
+                            The route can be divided into several parts. The first circumambulation in the morning
+                            starts from Ukubahā and follows the localities accordingly: (1) Sundhara, (2) Guita, (3)
+                            Subaha, (4) Bhinchebaha, (5) Tyāga, (6) Tvaybaha, (7) Yacchubaha, (8) Yanamugal, (9)
+                            Gujibaha, (10) Jyobabahi, (11) Naudobaha, (12) Jyothabaha, (13) Sikuncabaha, (14)
+                            Hitiphusabaha, (15) Nagubaha, (16) Kanibaha, (17) Ubabahi, (18) Dunebaha, (19) Mahabauddha,
+                            (20) Ukubaha. Even upon returning to its home-monastery, the icon of the deity does not
+                            enter the vihāra (monastery). It remains outside while human participants are allowed to
+                            enter the monastery to have lunch. The second circumambulation – from noon to evening –
+                            starts form Ukubahā and follows these localities: (1) Gangabaha, (2) Dhandyabaha, (3)
+                            Dyanani (4) Bakunani, (5) Darbar, (6) Tangabaha, (7) Cukabaha, (8) Tabaha, (9) Jombaha, (10)
+                            Nhaykanbahi, (11) Talache, (12) Kvache, (13) Bahalukha, (14) Kaygunani, (15) Daubaha, (16)
+                            Vanabaha, (17) Habaha, (18) Nabaha, (19) Kalanche, (20) Mikhabaha, (21) Nyakhacuka, (22)
+                            Nakabahi, (23) Khache, (24) Nagbaha, (25) Sasunani, (26) Kontibahi, (27) Mesahiti and comes
+                            back to Ukubaha.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <h2 class="mb-0 text-5">Effect of the COVID-19 pandemic on the festival:</h2>
+                        <p class="text-justify mt-0">
+                            The Phudyaḥ jātrā, like all festivals of the Kathmandu Valley were affected by COVID-19
+                            pandemic in 2020- either canceled, delayed or celebrated in smaller versions. This jātrā was
+                            nearly put on halt. The executive members of the Organization of Buddhist Monasteries of
+                            Patan, representatives of all Buddhist monasteries of Patan, the Committee for the study on
+                            Vajrācārya Pūjā and Rituals (Vajrācārya Pūjā Vidhi Addhyayan Samiti), and the Organization
+                            of Traditional Buddhadharma of Nepal (Nepala Paramparāgata Bauddhadharma Saṃgha) had an
+                            important discussion about organizing the Pañcadāna festival on July 20, 2020. They
+                            unanimously decided to celebrate the Pañcadāna festival only inside the limits of the
+                            boundaries of their own monasteries to prevent the spread of COVID-19. According to a senior
+                            member of the vihāra, the members of Ukubahā monastery decided to continue the Phudyaḥ Jātrā
+                            because several devotees would not consume their own food without offering ritual gifts
+                            (dāna) to Phudyaḥ on that day. They also decided that without invitation, the jātrā members
+                            would not enter any vihāra or house.
+                        </p>
+                    </div>
+                </div>
+                <a href="https://danam.cats.uni-heidelberg.de/media/articles/Oslo-dipankarayatra.pdf" target="_blank"
+                    rel="noopener noreferrer">
+                    <p>
+                        Michaels, Axel. “From Syncretism to Transculturality: The Dīpaṅkara Procession in the Kathmandu
+                        Valley.” In <i>South Asian Festivals on the Move</i>, edited by Ute Hüsken and Axel Michaels, 317–42.
+                        Wiesbaden: Harrassowitz, 2013.
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% include 'partials/javascript.htm' %}
+</body>
+
+</html>

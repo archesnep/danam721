@@ -1,0 +1,112 @@
+{% extends "views/components/widgets/base.htm" %}
+{% load i18n %}
+{% load template_tags %}
+
+{% block form %}
+<div class="row widget-wrapper">
+    <div class="form-group">
+        <label class="control-label widget-input-label" for="" data-bind="text:label"></label>
+        <!-- ko if: node -->
+        <i data-bind="css: {'ion-asterisk widget-label-required': node.isrequired}"></i>
+        <!-- /ko -->
+        <div class="col-xs-12">
+            {% include 'views/components/map-widget-editor.htm' %}
+        </div>
+    </div>
+</div>
+{% endblock form %}
+
+{% block report %}
+<dt data-bind="text: label"></dt>
+<!-- ko if: summaryDetails.length === 0 -->
+<dd>
+    <span data-bind="text: $root.translations.none"></span>
+</dd>
+<!-- /ko -->
+<!-- ko ifnot: summaryDetails.length === 0  -->
+<dd data-bind="foreach: summaryDetails">
+    <div style='margin-bottom:2px' data-bind="text: JSON.stringify($data.geometry)"></div>
+</dd>
+<!-- /ko -->
+{% endblock report %}
+
+{% block config_form %}
+<div class="control-label">
+    <span data-bind="text: $root.translations.availableGeometryTypes"></span>
+</div>
+<div class="col-xs-12 pad-no crud-widget-container">
+    <input style="display:inline-block;"
+        data-bind="select2Query: {
+            select2Config: {
+                clickBubble: true,
+                value: geometryTypeList,
+                multiple: true,
+                allowClear: true,
+                minimumInputLength: 0,
+                placeholder: $root.translations.availableGeometryTypes,
+                data: [{
+                    text: $root.translations.point,
+                    id: 'Point'
+                }, {
+                    text: $root.translations.line,
+                    id: 'Line'
+                }, {
+                    text: $root.translations.polygon,
+                    id: 'Polygon'
+                }]
+            }
+        }">
+</div>
+<div class="control-label">
+    <span data-bind="text: $root.translations.mapCenterLongitude"></span>
+</div>
+<div class="col-xs-12 pad-no crud-widget-container">
+    <input 
+        type="number" 
+        id="" 
+        class="form-control input-md widget-input" 
+        data-bind="
+            attr: {placeholder: $root.translations.longitudeXCoordinate},
+            value: centerX, 
+            valueUpdate: 'keyup'
+        "
+    >
+</div>
+<div class="control-label">
+    <span data-bind="text: $root.translations.mapCenterLatitude"></span>
+</div>
+<div class="col-xs-12 pad-no crud-widget-container">
+    <input 
+        type="number" 
+        id="" 
+        class="form-control input-md widget-input" 
+        data-bind="
+            attr: {placeholder: $root.translations.latitudeYCoordinate},
+            value: centerY, 
+            valueUpdate: 'keyup'
+        "
+    >
+</div>
+<div class="control-label">
+    <span data-bind="text: $root.translations.defaultZoom"></span>
+</div>
+<div class="col-xs-12 pad-no crud-widget-container">
+    <input 
+        type="number" 
+        min=1 
+        max=20 
+        id="" 
+        class="form-control input-md widget-input" 
+        data-bind="
+            attr: {placeholder: $root.translations.zoomLevel},
+            value: zoom, 
+            valueUpdate: 'keyup'
+        "
+    >
+</div>
+{% endblock config_form %}
+
+{% block display_value %}
+<span data-bind="text: displayValue()"></span>
+<span data-bind="text: $root.translations.features"></span>
+{% endblock display_value %}

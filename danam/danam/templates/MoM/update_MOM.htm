@@ -1,0 +1,150 @@
+{% extends 'MoM/base.htm' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<div role="main" class="main">
+    <section class="section section-default pt-5 m-0">
+        <div class="container">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <form method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <!-- title -->
+                                <div class="form-group row">
+                                    <label for="id_title"
+                                        class="col-sm-2 col-form-label text-3 font-weight-bold text-color-dark">Title</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="title"
+                                            value="{{form.initial.title}}" required="" id="id_title">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="id_author"
+                                        class="col-sm-2 col-form-label text-3 font-weight-bold text-color-dark">Curated by</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" name="author"
+                                            value="{{form.initial.author}}"  id="id_author">
+                                    </div>
+                                </div>
+                                <!-- Thumbnail image  -->
+                                <div class="form-group row">
+                                    <div class="col-sm-3 col-form-label">
+                                        <label for="id_thumbnail"
+                                            class=" text-3 font-weight-bold text-color-dark">Thumbnail(800*800)</label>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <img src="{{form.initial.thumbnail.url}}" id="thumbnail-preview" height="200">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="file" name="thumbnail" accept="image/*" id="id_thumbnail"
+                                            onchange="showPreview(event);">
+                                    </div>
+                                </div>
+                                <!-- Primary image  -->
+                                <div class="form-group row">
+                                    <div class="col-sm-3 col-form-label">
+                                        <label for="id_image"
+                                            class=" text-3 font-weight-bold text-color-dark">Primary Image</label>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <img src="{{form.initial.image.url}}" id="primary-image-preview" height="200">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="file" name="image" accept="image/*" id="id_image"
+                                            onchange="showPrimaryPreview(event);">
+                                    </div>
+                                </div>
+                                <!-- caption  -->
+                                <div class="form-group row">
+                                    <label for="id_caption"
+                                        class="col-sm-2 col-form-label text-3 font-weight-bold text-color-dark">Caption</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="caption" class="form-control"
+                                            value="{{form.initial.caption}}" id="id_caption">
+                                    </div>
+                                </div>
+                                <!-- description  -->
+                                <div class="form-group row">
+                                    <label for="id_description"
+                                        class="col-sm-2 col-form-label text-3 font-weight-bold text-color-dark">Description</label>
+                                    <div class="col-sm-8">
+                                        {{form.description}}
+                                    </div>
+                                </div>
+                                <!-- date  -->
+                                <div class="form-group row">
+                                    <label for="id_date"
+                                        class="col-sm-2 col-form-label text-3 font-weight-bold text-color-dark">Date</label>
+                                    <div class="col-sm-8">
+                                        <input type="date" name="date" required="" id="id_date"
+                                            value="{{form.initial.date|date:'c'}}">
+                                    </div>
+                                </div>
+                                <!-- status  -->
+                                <div class="form-group row">
+                                    <label for="id_date"
+                                        class="col-sm-2 col-form-label text-3 font-weight-bold text-color-dark">Status</label>
+                                    <div class="col-sm-8">
+                                        {{form.status}}
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10">
+                                        <input type='submit' value='Update Form'
+                                            class="btn btn-3d btn-primary rounded-0 mr-3" />
+                                        <input class="btn btn-3d btn-primary rounded-0 mr-3" selected="" 
+                                        type="button" value="Cancel" 
+                                        onclick="window.history.go(-1);"/>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock content %}
+
+{% block footer %}
+{% endblock footer %}
+
+{# Page javascript #}
+{% block page_js %}
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"
+    data-ckeditor-basepath="/media/ckeditor/ckeditor/" id="ckeditor-init-script"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+
+<script>
+    function showPreview(event) {
+        if (event.target.files.length > 0) {
+            var src = URL.createObjectURL(event.target.files[0]);
+            var preview = document.getElementById("thumbnail-preview");
+            preview.src = src;
+            preview.style.height = "200px";
+            preview.style.width = "200px";
+        }
+    }
+</script>
+<script>
+    function showPrimaryPreview(event) {
+        if (event.target.files.length > 0) {
+            var src = URL.createObjectURL(event.target.files[0]);
+            var preview = document.getElementById("primary-image-preview");
+            preview.src = src;
+            preview.style.height = "200px";
+            preview.style.width = "200px";
+        }
+    }
+</script>    
+{% endblock page_js %}

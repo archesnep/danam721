@@ -1,0 +1,57 @@
+{% extends 'MoM/base.htm' %}
+{% load static %}
+{% load i18n %}
+
+
+{% block content %}
+
+<div role="main" class="main">
+    <div class="sort-destination-loader sort-destination-loader-showing recent-posts bg-dark m-0 p-0">
+        <div class="row portfolio-list sort-destination m-0 p-0" data-sort-id="portfolio">
+            {% for monument in monument_list %}
+            <div class="col-sm-6 col-lg-3 p-0 m-0 isotope-item text-start">
+                <a href="{{ monument.get_absolute_url }}">
+                    <article>
+                        <div
+                            class="thumb-info thumb-info-no-borders thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-show-more thumb-info-no-zoom border-radius-0">
+                            <div class="thumb-info-wrapper thumb-info-wrapper-opacity-6">
+                                {% if monument.image %}
+                                <img src="{{monument.image.url}}" height="350"
+                                    alt="{{monument.title}}">
+                                {% endif %}
+                                <div class="thumb-info-title bg-transparent p-4">
+                                    <div class="thumb-info-type bg-color-primary px-2 mb-1">{{monument.date|date:"M Y"}}</div>
+                                    <div class="thumb-info-inner mt-1">
+                                        <h2 class="text-color-light line-height-2 text-4 font-weight-bold mb-0">
+                                            {{monument.title}}</h2>
+                                    </div>
+                                    <div class="thumb-info-show-more-content">
+                                        <p
+                                            class="mb-0 text-1 line-height-9 mb-1 mt-2 opacity-5 d-none d-lg-block" style="color: #FFF !important;">
+                                            {{monument.description|safe|truncatewords:25}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <ul class="nav nav-pills sort-source sort-source-style-3 d-none" data-sort-id="portfolio" data-option-key="filter"
+        data-plugin-options="{'layoutMode': 'packery', 'filter': '*'}">
+        <li class="nav-item active" data-option-value="*"><a class="nav-link text-1 text-uppercase active" href="#">Show
+                All</a></li>
+    </ul>
+
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock footer %}
+
+{

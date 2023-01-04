@@ -1,0 +1,110 @@
+{% load static %}
+{% load template_tags %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Basic -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>{{ app_settings.APP_NAME }} - News</title>
+
+	<meta name="keywords" content="DANAM NEWS" />
+	<meta name="description" content="Nepal Heritage Documentation Project">
+	<meta name="author" content="NHDP">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+	<!-- Mobile Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+
+	<!-- Vendor CSS -->
+	{% include 'partials/css.htm' %}
+	<!-- Web Fonts  -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
+		rel="stylesheet" type="text/css">
+
+
+	<!-- Head Libs -->
+	<script src="{% static 'js/vendor/modernizr/modernizr.min.js' %}"></script>
+
+</head>
+
+<body>
+
+	<div class="body">
+		{% include 'partials/danam_navbar.htm' %}
+		<div role="main" class="main">
+
+			<section
+				class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5"
+				style="background-image: url({% static 'img/patterns/wild_oliva.png' %});">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 align-self-center p-static order-2 text-center">
+							<h1 class="font-weight-bold text-8">Danam News</h1>
+							<span class="sub-title">Check out our Latest News!</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="container py-4">
+				<div class="row">
+					<div class="col">
+						<div class="blog-posts single-post">
+
+							<article class="post post-large blog-single-post border-0 m-0 p-0">
+								<div class="post-image ml-0">
+									<a href="#">
+										<img src="{% static 'img/news-portal/damageinheritage.jpeg' %}"
+											class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
+									</a>
+								</div>
+								<div class="post-date ml-0">
+									<span class="day">17</span>
+									<span class="month">October</span>
+								</div>
+								<div class="post-content ml-0">
+									<h2 class="font-weight-bold"><a href="#">Research based on NHDP
+											Published</a></h2>
+									<div class="post-meta">
+										<span><i class="far fa-user"></i> By <a href="#">NHDP</a> </span>
+									</div>
+									<p>
+										We are excited to announce that Prof. Dr. Christiane
+										Brosius and Prof. Dr. Axel Michaels have published an
+										article based on NHDP’s work. It is great to see that DANAM
+										as a database can be used in research-based publications.
+									</p>
+									<p>
+										The article, titled ‘Vernacular Heritage as Urban
+										Place-Making. Activities and Positions in the Reconstruction
+										of Monuments after the Gorkha Earthquake in Nepal,
+										2015–2020: The Case of Patan’ is open-access and has been
+										published in Sustainability, an international,
+										cross-disciplinary, scholarly, peer-reviewed and open access
+										journal of environmental, cultural, economic, and social
+										sustainability of human beings. Please find the article
+										<a href="https://www.mdpi.com/2071-1050/12/20/8720" target="_blank">here</a>.
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Vendor -->
+	{% include 'partials/javascript.htm' %}
+</body>
+
+</html>

@@ -1,0 +1,339 @@
+{% load static %}
+{% load template_tags %}
+{% load i18n %}
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ app_settings.APP_NAME }} - Welcome</title>
+
+    <meta name="keywords"
+        content="NHDP, Kathmandu Monuments, nepal cultural heritage, kathmandu heritage, nepal archive, kathmandu archive, nepal historic building archive, nepal monument, nepal inscirptions, nepal docuements, pagoda temples" />
+    <meta name="description" content="Nepal Heritage Documentation Project">
+    <meta name="author" content="NHDP">
+
+    <!-- Global site tag (gtag.js) - Google Analytics 
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164039931-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-164039931-1');
+	</script>
+-->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    {% include 'partials/css.htm' %}
+</head>
+
+<!--
+The #page-top ID is part of the scrolling feature.
+The data-spy and data-target are part of the built-in Bootstrap scrollspy function.
+-->
+
+<body class="danam_home">
+
+    <body class="loading-overlay-showing" data-plugin-page-transition data-loading-overlay
+        data-plugin-options="{'hideDelay': 500}">
+        <div class="loading-overlay">
+            <div class="bounce-loader">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+
+        <div class="body">
+            {% include 'partials/danam_navbar.htm' with extra_links='partials/monument-link.htm' %}
+
+            <div role="main" class="main">
+                <div class="slider-container light rev_slider_wrapper" style="height: 650px;">
+                    <div id="revolutionSlider" class="slider rev_slider" data-version="5.4.8"
+                        data-plugin-revolution-slider
+                        data-plugin-options="{'delay': 9000, 'gridwidth': 1170, 'gridheight': 650, 'disableProgressBar': 'on', 'responsiveLevels': [4096,1200,992,500], 'navigation' : {'arrows': { 'enable': true, 'style': 'arrows-style-1 arrows-big arrows-dark' }, 'bullets': {'enable': false, 'style': 'bullets-style-1 bullets-color-primary', 'h_align': 'center', 'v_align': 'bottom', 'space': 7, 'v_offset': 70, 'h_offset': 0}}}">
+                        <ul>
+                            <li data-transition="fade">
+                                <img src="{% static 'img/slides/panorama-Patan-Darbar.jpg' %}" alt=""
+                                    data-bgposition="right center" data-bgpositionend="center center" data-bgfit="cover"
+                                    data-bgrepeat="no-repeat" data-kenburns="on" data-duration="9000"
+                                    data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100"
+                                    data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0"
+                                    data-bgparallax="0" class="rev-slidebg">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <section class="nhdp-intro mt-3">
+                    <div class="container">
+                        <p class="text-justify">
+                            <span class="text-4">NEPAL HERITAGE DOCUMENTATION PROJECT</span> is supported by the Arcadia
+                            Fund of Lisbet Rausing and Peter Baldwin and provides an open access approach to extensive
+                            heritage documentation in Nepal. The project itself straddles Germany and Nepal. In Germany,
+                            the NHDP is run collaboratively by the Heidelberg Centre for Transcultural Studies (HCTS)
+                            and the Heidelberg Academy of Sciences and Humanities (HAdW). The project’s key partners and
+                            representatives in Nepal include the Department of Archaeology of the Government of Nepal
+                            and the Saraf Foundation of Himalayan Traditions and Culture.
+                        </p>
+                    </div>
+                </section>
+                <!-- alert text  -->
+                <!-- <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="alert alert-warning text-justify">
+                                <p>
+                                    Please note that some of the monument entries are incomplete due to the pandemic
+                                    situation in
+                                    Nepal. Our team members’ safety is of utmost importance to us and currently
+                                    documentation process is slowed down. The missing data will be uploaded as soon as
+                                    the situation in Nepal gets better. We apologize for the inconvenience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Featured search and highlights -->
+
+                <section class="featured-search mt-4 mb-0">
+                    <div class="container">
+                        <h2 class="text-color-dark text-center mb-0 appear-animation" data-appear-animation="maskUp"
+                            data-appear-animation-delay="250"> Heritage Focus Areas and Heritage Walks
+                        </h2>
+                        <div class="row mt-4">
+                            <div class="col-lg-6">
+                                <div class="featured-box featured-box-quaternary mt-2">
+                                    <div class="box-content">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h2 class="mb-0"> Heritage focus areas </h2>
+                                                <p class="text-justify">
+                                                    Alongside our attempts to cover the old Royal City of Patan, we have
+                                                    defined certain ‘clusters’ of monuments that are characterised by a
+                                                    certain historical, social or ritual importance and connectivity. We
+                                                    call them “Heritage Focus Areas”. You will be able to see monuments
+                                                    in relation, and enter each one in the database. It is important to
+                                                    point out that the ‘borders’ of these clusters have been defined on
+                                                    the basis of these criteria, and do not represent any existing
+                                                    administrative or planned boundaries.
+                                                </p>
+
+                                                <div class="divider divider-small divider-small-center">
+                                                    <hr>
+                                                </div>
+                                                <a href="{% url 'heritage_focus' %}" target="_blank"
+                                                    rel="noopener noreferrer">
+                                                    <button class="btn btn-quaternary mr-1 mb-4" type="button">
+                                                        Learn More
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="featured-box featured-box-quaternary mt-2">
+                                    <div class="box-content">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h2 class="mb-4"> Heritage walks
+                                                </h2>
+                                                <p class="text-justify">
+                                                    Join us for a heritage walk! Besides documenting individual sites,
+                                                    NHDP
+                                                    also records how the sites are connected to rituals and other forms
+                                                    of
+                                                    religious and secular practices. This kind of documentation keeps
+                                                    cultural heritage alive. While connecting heritage sites through the
+                                                    heritage walks, we are able to present you with thematic approaches
+                                                    that
+                                                    enable a different understanding of the rich and dynamic heritage in
+                                                    and
+                                                    of Nepal.
+                                                </p>
+                                                <p class="text-justify">
+                                                    The combination of data from DANAM, mappings, satellite images and
+                                                    detailed descriptions permits a virtual discovery of the selected
+                                                    cultural rituals, spaces and locations. Allowing to locate yourself
+                                                    in
+                                                    the map on your mobile device, the walks can be retraced and
+                                                    information
+                                                    on monuments and rituals can be queried on-site.
+                                                </p>
+                                                <div class="divider divider-small divider-small-center">
+                                                    <hr>
+                                                </div>
+                                                <a href="https://nepalheritage.app/" target="_blank"
+                                                    rel="noopener noreferrer">
+                                                    <button class="btn btn-quaternary mr-1 mb-4" type="button">Learn
+                                                        More</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </section>
+
+
+            <section class="section pb-1 ">
+                <div class="container pb-2 ">
+                    <div class="row pt-0">
+                        <div class="col">
+                            <h2 class="text-color-dark font-weight-normal text-6 mb-2"><strong
+                                    class="font-weight-extra-bold">Funding </strong>partner</h2>
+                        </div>
+                    </div>
+                    <div class=" col-md-auto mb-md-0 mt-5 mt-lg-2 pl-1">
+                        <div class="content-grid">
+                            <div class="row content-grid-row pl-3 pr-3 ">
+                                <div class=" content-grid-item col-sm-12 col-md-auto mb-md-0">
+                                    <a rel="noopener noreferrer" href="https://www.arcadiafund.org.uk/" target="_blank">
+                                        <img class="img-fluid object-fit"
+                                            src="{% static '/img/partners/arcadia.webp' %}" alt=""
+                                            style="height: 75px !important; max-width: 100% !important;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="container">
+                    <div class="row pt-2">
+                        <div class="col">
+                            <h2 class="text-color-dark font-weight-normal text-6 mb-2 mr-2"><strong
+                                    class="font-weight-extra-bold">Cooperation</strong> partners</h2>
+                        </div>
+                    </div>
+                    <div class="row mb-2 pb-0">
+                        <div class="col">
+                            <div class="content-grid">
+                                <div class="row content-grid-row pl-3 pr-3">
+                                    <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                                        <a href="https://www.uni-heidelberg.de/en" target="_blank">
+                                            <img src="{% static '/img/partners/logo_uni_fp2.gif' %}" alt
+                                                class="img-fluid" style="height: 84px; width: auto;" />
+                                        </a>
+                                    </div>
+                                    <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                                        <a href="http://www.asia-europe.uni-heidelberg.de/en/hcts.html" target="_blank">
+                                            <img src="{% static '/img/partners/logo_cluster_fp2.png' %}" alt
+                                                class="img-fluid" style="height: 45px; width: auto;" />
+                                        </a>
+                                    </div>
+                                    <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                                        <a href="https://www.hadw-bw.de/" target="_blank">
+                                            <img src="{% static '/img/partners/hadw.png' %}" alt class="img-fluid"
+                                                style="height: 46px; width: auto;" />
+                                        </a>
+                                    </div>
+                                    <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                                        <a href="http://www.doa.gov.np/" target="_blank">
+                                            <img src="{% static '/img/partners/Doalogo.png' %}" alt class="img-fluid"
+                                                style="height: 125px; width: auto;" />
+                                        </a>
+                                    </div>
+                                    <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                                        <a href="http://thesaraffoundation.org/" target="_blank">
+                                            <img src="{% static '/img/partners/SF02.png' %}" alt class="img-fluid"
+                                                style="height: 60px; width: auto;" />
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container pb-2 ">
+                    <div class="row pt-4">
+                        <div class="col">
+                            <h2 class="text-color-dark font-weight-normal text-6 mb-2"><strong
+                                    class="font-weight-extra-bold">Network</strong> of partners</h2>
+                        </div>
+                    </div>
+                    <div class="row mb-5 pb-4">
+                        <div class="col">
+                            <div class="content-grid">
+                                <div class="row content-grid-row pl-3 pr-3">
+                                    <!-- <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                                        <a href=" https://i3mainz.hs-mainz.de/" target="_blank">
+                                            <img src="{% static '/img/partners/i3mainz-cropped.png' %}" alt
+                                                class="img-fluid" style="height: 110px; width: auto;" />
+                                        </a>
+                                    </div> -->
+                                    <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                                        <a href="https://kvptnepal.org/" target="_blank">
+                                            <img src="{% static '/img/partners/KVPT_logo-transp-typo-no-border.png' %}"
+                                                alt class="img-fluid" style="height: 113px; width: auto;" />
+                                        </a>
+                                    </div>
+                                    <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                                        <a href="https://www.sai.uni-heidelberg.de/kathmandu/" target="_blank">
+                                            <img src="{% static '/img/partners/sai.png' %}" alt class="img-fluid"
+                                                style="height: 127px; width: auto;" />
+                                        </a>
+                                    </div>
+                                    <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                                        <a href="http://www.unesco.org/new/en/kathmandu/" target="_blank">
+                                            <img src="{% static '/img/partners/unesc.png' %}" alt class="img-fluid"
+                                                style="height: 125px; width: auto;" />
+                                        </a>
+                                    </div>
+                                    <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                                        <a href="https://www.ub.uni-heidelberg.de/Englisch/Welcome.html"
+                                            target="_blank">
+                                            <img src="{% static '/img/partners/LogoUBHei.png' %}" alt class="img-fluid"
+                                                style="height: 115px; width: auto;" />
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        {% include 'partials/footer.htm' %}
+        </div>
+
+        {% include 'partials/javascript.htm' %}
+
+        <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+                <script>
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                
+                    ga('create', 'UA-12345678-1', 'auto');
+                    ga('send', 'pageview');
+                </script>
+                 -->
+    </body>
+
+</html>

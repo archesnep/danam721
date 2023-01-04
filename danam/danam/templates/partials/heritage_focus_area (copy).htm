@@ -1,0 +1,450 @@
+{% load static %}
+{% load template_tags %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Basic -->
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ app_settings.APP_NAME }} - Welcome</title>
+
+    <meta name="keywords" content="NHDP" />
+    <meta name="description" content="Nepal Heritage Documentation Project">
+    <meta name="author" content="NHDP">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
+        rel="stylesheet" type="text/css">
+
+    {% include 'partials/css.htm' %}
+    <link rel="stylesheet" href="{% static 'css/design/vendor/font-awesome/css/font-awesome.min.css' %}">
+</head>
+
+<body data-spy="scroll" data-target="#navSecondary" data-offset="172">
+    <div class="body">
+        {% include "partials/danam_navbar.htm" %}
+        <div role="main" class="main">
+            <section
+                class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5"
+                style="background-image: url({% static 'img/patterns/random_grey_variations.png' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 align-self-center p-static order-2 text-center">
+                            <h1>Heritage Focus Areas</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Heritage Focus Area  -->
+            <section class="section section-height-4 bg-light border-0 mb-0" id="ourprojects">
+                <div class="container container-xl mt-0 load-more-list">
+                    <!-- Featured search row 1-->
+                    <div id="portfolioLoadMoreWrapper" class="row portfolio-list sort-destination mb-1 appear-animation"
+                        data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"
+                        data-sort-id="portfolio" data-total-pages="6"
+                        data-ajax-url="/ajax/demo-architecture-interior-ajax-load-more-">
+
+                        <!-- Bhurit Temple Complex  -->
+                        <div class="col-lg-4 isotope-item mt-0">
+                            <div class="portfolio-item">
+                                <a href="https://danam.cats.uni-heidelberg.de/report/9d323c41-a813-47ab-ac64-352f477ea86c"
+                                    rel="noopener noreferrer" target="_blank" class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="{% static 'img/feature_search/Bhurti_H_20140924.webp' %}"
+                                                class="img-fluid" alt="">
+                                            <span class="thumb-info-title text-left">
+                                                <span
+                                                    class="thumb-info-inner font-weight-bold line-height-1 text-4 mb-3">
+                                                    Bhurtī Temple Complex
+                                                </span>
+                                                <span
+                                                    class="thumb-info-type text-transform-none text-justify font-weight-light text-2 line-height-7 pr-xl-5 mr-5">
+                                                    The Bhurtī temple complex is located 3 km north of
+                                                    Nārāyaṇa, the Dailekh district headquarter. It
+                                                    currently comprises 22 standing śikhara temples (or
+                                                    devala) and one stone fountain. Architectural
+                                                    activity at the site can be situated between the
+                                                    13th and 15th century, a time period corresponding
+                                                    to the latter part of the Khaśa Malla empire and the
+                                                    early phase of the Rāskoṭi dynasty. In 2008, the
+                                                    “Bhurti Temple Complex of Dailekh” was enlisted on
+                                                    UNESCO’s World Heritage Tentative List by the
+                                                    Government of Nepal (criteria ii and iv).
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="thumb-info-caption mt-0 mb-0">
+                                            <span class="thumb-info-caption-text text-center">Bhurtī Temple
+                                                Complex</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Patan Durbar Square  -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="https://danam.cats.uni-heidelberg.de/report/85bbad4c-4f0f-4a8f-b5ce-54d3c12a5587"
+                                    target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="{% static 'img/feature_search/patan_durbar.webp' %}"
+                                                class="img-fluid" alt="">
+                                            <span class="thumb-info-title text-left">
+                                                <span
+                                                    class="thumb-info-inner font-weight-bold line-height-1 text-4 mb-3">Patan
+                                                    Durbar Square
+                                                </span>
+                                                <span
+                                                    class="thumb-info-type text-transform-none text-justify font-weight-light text-2 line-height-7 pr-xl-5 mr-5">
+                                                    Patan Durbar Square is the heart of the old town of Lalitpur and
+                                                    one of three royal
+                                                    squares in the Kathmandu Valley, all of which are declared
+                                                    UNESCO World Heritage
+                                                    Sites. One of its attractions is the ancient Royal Palace
+                                                    where the Malla Kings of Lalitpur resided. NHDP has documented
+                                                    many previously
+                                                    undocumented monuments located at this Square.
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="thumb-info-caption mt-0 mb-0">
+                                            <span class="thumb-info-caption-text text-center">Patan Durbar Square</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Sinja Valley -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="https://danam.cats.uni-heidelberg.de/report/a58d1b3e-67f4-47f1-afba-e5550c0b5e05"
+                                rel="noopener noreferrer" target="_blank"
+                                class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="{% static 'img/feature_search/sinja.webp' %}" class="img-fluid"
+                                                alt="">
+                                            <span class="thumb-info-title text-left">
+                                                <span
+                                                    class="thumb-info-inner font-weight-bold line-height-1 text-4 mb-3">
+                                                    Sinja Valley
+                                                </span>
+                                                <span
+                                                    class="thumb-info-type text-transform-none text-justify font-weight-light text-1 line-height-7 pr-xl-5 mr-lg-5">
+                                                    The Sinja Valley is located in West Nepal, in the Jumla
+                                                    district. The Sinja river runs through
+                                                    the valley before joining the flows of the Karnali in Kalikot
+                                                    district. The area is marked by
+                                                    stunning sceneries of fertile paddy fields, a preserved
+                                                    vernacular architecture and a number
+                                                    of heritage sites. The landscape is dotted by medieval stone
+                                                    pillars, śikhara temples and
+                                                    fountains. Close to the village of Haṭ Sinja is the site of a
+                                                    ruined medieval fortress often
+                                                    identified as Yatse (Ya rtse), the capital of the Khaśa Malla
+                                                    empire (12 th -14 th century).
+                                                    In 2008, the Sinja Valley was enlisted on UNESCO’s World
+                                                    Heritage Tentative List by the
+                                                    Government of Nepal (criteria ii and iii).
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="thumb-info-caption mt-0 mb-0">
+                                            <span class="thumb-info-caption-text text-center">Sinja Valley</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!---Featured search row 2 -->
+                    <div id="portfolioLoadMoreWrapper" class="row portfolio-list sort-destination mb-1 appear-animation"
+                        data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"
+                        data-sort-id="portfolio" data-total-pages="6"
+                        data-ajax-url="ajax/demo-architecture-interior-ajax-load-more-">
+                        
+                         <!-- kirtipur area -->
+                         <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="https://danam.cats.uni-heidelberg.de/report/a53d02a0-6fe5-4ba1-aae2-305aed7f00c9"
+                                rel="noopener noreferrer" target="_blank"
+                                class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="{% static 'img/feature_search/kirtipur.webp' %}" class="img-fluid"
+                                                alt="">
+                                            <span class="thumb-info-title text-left">
+                                                <span
+                                                    class="thumb-info-inner font-weight-bold line-height-1 text-1 mb-3">Kirtipur</span>
+                                                <span
+                                                    class="thumb-info-type text-transform-none text-justify font-weight-light text-1 line-height-7 pr-xl-5 mr-lg-5">
+                                                    Kirtipur, an old Newar settlement of the Kathmandu Valley is
+                                                    believed to be founded by King Sadāśivadeva (ca. 1099-1126 CE).
+                                                    The citizens of this ancient Newar city have engaged in preserving
+                                                    the rich tangible and intangible heritage sites that have been
+                                                    included in the ‘World Heritage List Nominations’ by UNESCO.
+                                                    The city, with its numerous temples, stūpas, caityas or arcaded
+                                                    platforms, dynamised by several impressive processions, festivals
+                                                    and other cultural activities, is a remarkable repository of
+                                                    cultural heritage from Nepal.
+                                                    Kirtipur hosts the unique Bāghabhairava temple, Cilincva Caitya and
+                                                    Umāmaheśvara temple.
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="thumb-info-caption mt-0 mb-0">
+                                            <span class="thumb-info-caption-text text-center">Kirtipur</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Sunaguthi  -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="https://danam.cats.uni-heidelberg.de/report/00a71d7f-01f6-4b80-8c0b-865423948d37"
+                                rel="noopener noreferrer" target="_blank"
+                                class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="{% static 'img/feature_search/suanaguthi.webp' %}"
+                                                class="img-fluid" alt="">
+                                            <span class="thumb-info-title text-left">
+                                                <span
+                                                    class="thumb-info-inner font-weight-bold line-height-1 text-4 mb-3">Sunaguthi</span>
+                                                <span
+                                                    class="thumb-info-type text-transform-none text-justify font-weight-light text-2 line-height-7 pr-xl-5 mr-5">
+                                                    The Newar settlement of Sunaguthi, located c. 6 km south of
+                                                    Patan, is remarkably rich in its largely undocumented tangible
+                                                    and intangible heritage. Particularly the attempt to widen the
+                                                    main road where many of the heritage sites lie, has led to their
+                                                    extremely endangered status. NHDP has begun to document some of
+                                                    those vulnerable sites for a case-study – some of them are
+                                                    already online, please take a look (here).
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="thumb-info-caption mt-0 mb-0">
+                                            <span class="thumb-info-caption-text text-center">Sunaguthi</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- From doucmenataion to reconstruction  -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="{% url 'search_home' %}?paging-filter=1&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%2228294946-9323-11e9-bf23-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%2228294784-9323-11e9-bf23-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22LAL4100%22%7D%7D%2C%7B%22op%22%3A%22or%22%2C%2228294946-9323-11e9-bf23-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%2228294784-9323-11e9-bf23-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22SUN4200%22%7D%7D%5D"
+                                rel="noopener noreferrer" target="_blank"
+                                class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="{% static 'img/feature_search/documentation_reconstruction.webp' %}"
+                                                class="img-fluid" alt="">
+                                            <span class="thumb-info-title text-left">
+                                                <span
+                                                    class="thumb-info-inner font-weight-bold line-height-1 text-4 mb-3">
+                                                    From documentation to reconstruction
+                                                </span>
+                                                <span
+                                                    class="thumb-info-type text-transform-none text-justify font-weight-light text-2 line-height-7 pr-xl-5 mr-lg-5">
+                                                    In very few selected cases, NHDP documents projects of
+                                                    community-based reconstruction of previously (and still)
+                                                    endangered heritage sites through close-up documentation. These
+                                                    will be helpful for further attempts of local groups to salvage
+                                                    endangered sites and be inspired as well as informed about
+                                                    possibilities of transforming endangered heritage into hopefully
+                                                    sustained sites in use. We start with two arcaded resthouses
+                                                    (phalca): LAL4100 and SUN4200.
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="thumb-info-caption mt-0 mb-0">
+                                            <span class="thumb-info-caption-text text-center">From Documentation to
+                                                reconstruction</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- feature search row 3 -->
+                    <div id="portfolioLoadMoreWrapper" class="row portfolio-list sort-destination mb-1 appear-animation"
+                        data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"
+                        data-sort-id="portfolio" data-total-pages="6"
+                        data-ajax-url="ajax/demo-architecture-interior-ajax-load-more-">
+
+                        <!-- Bungamati  -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="https://danam.cats.uni-heidelberg.de/report/8e2b2c0e-3970-418f-897c-226e63356b88"
+                                rel="noopener noreferrer" target="_blank"
+                                class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="{% static 'img/feature_search/bungmati.webp' %}" class="img-fluid"
+                                                alt="">
+                                            <span class="thumb-info-title text-left">
+                                                <span
+                                                    class="thumb-info-inner font-weight-bold line-height-1 text-4 mb-3">Bungamati</span>
+                                                <span
+                                                    class="thumb-info-type text-transform-none text-justify font-weight-light text-2 line-height-7 pr-xl-5 mr-lg-5">
+                                                    Located south of Patan, Bungamati is an important settlement for
+                                                    intangible and tangible heritage. The predominantly Newar town’s
+                                                    historical core has been heavily damaged by the 2015
+                                                    earthquakes. Nearly two thirds of the houses have been damaged
+                                                    or destroyed, many heritage monuments collapsed or are still
+                                                    endangered, including the temple of the main deity. Please take a
+                                                    look for the first documented monuments here....
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="thumb-info-caption mt-0 mb-0">
+                                            <span class="thumb-info-caption-text text-center">Bungamati</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Ikalalkhu -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="{% url 'search_home' %}?paging-filter=1&term-filter=%5B%7B%22context%22%3A%22%22%2C%22context_label%22%3A%22Monument%20-%20Locations%22%2C%22id%22%3A0%2C%22text%22%3A%22Ikh%C4%81lakhu%22%2C%22type%22%3A%22term%22%2C%22value%22%3A%22Ikh%C4%81lakhu%22%2C%22inverted%22%3Afalse%7D%5D&map-filter=%7B%22type%22%3A%22FeatureCollection%22%2C%22features%22%3A%5B%7B%22id%22%3A%2205caf14db1354c13e3ba66cd94b80d6a%22%2C%22type%22%3A%22Feature%22%2C%22properties%22%3A%7B%22inverted%22%3Afalse%2C%22buffer%22%3A%7B%22width%22%3A%2250%22%2C%22unit%22%3A%22m%22%7D%7D%2C%22geometry%22%3A%7B%22coordinates%22%3A%5B%5B%5B85.32315115478087%2C27.672650763709115%5D%2C%5B85.32360840200175%2C27.672558920430262%5D%2C%5B85.32409864643427%2C27.672195721267883%5D%2C%5B85.32376867421436%2C27.671611260312716%5D%2C%5B85.32308516034033%2C27.671486018270002%5D%2C%5B85.32232151035129%2C27.672091353465916%5D%2C%5B85.32235922146009%2C27.672546396341815%5D%2C%5B85.3226561964683%2C27.67278435378398%5D%2C%5B85.32315115478087%2C27.672650763709115%5D%5D%5D%2C%22type%22%3A%22Polygon%22%7D%7D%5D%7D"
+                                rel="noopener noreferrer" target="_blank"
+                                class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="{% static 'img/feature_search/Ikalakhu.webp' %}" class="img-fluid"
+                                                alt="">
+                                            <span class="thumb-info-title text-left">
+                                                <span
+                                                    class="thumb-info-inner font-weight-bold line-height-1 text-4 mb-3">Ikalakhu</span>
+                                                <span
+                                                    class="thumb-info-type text-transform-none text-justify font-weight-light text-2 line-height-7 pr-xl-5 mr-5">
+                                                    Despite being of less geographical scale, Ikhalakhu is special
+                                                    because of its density of important Buddhist monasteries and
+                                                    temples. For example, the Trilingesvara Mahadeva temple has
+                                                    unique architectural features as well as an inscription from 379
+                                                    CE, mentioning King Vasantadeva. 14 additional previously
+                                                    undocumented monuments have been entered into DANAM.
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="thumb-info-caption mt-0 mb-0">
+                                            <span class="thumb-info-caption-text text-center">Ikalakhu</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Pimbahal -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a  href="{% url 'pimbahal' %}" rel="noopener noreferrer"
+                                target="_blank" class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="{% static 'img/feature_search/pimbahal.webp' %}" class="img-fluid"
+                                                alt="Pimbahal">
+                                            <span class="thumb-info-title text-left">
+                                                <span
+                                                    class="thumb-info-inner font-weight-bold line-height-1 text-4 mb-3">Pimbahal</span>
+                                                <span
+                                                    class="thumb-info-type text-transform-none text-justify font-weight-light text-2 line-height-7 pr-xl-5 mr-5">
+                                                    Pimbahal is a unique part of Patan’s urban heritage and dynamic
+                                                    life, with a high condensation of sites used for social,
+                                                    religious, economic and cultural purposes. It has a vibrant
+                                                    political and cultural history and life that also manifests in
+                                                    its larger ensemble of monuments, and intangible heritage.
+                                                </span>
+                                                <span
+                                                    class="text-transform-none font-weight-light text-2 btn btn-xs btn-primary float-left mt-2">Read
+                                                    more...</span>
+                                            </span>
+                                        </span>
+                                        <span class="thumb-info-caption mt-0 mb-0">
+                                            <span class="thumb-info-caption-text text-center">Pimbahal</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>    
+                    </div>
+                    <!-- end of feature search row 3 -->
+
+                    <!-- feature search row 4  -->
+
+                    <div id="portfolioLoadMoreWrapper" class="row portfolio-list sort-destination mb-1 appear-animation"
+                        data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"
+                        data-sort-id="portfolio" data-total-pages="6"
+                        data-ajax-url="ajax/demo-architecture-interior-ajax-load-more-">
+
+                        <!-- Cyāsal  -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="{% url 'cyasal' %}" rel="noopener noreferrer"
+                                target="_blank" class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="{% static 'img/feature_search/cyasal.webp' %}" class="img-fluid"
+                                                alt="cyasal">
+                                            <span class="thumb-info-title text-left">
+                                                <span
+                                                    class="thumb-info-inner font-weight-bold line-height-1 text-4 mb-3">Cyāsal</span>
+                                                <span
+                                                    class="thumb-info-type text-transform-none text-justify font-weight-light text-2 line-height-7 pr-xl-5 mr-5">
+                                                    Cyāsal is one of the few large open areas in the densely built
+                                                    old city of Patan. It is a remarkable habitat of both Newar
+                                                    urban cultural heritage and modern facets. Several Licchavi
+                                                    period stone inscriptions found here traces back its history to
+                                                    ancient period.
+                                                </span>
+                                                <span
+                                                    class="text-transform-none font-weight-light text-2 btn btn-xs btn-primary float-left mt-2">Read
+                                                    more...</span>
+                                            </span>
+                                        </span>
+                                        <span class="thumb-info-caption mt-0 mb-0">
+                                            <span class="thumb-info-caption-text text-center">Cyāsal</span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of feature Search row 4  -->
+                </div>
+                <!-- end of feature search -->
+            </section>
+            {% include 'partials/footer.htm' %}
+            {% include 'partials/javascript.htm' %}
+</body>
+
+</html>

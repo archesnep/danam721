@@ -1,0 +1,125 @@
+{% load static %}
+{% load template_tags %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ app_settings.APP_NAME }} - News</title>
+
+    <meta name="keywords" content="DANAM NEWS" />
+    <meta name="description" content="Nepal Heritage Documentation Project">
+    <meta name="author" content="NHDP">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+
+    <!-- Vendor CSS -->
+    {% include 'partials/css.htm' %}
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
+        rel="stylesheet" type="text/css">
+
+
+    <!-- Head Libs -->
+    <script src="{% static 'js/vendor/modernizr/modernizr.min.js' %}"></script>
+
+</head>
+
+<body>
+
+    <div class="body">
+        {% include 'partials/danam_navbar.htm' %}
+        <div role="main" class="main">
+            <section
+                class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5"
+                style="background-image: url({% static 'img/patterns/wild_oliva.png' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 align-self-center p-static order-2 text-center">
+                            <h1 class="font-weight-bold text-8">Danam News</h1>
+                            <span class="sub-title">Check out our Latest News!</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col">
+                        <div class="blog-posts single-post">
+                            <article class="post post-large blog-single-post border-0 m-0 p-0">
+                                <div class="post-date ml-0">
+                                    <span class="day">16</span>
+                                    <span class="month">September</span>
+                                </div>
+                                <div class="post-content ml-0">
+                                    <h2 class="font-weight-bold"><a href="#">New Project on the Anthropology of
+                                            Inscriptions in the Kathmandu Valley</a></h2>
+                                    <div class="post-meta">
+                                        <span><i class="far fa-user"></i> By <a href="#">NHDP</a> </span>
+                                    </div>
+                                    <p>
+                                        Christiane Brosius and Astrid Zotter receive a nine-month seed funding for a new
+                                        project on the “Anthropology of Inscriptions: Memory and Cultural Heritage in
+                                        the Public Sphere” within the frame of the Flagship Initiative “Transforming
+                                        Cultural Heritage”, which Simon Cubelic will also join as research fellow. The
+                                        rich inscription heritage of Kathmandu Valley dates back to the 2nd century AD.
+                                        Up to the present day, inscriptions are omnipresent in Nepal’s religious and
+                                        public life. Written artefacts in Sanskrit, Newari and Nepali language recording
+                                        grants, donations or the establishment of trusts are found on temples, shrines,
+                                        wells and rest houses alike. Due to the rapid urbanization, infrastructure
+                                        development or natural disasters many inscriptions are currently highly
+                                        endangered. Nowadays, NGOs, (inter-)national institutions or private donors
+                                        sponsoring the preservation of heritage sites add to Nepal’s epigraphical
+                                        tradition through the installation of commemorative plaques.
+                                    </p>
+                                    <p>
+                                        The project aims at investigating the crucial role inscriptions, graffiti or
+                                        other publicly displayed media of a written communication has played for the
+                                        construction of spaces, identities and collective memory in the Kathmandu
+                                        Valley. A selected corpus of inscriptions from the 15th century to the present
+                                        will be documented, edited and published in digital form in close collaboration
+                                        with the Nepal Heritage Documentation Project (NHDP), the Research Unit
+                                        “Documents on the History of Religion and Law of Premodern Nepal” (HAdW) and the
+                                        University Library Heidelberg. Textual data will be enriched by meta- and
+                                        normdata and linked with digitally available ethnographic material (videos, oral
+                                        histories, maps), monument documentations or archival sources they are related
+                                        to. By drawing on methods from Visual Anthropology and Philology, the
+                                        inscriptions will be studied from an interdisciplinary and transtemporal
+                                        perspective: as images and texts; as sediments of past meaning and sites of
+                                        contemporary struggles; as historical objects embedded in monument sites, but
+                                        also as literate practices through which ritual and festive activity is
+                                        connected to heritage scapes. Thereby the project wants not only to contribute
+                                        to a better understanding of the linkage between tangible and intangible
+                                        heritage, but also to interrogate the concept of cultural heritage by opening it
+                                        up for local notions from the past and present.
+                                    </p>
+                                    <p>
+                                        This project will greatly enhance the work for NHDP, and we hope that the
+                                        interaction between the two will contribute to shared aim of preserving Nepal’s
+                                        cultural heritage and compiling an openly accessible database for the current
+                                        and future generations of researchers and enthusiasts.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'partials/javascript.htm' %}
+</body>
+
+</html>

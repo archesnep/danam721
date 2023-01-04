@@ -1,0 +1,126 @@
+{% extends 'news/base.htm' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<div class="body">
+    {% include 'partials/danam_navbar.htm' %}
+
+    <div role="main" class="main">
+
+        <section
+            class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5"
+            style="background-image: url({% static 'img/patterns/random_grey_variations.png' %});">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12 align-self-center p-static order-2 text-center">
+
+                        <h1 class=" font-weight-bold text-8">NHDP News</h1>
+                        <span class="sub-title ">Check out our Latest News!</span>
+                    </div>
+
+                    <div class="col-md-12 align-self-center order-1">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container py-4">
+            <div class="row">
+                <div class="col">
+                    <div class="blog-posts">
+                        <section class="timeline">
+                            <div class="timeline-body">
+                                {% for post in posts %}
+                                {% if post.created_date|date:'d'|divisibleby:"2" %}
+                                <article class="timeline-box left post post-medium">
+                                    {% else %}
+                                    <article class="timeline-box right post post-medium">
+                                        {% endif %}
+                                        <div class="timeline-box-arrow"></div>
+                                        <div class="p-2">
+                                            <div class="row mb-2">
+                                                <div class="col">
+                                                    <div class="post-image">
+                                                        <div class="owl-carousel owl-theme show-nav-hover dots-inside nav-inside nav-style-1 nav-light mb-0"
+                                                            data-plugin-options="{'items': 1, 'margin': 10, 'loop': false, 'nav': true, 'dots': true}">
+                                                            {% for i in post.images.all %}
+                                                            {% if i.image %}
+                                                            <div>
+                                                                <div class="img-thumbnail border-0 p-0 d-block">
+                                                                    <img class="img-fluid border-radius-0" src="{{ i.image.url }}"
+                                                                     alt="{{i.image.name}}" height="300" >
+                                                                </div>
+                                                            </div>
+                                                            {% endif %}
+                                                            {% endfor %}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>   
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="post-content text-justify">
+                                                        <h2 class="font-weight-semibold text-5 line-height-4 mt-0 mb-0">
+                                                            <a
+                                                                href="{{ post.get_absolute_url }}">{{ post.title|capfirst }}</a>
+                                                        </h2>
+                                                        <p>{{ post.content|safe|truncatechars:300 }}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="post-meta">
+                                                        <span><i class="far fa-calendar-alt"></i> {{ post.created_date|date:"D-M-Y" }}<br>
+                                                        </span><br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <a href="{{ post.get_absolute_url }}"
+                                                        class="btn btn-primary btn-md">Read
+                                                        More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    {% endfor %}
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <ul class="pagination">
+                {% if post.has_previous %}
+                <li class="page-item">
+                    <a href="?page={{ posts.previous_page_number }}" class="page-link">&laquo;</a>
+                </li>
+                {% endif %}
+
+                {% for p in page_range %}
+                {% if post.number == p %}
+                <li class="page-item active">
+                    <a href="?page={{ p }}" class="page-link">{{ p }}</a>
+                </li>
+                {% else %}
+                <li class="page-item">
+                    <a href="?page={{ p }}" class="page-link">{{ p }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+
+                {% if post.has_next %}
+                <li class="page-item">
+                    <a href="?page={{ posts.next_page_number }}" class="page-link">&raquo;</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

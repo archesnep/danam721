@@ -1,0 +1,45 @@
+{% extends 'news/base.htm' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% block title %}{{ post.title }}|Edit{% endblock %}
+{% block content %}
+<div class="body">
+  {% include 'news/alerts.htm' %}
+  {% include 'partials/danam_navbar.htm' %}
+  <div role="main" class="main">
+    <section
+      class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5"
+      style="background-image: url({% static 'img/patterns/wild_oliva.png' %});">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 align-self-center p-static order-2 text-center">
+            <h1 class="font-weight-bold text-8">Danam News</h1>
+            <span class="sub-title">Check out our Latest News!</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container pb-5">
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.title|as_crispy_field}}
+        {{form.body|as_crispy_field}}
+        <div class="form-row">
+          <div class="form-group col-md-2 pr-5 mb-0">
+            {{form.author|as_crispy_field}}
+          </div>
+          <div class="form-group col-md-2 mb-0">
+            {{form.status|as_crispy_field}}
+          </div>
+        </div>
+        {{ formset.management_form }}
+        {% for form in formset %}
+        {{ form|crispy }}
+        {% endfor %}
+        <input type="submit" value="Update" class="btn btn-outline-success mt-5">
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

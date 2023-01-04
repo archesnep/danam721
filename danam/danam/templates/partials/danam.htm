@@ -1,0 +1,237 @@
+{% load static %}
+{% load template_tags %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Basic -->
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ app_settings.APP_NAME }} - Welcome</title>
+
+    <meta name="keywords" content="NHDP" />
+    <meta name="description" content="Nepal Heritage Documentation Project">
+    <meta name="author" content="NHDP">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
+        rel="stylesheet" type="text/css">
+
+    {% include 'partials/css.htm' %}
+    <!-- Default css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/skins/default.css' %}">
+</head>
+
+<body data-spy="scroll" data-target="#navSecondary" data-offset="172">
+    <div class="body">
+        {% include "partials/danam_navbar.htm" with extra_links='partials/monument-link.htm' %}
+
+        <div class="container py-1">
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <aside class="sidebar" id="sidebar" data-plugin-sticky
+                        data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}">
+
+                        <h5 class="font-weight-normal">Categories</h5>
+                        <ul class="nav nav-list flex-column mb-5">
+                            <li class="nav-item">
+                                <a class="nav-link" data-hash data-hash-offset="95" href="#first">
+                                    {% trans "DANAM" %}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-hash data-hash-offset="95" href="#second">
+                                    {% trans "DANAM ACCOMPLISHMENTS" %}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-hash data-hash-offset="95" href="#third">
+                                    {% trans "THE AIMS OF DANAM" %}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-hash data-hash-offset="95" href="#fourth">
+                                    {% trans "THE STRUCTURE OF DANAM" %}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-hash data-hash-offset="95" href="#fifth">
+                                    {% trans "USING DANAM" %}
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="col-lg-9 text-justify">
+                    {# first menu #}
+                    <p class="font-weight-normal text-5 mb-2 lead mb-1" id="first">
+                        DATABASE
+                    </p>
+                    <p class="text-justify">DANAM, the Digital Archive of Nepalese Arts and Monuments, is the database
+                        of the Nepal Heritage Documentation Project. All of its content is available to the public for
+                        free and can be accessed online. Datasets in DANAM include structured information about the
+                        monuments’ histories, object details, anthropological data on religious and social activities,
+                        architectural details, maps, plans and drawings. The database offers photographic documentation
+                        of inscriptions, monument objects and monument views, and if possible, documentation of social
+                        and religious activities. Almost every general description is available in both English and
+                        Nepali. We also provide references to scholarly documentation whenever possible, either for
+                        further interest or as sources for our documentation or historical research.
+                    </p>
+                    <p>
+                        DANAM is based on Arches (V4), an open source graph technology platform designed for managing
+                        cultural heritage repositories. Its content is shareable and interoperable, thus guaranteeing
+                        long-term access, sufficient storage and the smooth usability of the monument data inventory.
+                    </p>
+                    <p>
+                        To use DANAM, please <a href="{% url 'search_home' %}">click here</a>. We do however advise that
+                        you first take a look at the
+                        information below. Please also note that DANAM is currently under development and is
+                        continuously being updated and reviewed.
+                    </p>
+                    <p>
+                        When using any of the information or images from this website in academic publications, print,
+                        or elsewhere on the internet, please reference: Christiane Brosius and Axel Michaels (Eds.),
+                        Nepal Heritage Documentation Project (https://nhdp-test.kjc.uni-heidelberg.de/), last accessed:
+                        dd/mm/yyyyy
+                    </p>
+                    {# Second Menu #}
+                    <p class="font-weight-normal text-5 mb-2 lead mb-1" id="second">
+                        DANAM ACCOMPLISHMENTS (Monthly updated)
+                    </p>
+                    <section class="section bg-color-light custom-padding-3 border-0 my-0">
+                        <div class="container">
+                            <div class="row counters pb-2 mb-5">
+                                <div class="col-md-4 mb-5 mb-lg-0">
+                                    <div class="counter">
+                                        <strong class="font-weight-normal text-color-dark custom-fontsize-4 mb-3"
+                                            data-to="{{ m_count }}"><p>{{ m_count }}</p></strong>
+                                        <label class="font-weight-normal custom-fontsize-5 px-5">Built Monuments</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-lg-0">
+                                    <div class="counter">
+                                        <strong class="font-weight-normal text-color-dark custom-fontsize-4 mb-3"
+                                            data-to= "{{ o_count }}" data-append="+">{{o_count }}</strong>
+                                        <label class="font-weight-normal custom-fontsize-5 px-5">Objects (statues,
+                                            images, ritual paraphernalia)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-sm-0">
+                                    <div class="counter">
+                                        <strong class="font-weight-normal text-color-dark custom-fontsize-4 mb-3"
+                                            data-to="1600" data-append="+">0</strong>
+                                        <label class="font-weight-normal custom-fontsize-5 px-5">Inscriptions</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    {# Third Menu #}
+                    <p class="font-weight-normal text-5 mb-2 lead mb-1" id="third">
+                        THE AIMS OF DANAM
+                    </p>
+                    <p>
+                        Nepal, and especially the Kathmandu Valley, is historically and culturally unique and
+                        substantially endangered. Rapid urban transformation and development, as well as damage caused
+                        by the two earthquakes of 2015 have caused many of its monuments to disappear over the past two
+                        to three decades. Worryingly, heritage experts anticipate that as much as an additional 50% may
+                        vanish in the coming two decades. The main goal of the Nepal Heritage Documentation Project is
+                        therefore to produce a close to comprehensive inventory that helps to capture the endangered and
+                        previously undocumented built heritage of Nepal, with a strong focus on the Kathmandu Valley. In
+                        doing so, we hope to contribute to creating awareness and knowledge of Nepal’s rich past. More
+                        than that, however, we also wish to highlight the heritage that is still there and to serve as
+                        resource for future generations.
+                    </p>
+                    {# Fourth Menu #}
+                    <p class="font-weight-normal text-5 mb-2 lead mb-1" id="fourth">
+                        THE STRUCTURE OF DANAM
+                    </p>
+                    <p><b>Data Entry Status:</b> gives you an idea of the progress of the data Input</p>
+                    <p><b>Identifier:</b> Pruscha refers to Carl Pruscha’s monumental Kathmandu Valley: The preservation
+                        of physical environment and cultural heritage, protective inventory, Vienna: Schroll, 1975
+                        (Reprint Kathmandu 2015)</p>
+                    <p><b>Maps, Plans & Drawings:</b> Location Maps of Patan are mostly based on Bijay Basukala’s and
+                        Niels Gutschow’s map of Patan (1990) but have been updated. For Sunaguthi, we have used a ap of
+                        the Road and Transport Department and Bungamati has been mapped on a survey of Danish students
+                        and faculty in 1968.</p>
+                    <p><b>Descriptions:</b> This section summarises architectural, (art) historical and anthropological
+                        information, as well as any peculiarities.</p>
+                    <p><b>Damages & Threats:</b> this section is not a detailed condition assessment but lists the most
+                        urgent damages and threats to the monuments. If possible, photographs are added for further
+                        documentation (in the section ‘Monument images after 2015’).</p>
+                    <p><b>Images:</b> Almost all photos after 2015 have been made by our team members. The photographer
+                        will be acknowledged in a more advanced version together with more metadata. Historical photos
+                        are those that have been taken before the earthquakes in 2015. We have also shared materials
+                        from organisations such as <a href="https://kvptnepal.org/" target="_blank">KVPT</a> and <a
+                            href="https://www.nepalpicturelibrary.org/" target="_blank">Nepal Picture Library</a> as
+                        well as individual persons.</p>
+                    <p><b>Monument’s Objects:</b> Only the most important objects (statues, images, caityas, etc.) have
+                        been included here. Other objects associated with the monument (such as yajñakuṇḍas, maṇḍalas,
+                        jaladroṇīs, wells, oil lamps, platforms (dabu/dabali), bells, struts or guardian animals) are
+                        listed only when they are exceptionally interesting, very old, or bear an inscription.
+                    </p>
+                    <p><b>Social & Religious Activities:</b> This section mostly lists events and their agents but not
+                        detailed information of the actors. For the sake of privacy, personal names have only been given
+                        when they are historical and public figures, have been reported in other sources or when the
+                        individuals have agreed that their names are published.</p>
+                    <p><b>Historical Events:</b> Only historical events proven through inscriptions or paper documents
+                        are listed here.</p>
+                    {# Fifth Menu #}
+                    <p class="font-weight-normal text-5 mb-2 lead mb-1" id="fifth">
+                        USING DANAM
+                    </p>
+                    <p><b>Search:</b> The basic search function uses a full-text search of all the material that is
+                        available in the datasets. As of yet it is not possible to sort the monuments alphabetically.
+                    </p>
+                    <p><b>Advanced search:</b> For targeted search queries, the platform offers an advanced search
+                        module with an option to compose specific combinations of filters.</p>
+                    <p><b>Summaries:</b> Short summaries of the monuments are found on the left bar.</p>
+                    <p><b>Location:</b> Street and satellite maps indicate geospatial information of monuments.</p>
+                    <p><b>Data entry status:</b> DANAM is currently under development and its datasets are continuously
+                        reviewed and completed. If in a very preliminary state, we have added ‘work in progress’ to the
+                        description panel.</p>
+                    <p><b>Glossary:</b> For terms in indigenous languages still require standardization and a glossary
+                        for special terms is currently prepared.</p>
+                    <p><b>References:</b> Bibliographical references to further reports and secondary literature have
+                        been hyperlinked to Zotero.</p>
+                    <p><b>Visuals:</b> All photographs, plans, maps and drawings will be successively stored in
+                        heidICON, the object and multimedia database of Heidelberg University. The project makes use of
+                        this sustainable research data platform to provide additional material for each monument open
+                        access, which can be found there with the monument identification number. All images in this
+                        database and in heidICON are and may be only used for non-commercial documentary, academic or
+                        educational purposes.<br />
+                        Despite all efforts, it has not always been possible to obtain the photographers' permissions
+                        for historical photographs. Whoever feels that his or her rights have been violated, may contact
+                        us, so we can take appropriate measures.<br />
+                        All other photos used in DANAM are by team members of NHDP, mostly Yogesh Budhatoki, Nashib
+                        Kafle and Thomas Schrom. Unless otherwise indicated, the copyrights on all of these photographs
+                        are held by the administration and faculties of the University of Heidelberg. The photographers
+                        and the exact date of photography will be listed in the heidICON database.
+
+                        The photos from H.M.G. Nepal/Carl Pruscha (Kathmandu Valley: The preservation of physical
+                        environment and cultural heritage, protective inventory, Vienna 1975, reprint Kathmandu 2015)
+                        have been predominantly made by Ganesh Man Chitrakar together with Sridhar Lal Manandhar and
+                        Carl Pruscha. Since it is not clear who actually pressed the shutter, we only refer to Pruscha
+                        1975 and the approximate date of photography.
+                    </p>
+                    <iframe width="100%" height="400" src="https://zo-pandora.zo.uni-heidelberg.de/BJF/player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture fullscreen" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        {% include 'partials/javascript.htm' %}
+    </div>
+</body>
+
+</html>

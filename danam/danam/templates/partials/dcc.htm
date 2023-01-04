@@ -1,0 +1,253 @@
+{% load static %}
+{% load template_tags %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ app_settings.APP_NAME }} - Date Conversion Chart</title>
+
+    <meta name="keywords" content="DANAM NEWS" />
+    <meta name="description" content="Nepal Heritage Documentation Project">
+    <meta name="author" content="NHDP">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+
+    <!-- Vendor CSS -->
+    {% include 'partials/css.htm' %}
+    <!-- Theme CSS -->
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
+        rel="stylesheet" type="text/css">
+
+    <!-- Skin CSS -->
+
+
+    <!-- Theme Custom CSS -->
+
+    <!-- Head Libs -->
+    <script src="{% static 'js/vendor/modernizr/modernizr.min.js' %}"></script>
+
+</head>
+
+<body>
+    <div class="body">
+        {% include 'partials/danam_navbar.htm' %}
+        <section
+            class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5"
+            style="background-image: url({% static 'img/patterns/random_grey_variations.png' %});">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 align-self-center p-static order-2 text-center">
+                        <h1 class=" font-weight-bold text-8">Date Conversion Chart</h1>
+                    </div>
+                    <div class="col-md-12 align-self-center order-1">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="table-responsive padding-right: .25rem">
+            <table style="text-align: left;" cellpadding="2" cellspacing="2" class="container table table-bordered">
+                <p class="container">
+                    Below is a table of comparative calendar years of Vikramasamvat and Śaka. it is based on the table
+                    of <a href="#" data-toggle="tooltip"
+                        title="Mary Shepherd Slusser. 1998. Nepal Mandala. A Cultural Study of Kathmandu Valley. Kathmandu: Mandala Book Point (Reprint. 1. ed. 1982, Princeton NJ: Princeton Unicersity Press)">Slusser
+                        1998:</a> 390.
+                </p>
+                <caption>
+                    Some of the months may occur under alternative names, eg. Mārgaśīrṣa as Agahana. <br>
+                    Furthermore, a web based <b>date converter</b> can be found in the link below: <br>
+                    The <a href="http://www.cc.kyoto-su.ac.jp/~yanom/pancanga/" target="_blank">Pancanga</a>
+                </caption>
+                <thead class="thead-light">
+                    <tr>
+                        <th style="vertical-align: top;">Gregorian Year<br>
+                        </th>
+                        <th colspan="2" rowspan="1" style="vertical-align: top;">Vikramasamvat<br>
+                            (begins 57 B.C.)<br>
+                        </th>
+                        <th style="vertical-align: top;">Nepalsamvat<br>
+                            (begins 20 October 879 A.D.)<br>
+                        </th>
+                        <th style="vertical-align: top;">Nepalasamvat</th>
+                        <th style="vertical-align: top;">&#346;aka Era<br>
+                            (begins 78 A.D.)<br>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="vertical-align: top;">April-May<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: rgb(204, 255, 255);">Vai&#347;&#257;kha
+                            (Vais&#257;kha)</td>
+                        <td colspan="1" rowspan="9"
+                            style="vertical-align: top; background-color: rgb(246, 248, 248); text-align: center; border-bottom: .15em solid black;">
+                            -57<br>
+                        </td>
+                        <td style="vertical-align: top;"><br>
+                        </td>
+                        <td colspan="2" rowspan="6" style="vertical-align: top;"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">May-June<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: rgb(204, 255, 255);">Jye&#7779;&#7789;ha
+                            (Je&#7789;ha)<br>
+                        </td>
+                        <td style="vertical-align: top;"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">June-July<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: rgb(204, 255, 255);">
+                            &#256;&#7779;&#257;&#7693;ha (As&#257;ra)<br>
+                        </td>
+                        <td style="vertical-align: top;"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">July-August<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: rgb(204, 255, 255);">&#346;r&#257;va&#7751;a
+                            (S&#257;una)<br>
+                        </td>
+                        <td style="vertical-align: top;"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">August-September<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: rgb(204, 255, 255);">Bh&#257;dra (Bhadau)<br>
+                        </td>
+                        <td style="vertical-align: top;"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">September-October<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: rgb(204, 255, 255);">&#256;&#347;vina
+                            (Asoja)<br>
+                        </td>
+                        <td style="vertical-align: top;"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">October-November<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: rgb(204, 255, 255);">K&#257;rttika
+                            (K&#257;rtika)<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: #ebf1ee;">K&#257;rttika (K&#257;rtika)</td>
+                        <td colspan="1" rowspan="3" style="vertical-align: top; background-color:#c4d79d;">+879<br>
+                        </td>
+                        <td colspan="1" rowspan="3" style="vertical-align: top; background-color: #ffff3e;">+78<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">November-December<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: rgb(204, 255, 255);">
+                            M&#257;rga&#347;&#299;r&#7779;a (Ma&#7749;sira)<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: #ebf1ee;">M&#257;rga&#347;&#299;r&#7779;a
+                            (Ma&#7749;sira)</td>
+                    </tr>
+                    <tr style="border-bottom: .15em solid black;">
+                        <td style="vertical-align: top;">December-January</td>
+                        <td style="vertical-align: top; background-color: rgb(204, 255, 255);">Pau&#7779;a (Pusa)</td>
+                        <td style="vertical-align: top; background-color: #ebf1ee;">Pau&#7779;a (Pusa)</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">December-January<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: rgb(204, 255, 255);">Pau&#7779;a (Pusa)<br>
+                        </td>
+                        <td colspan="1" rowspan="4"
+                            style="vertical-align: top; background-color: rgb(246, 248, 248); text-align: center;">
+                            -56<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: #ebf1ee;">Pau&#7779;a (Pusa)</td>
+                        <td colspan="1" rowspan="8" style="vertical-align: top; background-color:#c4d79d;">+880<br>
+                        </td>
+                        <td colspan="1" rowspan="8" style="vertical-align: top; background-color: #ffff3e;">+79<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">January-February<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: rgb(204, 255, 255);">M&#257;gha<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: #ebf1ee;">M&#257;gha</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">February-March<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: rgb(204, 255, 255);">Ph&#257;lguna
+                            (Ph&#257;guna) <br>
+                        </td>
+                        <td style="vertical-align: top; background-color: #ebf1ee;">Ph&#257;lguna (Ph&#257;guna)</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">March-April<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: rgb(204, 255, 255);">Caitra (Caita)<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: #ebf1ee;">Caitra (Caita)</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">April-May<br>
+                        </td>
+                        <td colspan="1" rowspan="4" style="vertical-align: top;"><br>
+                        </td>
+                        <td colspan="1" rowspan="4" style="vertical-align: top;"><br>
+                        </td>
+                        <td style="vertical-align: top; background-color: #ebf1ee;">Vai&#347;&#257;kha (Vais&#257;kha)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">May-June<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: #ebf1ee;">Jye&#7779;&#7789;ha (Je&#7789;ha)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">June-July<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: #ebf1ee;">&#256;&#7779;&#257;&#7693;ha
+                            (As&#257;ra)</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">July-August<br>
+                        </td>
+                        <td style="vertical-align: top; background-color: #ebf1ee;">&#346;r&#257;va&#7751;a (S&#257;una)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- vendor -->
+        <section class="pt-5">
+            {% include 'partials/javascript.htm' %}
+        </section>
+    </div>
+</body>
+
+</html>

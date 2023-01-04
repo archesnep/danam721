@@ -1,0 +1,105 @@
+{% load static %} {% load template_tags %} {% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Basic -->
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ app_settings.APP_NAME }} - Welcome</title>
+
+    <meta name="keywords" content="NHDP" />
+    <meta name="description" content="Nepal Heritage Documentation Project">
+    <meta name="author" content="NHDP">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css"> {% include 'partials/css.htm' %}
+    <link rel="stylesheet" href="{% static 'css/design/vendor/font-awesome/css/font-awesome.min.css' %}">
+</head>
+
+<body data-spy="scroll" data-target="#navSecondary" data-offset="172">
+    <div class="body">
+        {% include "partials/danam_navbar.htm" with extra_links='partials/monument-link.htm' %}
+        <div role="main" class="main">
+            <section class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5" style="background-image: url({% static 'img/patterns/random_grey_variations.png' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 align-self-center p-static order-2 text-center">
+                            <h1>DANAM Feedback</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container py-1 text-justify">
+                <!-- testomonial section -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="testimonial testimonial-style-3 testimonial-with-quotes">
+                            <blockquote>
+                                <p class="text-color-dark text-4">
+                                    I am extremely grateful to the NHDP project for documenting the Chhayabahal Mattha including very old documents from the Mattha. The Chayabahal Mattha belongs to our family trust and was built in the Malla period (400 years old?) The documentation work
+                                    by NHDP will be extremely useful for our restoration and conservation goals.
+                                </p>
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <div class="testimonial-author-thumbnail">
+                                    <img src="img/clients/client-1.jpg" class="img-fluid rounded-circle" alt="">
+                                </div>
+                                <p><strong>Luna Bharati</strong><span>9.3.2022 (Executive Director, Chhayabahal Mattha
+                                        Foundation)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="testimonial testimonial-style-3 testimonial-with-quotes">
+                            <blockquote>
+                                <p class="text-color-dark text-4">I have so much admiration and respect for your work on Nepal. It will truly be a great honor to study using the DANAM data.
+                                </p>
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <div class="testimonial-author-thumbnail">
+                                    <img src="img/clients/client-1.jpg" class="img-fluid rounded-circle" alt="">
+                                </div>
+                                <p><strong>Prof. Timothy Lubin</strong><span>19.4.2021 (Washington and Lee
+                                        University)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2 mb-2">
+                    <div class="col-lg-6">
+                        <div class="testimonial testimonial-style-3 testimonial-with-quotes">
+                            <blockquote>
+                                <p class="text-color-dark text-4">It is indeed a wonderful project, one that has especially been a valuable reference during the past year. I certainly hope the pilot project will be a success, and that similar work can be extended to all of Nepal's heritage
+                                    sites.
+                                </p>
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <div class="testimonial-author-thumbnail">
+                                    <img src="img/clients/client-1.jpg" class="img-fluid rounded-circle" alt="">
+                                </div>
+                                <p><strong>Suyog Prajapati</strong><span>13.3.21 (State University of New Jersey)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of testimonial section -->
+            </div>
+            {% include 'partials/javascript.htm' %}
+        </div>
+    </div>
+</body>
+
+</html>

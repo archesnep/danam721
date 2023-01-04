@@ -1,0 +1,338 @@
+{% load static %}
+{% load template_tags %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Basic -->
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ app_settings.APP_NAME }} - Welcome</title>
+
+    <meta name="keywords" content="NHDP" />
+    <meta name="description" content="Nepal Heritage Documentation Project">
+    <meta name="author" content="NHDP">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
+        rel="stylesheet" type="text/css">
+
+    {% include 'partials/css.htm' %}
+    <link rel="stylesheet" href="{% static 'css/design/vendor/font-awesome/css/font-awesome.min.css' %}">
+</head>
+
+<body data-spy="scroll" data-target="#navSecondary" data-offset="172">
+    <div class="body">
+        {% include "partials/danam_navbar.htm" with extra_links='partials/monument-link.htm' %}
+
+        <div class="container py-1 text-justify">
+            <h4><strong>Anthropology of Inscriptions:</strong> Memory and Cultural Heritage in the Public Sphere
+            </h4>
+            <div class="row">
+                <div class="col">
+                    <div class="lightbox float-left mr-4"
+                        data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+
+                        <figure class="figure">
+                            <img loading=lazy class="figure-img img-fluid"
+                                src="{% static 'img/K_D_Inscription2.webp' %}" alt="NHDP Inscriptions Project"
+                                width="600" height="auto">
+                            <figcaption class="figure-caption text-1">An inscription on a silver kalaśa from VS 1990
+                                (1933
+                                CE) in which the spirit of Buṅgadyaḥ is transferred when his statue is taken out for
+                                Nhava from the temple in Ta Bahāḥ (photo by Monalisa Maharjan, 2021-04-28)
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <p>
+                        Up to the present day, inscriptions are omnipresent in Nepal’s religious and public life.
+                        Written artefacts in Sanskrit, Newari and Nepali language recording grants, donations or the
+                        establishment of trusts are found on temples, shrines, wells and rest houses alike. Due to
+                        the rapid urbanization, infrastructure development and/or natural disasters many inscriptions
+                        are currently highly endangered.
+                    </p>
+                    <p>
+                        The Project "Anthropology of Inscriptions: Memory and Cultural Heritage in the Public Sphere”
+                        which is funded by the Flagship Initiative “Transforming Cultural Heritage” of Heidelberg
+                        University aims at investigating the crucial role that inscriptions, graffiti and other publicly
+                        displayed media of written communication have played for the construction of spaces, identities,
+                        collective memory and values in the Kathmandu Valley. A selected corpus
+                        of inscriptions will be documented, edited and published in digital form in close
+                        collaboration with the Nepal Heritage Documentation Project (NHDP) and the Research Unit
+                        “Documents on the History of Religion and Law of Premodern Nepal” (HAdW). By drawing on
+                        methods from Visual Anthropology and Philology, the inscriptions will be studied from an
+                        interdisciplinary and transtemporal perspective: as images and texts; as sediments of past
+                        meaning and sites of contemporary struggles; as historical objects embedded in monument
+                        sites, but also as literate practices through which ritual and festive activities are
+                        connected to heritage scapes.
+                    </p>
+                    <!-- <p>
+                        <strong>Principal Investigators:</strong> <a
+                            href="https://danam.cats.uni-heidelberg.de/about_cb/" target="_blank">Prof. Dr. Christiane
+                            Brosius</a>, <a
+                            href="https://www.sai.uni-heidelberg.de/abt/IND/en/mitarbeiter/zotter/zottera.php"
+                            target="_blank">Dr. Astrid Zotter</a>
+                    </p>
+                    <p>
+                        <strong>Research Fellows:</strong> <a
+                            href="https://www.asia-europe.uni-heidelberg.de/de/personen/academic-staff/wissenschaftler-personendetails/persdetail/cubelic.html"
+                            target="_blank">Dr. Simon Cubelic</a>, <a
+                            href="https://danam.cats.uni-heidelberg.de/about_rk/" target="_blank">Dr. Rajan
+                            Khatiwoda</a>,
+                        <a href="https://danam.cats.uni-heidelberg.de/about-manisha-maharjan/" target="_blank">Dr.
+                            Monalisa Maharjan</a> and, <a href="https://danam.cats.uni-heidelberg.de/about_ns/"
+                            target="_blank">Dr. Nutandhar Sharma</a>
+                    </p>
+                    <p>
+                        <strong>Research Assistants:</strong> Julia Meckl, Franz Veit
+                    </p> -->
+                </div>
+            </div>
+            <p>
+                For more information, please see the inaugural issue of <a
+                    href="https://www.cats.uni-heidelberg.de/media/catsarena.html" target="_blank">CATSarena</a>, the
+                newsletter of the Centre for
+                Asian and Transcultural Studies (CATS), page 77.
+            </p>
+            <hr />
+        </div>
+        <div class="container py-1 text-justify">
+            <h4><strong>Heritage as Placemaking:</strong> The Politics of Solidarity and Erasure in South Asia</h4>
+            <div class="row">
+                <div class="col">
+                    <div class="lightbox float-left mr-4"
+                        data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+
+                        <figure class="figure">
+                            <img loading=lazy class="figure-img img-fluid"
+                                src="{% static 'img/Mottin_Naach Janakpur.jpeg' %}" alt="HAP Project" width="600"
+                                height="auto">
+                            <figcaption class="figure-caption text-1">Karik Maharaj, a naach (folk drama) performed in a
+                                village east of Janakpur. Photo by Monica Mottin</figcaption>
+                        </figure>
+                    </div>
+                    <div class="lightbox float-left mr-4"
+                        data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+
+                        <figure class="figure">
+                            <img loading=lazy class="figure-img img-fluid"
+                                src="{% static 'img/workshop-by-rupesh-shrestha.jpeg' %}" alt="HAP Project" width="600"
+                                height="auto">
+                            <figcaption class="figure-caption text-1">Rupesh Shrestha leads a workshop in Patan during
+                                the
+                                Heritage as Placemaking International Summer School ('Urban Heritage Mining', September
+                                22–29). Photo by Corinna Mascherin.</figcaption>
+                        </figure>
+                    </div>
+                    <p>
+                        What unites diverse, and at times ephemeral, communities in enabling or hindering heritage? From
+                        our perspective, the danger to the world’s heritage is not primarily war, terrorism,
+                        environmental change, tourism, or digitalization. Instead, it is the loss of interest or the
+                        inability to form and sustain solidarity across differences. The research project “Heritage as
+                        Placemaking: The Politics of Solidarity and Erasure in South Asia” (HaP), explores what enables
+                        or stymies heritage and the potential of heritagisation to ignite solidaric formations. The
+                        cultural dimension of the Sustainable Development Goals lies in the commitment of people to work
+                        together, to make place. Likewise, living heritage requires the individuals’ commitment to
+                        engage, collaborate, and invest in the joint cultural future of communities. This project is
+                        critical of the role of external authorities and experts in the process of sustaining cultural
+                        heritage and instead invests in those who identify with heritage, who uphold and maintain its
+                        existence. The goal of HaP is to investigate precisely what unites people and what therefore
+                        enables them to create heritage as placemaking.
+                    </p>
+                    <p>
+                        We acknowledge that many heritage sites in South Asia are decaying due to rapid urbanisation and
+                        changing living conditions, as well as labour migration and climate change. The project explores
+                        how local and transregional agents use heritage as placemaking to fight eviction, road widening,
+                        or real estate development. We see heritage as becoming the political argument over which
+                        different stakeholders, cultural owners, and audiences negotiate the future.
+                    </p>
+                    <p>
+                        The research team, based in Heidelberg, Kathmandu, London, and Delhi, explore how people—through
+                        forming temporary and/or longer-lasting groups of solidarity—decide over the formation,
+                        preservation, decay, and erasure of heritage. We ask: What informs decision-making when heritage
+                        is dynamically framed through engagement with the site itself, as well as with bureaucracy and
+                        governance? We question authorities in the discourses of development and advocate for the
+                        decolonisation of the heritage discourse to give local voices the weight they deserve, and we
+                        find social aesthetics and contemporary uses of the archive inspiring locations for fresh
+                        thought. Our study requires us to relationally approach affective and performative imaginaries
+                        and practices where nation-building and area-making are invoked in ways that transgress
+                        compartmentalized notions of ‘territory’ and ‘place’.
+                    </p>
+                    <p>
+                        This project contributes to a critical reflection of heritage production beyond developmentalism
+                        and preservation. It is situated in the fields of critical heritage studies, new area studies,
+                        and transcultural urbanisation studies. The theoretical implications of our empirical studies
+                        will lead to a new model of enabling heritage through place-making. HaP works closely with NHDP,
+                        especially on the social and religious dimensions of the monuments. Scholars working on Nepal in
+                        the framework of NHDP extensively use NHDP’s database, DANAM.
+                    </p>
+                    <p>
+                        For more information, please visit the <a href="https://heritageasplacemaking.com/"
+                            target="_blank" rel="noopener noreferrer">website</a> of the project.
+                    </p>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="container py-1 text-justify">
+            <h4><strong> Documents on the History of Religion and Law of Pre-modern Nepal</strong></h4>
+            <div class="row">
+                <div class="col">
+                    <div class="lightbox float-left mr-4"
+                        data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+
+                        <figure class="figure">
+                            <img loading=lazy class="figure-img img-fluid"
+                                src="{% static 'img/Documents project.jpg' %}" alt="HAP Project" width="600"
+                                height="auto">
+                            <figcaption class="figure-caption text-1">Photo by Manik Bajracharya, Heidelberg Academy of
+                                Sciences</figcaption>
+                        </figure>
+                    </div>
+                    <p>
+                        The foundation of modern Nepal, which until 2007 was styled as the 'only Hindu kingdom (of the
+                        world)', goes back to the middle of the 18th century when Pṛthvīnārāyaṇa Śāha, king of Gorkha,
+                        started expanding his dominion. He and his successors conquered many petty states, such as, in
+                        1768/69, the rich Malla kingdoms of Kathmandu Valley, and soon ruled over a large territory,
+                        which subsequently developed into a nation state.
+                    </p>
+                    <p>
+                        As a result of its territorial expansion and emergence as a nation state, Nepal experienced a
+                        rapid and extensive increase in the deeds and other documents produced in it in the 18th and
+                        19th centuries. Within the state administration, in temples, in the execution of law and in
+                        economic life, textualization reached unprecedented levels.
+                    </p>
+                    <p>
+                        The project "Documents on the History of Religion and Law of Pre-modern Nepal" aims at
+                        investigating the country’s rich textual material, consisting of historic temple documents and
+                        administrative and legal documents. It wishes, among other things, to understand developments
+                        entailed by the formation of the Himalayan state, such as the restructuring of social
+                        institutions and the expansion of Hindu rule. With research units in Heidelberg and Patan,
+                        Nepal, the project studies this unique textual corpus systematically; it also makes
+                        selected documents accessible in digital scholarly text editions, accompanied by translations.
+                    </p>
+                    <p>
+                        The centrepiece of the academic endeavour is the creation of a digital open access database, a
+                        pioneering work within research on South Asian documents. This database unites references to
+                        both edited and published documents and unpublished ones, and enables complex searches
+                        within the data sets. Moreover, the research based on the textual corpus connects to wider
+                        scholarly discussions on, for example, the legitimation and affirmation of rulership, political
+                        unification and nation building, the importance of the textualization and codification of law,
+                        and the development of elite cultures in the 19th century. This helps to form a more nuanced
+                        picture of Nepal’s socio-cultural transformations between the late 18th and first half of the
+                        20th century.
+                    </p>
+                    <p>
+                        This project and NHDP share the aim of creating an open access databases. NHDP uses this
+                        research as a source for historical information on monuments.
+                    </p>
+                    <p>
+                        For more information, please visit the <a
+                            href="https://www.hadw-bw.de/en/research/research-center/documents-history-religion-and-law-pre-modern-nepal"
+                            target="_blank" rel="noopener noreferrer">website</a> of the project.
+                    </p>
+                </div>
+            </div>
+            <hr />
+        </div>
+
+
+        <div class="container py-1 text-justify">
+            <h4><strong>Urban transformation and Placemaking:</strong> Fostering Learning from South Asia and Germany
+            </h4>
+            <div class="row">
+                <div class="col">
+                    <div class="lightbox float-left mr-4"
+                        data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+
+                        <figure class="figure">
+                            <img loading=lazy class="figure-img img-fluid" src="{% static 'img/DAAD project 1.jpeg' %}"
+                                alt="HAP Project" width="600" height="auto">
+                            <figcaption class="figure-caption">New Delhi, Metro line and large statue of Lord Hanuman”,
+                                photo by Christiane Brosius (2010)</figcaption>
+                        </figure>
+                    </div>
+                    <div class="lightbox float-left mr-4"
+                        data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+
+                        <figure class="figure">
+                            <img loading=lazy class="figure-img img-fluid" src="{% static 'img/DAAD project 2.jpeg' %}"
+                                alt="HAP Project" width="600" height="auto">
+                            <figcaption class="figure-caption text-1">Traditional and new residential houses in a
+                                courtyard of
+                                the the historic city of Patan, Lalitpur”, photo by Christiane Brosius (2019)
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <p>
+                        The project “Urban transformation and placemaking: Fostering Learning from South Asia and
+                        Germany”, funded by DAAD, in their framework Promotion of Subject-Related Partnerships with
+                        Institutions of Higher Education in Developing Countries from 2020-2023, is located at CATS/HCTS
+                        in Heidelberg and is a part of the Shaping Asia networking initiative. In cooperation with Sujan
+                        Chitrakar at the Kathmandu University’s Centre for Art and Design and Prof. Arunava Dasgupta
+                        from the School of Planning and Architecture, Delhi, the project aims for an inter- and
+                        transdisciplinary exchange of students, faculty, museums and non-governmental institutions.
+                    </p>
+                    <p>
+                        The multi-sited network pays particular attention to the study of urban responses to the
+                        interconnectivity of natural and man-made crises in cities, e.g., earthquakes, climate change,
+                        migration, endangered heritage and cultural diversity. A focus on placemaking, that is, how
+                        people shape their urban habitats and everyday worlds in cities, is especially promising for
+                        such an approach. To explore this in a multidisciplinary, comparative and connected way is a
+                        major goal of this triangular partnership. Thematically seen, the comparative lens on Delhi and
+                        Kathmandu contributes to better understanding of intra-Asian urban transformation without
+                        reducing the cities to the often attributed stereotypical ‘chaos’. Delhi and Kathmandu are
+                        contact zones for a wide range of communities from varying ethnic and geographic origins. Along
+                        with this, the mobile population of migrants and visitors, both domestic and foreign, makes
+                        these cities receptacles of cultural and social diversity. Across the wide spread of these
+                        metropolises, the multi-layered physical and social fabrics of the city is characterized by
+                        distinctive zones of concentrations of urban life and heritage, e.g., mansions (havelis) in the
+                        historic town of Shahjahanabad in Delhi or Buddhist compounds (bāhāḥ,bahi) and arcaded rest
+                        houses (pati) in the royal quarters in Patan, Bhaktapur and Kathmandu. Each of these
+                        identifiable zones with their local histories has shaped diverse identities that these historic
+                        cities unfold as resourceful. Through this, both in Delhi and the Kathmandu valley, many of the
+                        erstwhile traditional neighbourhoods have been steadily giving way to new public spaces,
+                        gentrification and ‘modernisation’, the idea of neighbourhood, the design of heritage areas,
+                        suburban areas and even slums. In such areas, as the old is transformed in terms of its apparent
+                        function and relevance, new populations (in Kathmandu from the hills and plains, in Delhi from
+                        the country-side and other towns) bring in new aspirations, sensibilities, living narratives and
+                        practices of placemaking.
+                    </p>
+                    <p>
+                        This partnership will jointly explore how institutions of Higher Education can respond to the
+                        ways in which cities in South Asia and Germany are shaped and transformed, how and what can be
+                        learnt from their often-substantial changes. The aim is to train young generations of students
+                        and faculty in the Humanities and Social Sciences as well as Art and Urban Design, to shape
+                        socially responsible and sustainable career paths by means of handling future-oriented questions
+                        and methodological challenges related to the ‘Urban Age’.
+                    </p>
+                    <p>
+                        Since heritage is an integral part of the multi-layered fabric of the cities in question, NHDP
+                        and especially DANAM is a useful resource for studying Kathmandu.
+                    </p>
+                    <p>
+                        <b>For more information, please visit</b> <a
+                            href="https://spacetoplace.org/" target="_blank"
+                            rel="noopener noreferrer">urban transformation and placemaking</a>
+                    </p>
+                </div>
+            </div>
+            <hr />
+        </div>
+        {% include 'partials/javascript.htm' %}
+    </div>
+</body>
+
+</html>

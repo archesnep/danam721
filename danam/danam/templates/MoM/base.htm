@@ -1,0 +1,94 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    {% block page_meta %}
+    <meta name="keywords" content="NHDP" />
+    <meta name="description" content="Nepal Heritage Documentation Project">
+    <meta name="author" content="NHDP">
+    {% endblock page_meta %}
+
+    {% block vendor_css %} {% endblock vendor_css %}
+
+    {# Global styles #}
+    {% block site_css %}
+
+    {% include 'partials/new-css.htm' %}
+
+    {% endblock site_css %}
+
+    {# Page-specific styles #}
+    {% block page_css %}
+
+    {% endblock page_css %}
+    <title>
+        {% block title %}
+        {{ app_settings.APP_NAME }} - Welcome
+        {% endblock %}
+    </title>
+     <!--Tinymce Text-Editor (Must be in Head Tag) -->
+     <script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
+     <script type="text/javascript" src="{% static 'js/tinymce/custom.js' %}"></script>
+     <!-- WYSIWYG Editor -->
+     {{ form.media }}
+</head>
+
+
+<body data-plugin-page-transition class="danam_home">
+    <div class="body">
+
+        {% block header %}
+        {% include 'partials/danam_navbar.htm' %}
+        {% endblock header %}
+
+        {% block content %}
+
+
+        {% endblock content %}
+
+
+        {% block footer %}
+        {% include 'partials/footer.htm' %}
+        {% endblock footer %}
+
+    </div>
+
+
+    {# Vendor javascript #}
+    {% block vendor_js %} {% endblock vendor_js %}
+
+
+
+    {# Global javascript #}
+    {% block site_js %}
+
+    {% include 'partials/new-javascript.htm' %}
+
+    {% endblock site_js %}
+
+
+
+    {# Shared data for javascript #}
+
+    {# Page javascript #}
+    {% block page_js %}
+
+
+    {% endblock page_js %}
+
+</body>
+
+</html>

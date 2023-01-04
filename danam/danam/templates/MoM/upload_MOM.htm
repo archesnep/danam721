@@ -1,0 +1,166 @@
+{% extends 'MoM/base.htm' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<div role="main" class="main">
+    <section class="section section-default pt-5 m-0">
+        <div class="container">
+            {% if messages %} {% for message in messages %}
+            <div class="alert alert-dismissible alert-warning">
+                <button type="button" class="close" data-dismiss="alert">
+                    ×
+                </button>
+                <p>
+                    <strong class="warning"><i class="fas fa-exclamation-triangle"></i> Warning! {{message}}</strong>
+                </p>
+                <strong><strong>
+            </div>
+            {% endfor %}
+            {% endif %}
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <form method="post" enctype="multipart/form-data" class="main-form">
+                                {% csrf_token %}
+                                <div class="form-group row">
+                                    <label for="id_title"
+                                        class="col-sm-2 col-form-label text-3 font-weight-bold text-color-dark border-color-primary">Title</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="title" maxlength="255" required="" id="id_title"
+                                            data-msg-required="Please enter your name." class="form-control"
+                                            placeholder="Enter the name of the monument.">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="id_thumbnail" class="col-sm-2 col-form-label text-3 font-weight-bold text-color-dark">Thumbnail (800*800)</label>
+                                    <div class="col-sm-4">
+                                        <input type="file" name="thumbnail" accept="image/*" id="id_thumbnail" onchange="showPreview(event);">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="preview">
+                                            <img id="thumbnail-preview">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="id_image"
+                                        class="col-sm-2 col-form-label text-3 font-weight-bold text-color-dark">Primary
+                                        Image</label>
+                                    <div class="col-sm-4">
+                                        <input type="file" name="image" accept="image/*" id="id_image" onchange="showPrimaryPreview(event);"> 
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="preview">
+                                            <img id="primary-image-preview">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="id_caption"
+                                        class="col-sm-2 col-form-label text-3 font-weight-bold text-color-dark">Caption</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="caption" id="id_caption" class="form-control"
+                                            placeholder="Enter the caption of the above image.">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="id_description"
+                                        class="col-sm-2 col-form-label text-3 font-weight-bold text-color-dark">Description</label>
+                                    <div class="col-sm-10">
+                                        {{form.description}}
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="id_author"
+                                        class="col-sm-2 col-form-label text-3 font-weight-bold text-color-dark border-color-primary">Curated
+                                        by</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="author" maxlength="255" id="id_author"
+                                            class="form-control" placeholder="Enter the name of the author.">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="id_date"
+                                        class="col-sm-2 col-form-label text-3 font-weight-bold text-color-dark">Date</label>
+                                    <div class="col-sm-10">
+                                        <input type="date" name="date" id="id_date">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="id_status"
+                                        class="col-sm-2 col-form-label text-3 font-weight-bold text-color-dark">Status</label>
+                                    <div class="col-sm-10">
+                                        <select name="status" id="id_status">
+                                            <option value="d" selected="">Draft</option>
+                                            <option value="p">Published</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10">
+                                        <input type='submit' value='Submit Form'
+                                            class="btn btn-3d btn-primary rounded-0 mr-3" />
+                                        <a href="{% url 'home' %}"  rel="noopener noreferrer"><button
+                                                type="button"
+                                                class="btn btn-3d btn-danger rounded-0 mb-2">Cancel</button></a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div> 
+{% endblock %}
+
+{# Page javascript #}
+{% block page_js %}
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"
+    data-ckeditor-basepath="/media/ckeditor/ckeditor/" id="ckeditor-init-script"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+<script>
+    function showPreview(event) {
+        if (event.target.files.length > 0) {
+            var src = URL.createObjectURL(event.target.files[0]);
+            var preview = document.getElementById("thumbnail-preview");
+            preview.src = src;
+            preview.style.height = "200px";
+            preview.style.width = "200px";
+        }
+    }
+</script>
+<script>
+    function showPrimaryPreview(event) {
+        if (event.target.files.length > 0) {
+            var src = URL.createObjectURL(event.target.files[0]);
+            var preview = document.getElementById("primary-image-preview");
+            preview.src = src;
+            preview.style.height = "200px";
+            preview.style.width = "200px";
+        }
+    }
+</script>
+<script type="text/javascript">
+    $(document).ready(function (event) {
+        $('#delete').click(function () {
+            return confirm("Are you sure to delete this post?");
+        });
+
+        $('.reply-btn').click(function () {
+            $(this).parent().parent().next('.replied-comments').fadeToggle()
+        });
+
+
+        $(function () {
+            setTimeout(function () {
+                $('.alert').slideUp(2000);
+            }, 5000);
+        });
+    });        
+</script>
+{% endblock page_js %}

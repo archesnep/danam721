@@ -1,0 +1,188 @@
+{% load static %} {% load template_tags %} {% load i18n %}
+
+<header id="header" class="header-effect-shrink"
+    data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 120, 'stickyHeaderContainerHeight': 70}">
+    <div class="header-body">
+        <div class="header-container container">
+            <div class="header-row">
+                <div class="header-column">
+                    <div class="header-row">
+                        <div class="header-logo">
+                            <a href="/">
+                                <img alt="NHDP logo" width="140" height="90" data-sticky-width="100" data-sticky-height="66"
+                                    src="{% static 'img/logo/logotextdown.jpg' %}">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-column justify-content-end">
+                    <div class="header-row">
+                        <div class="header-nav header-nav-links order-2 order-lg-1">
+                            <div
+                                class="header-nav-main header-nav-main-square header-nav-main-effect-3 header-nav-main-sub-effect-1">
+                                <nav class="collapse">
+                                    <ul class="nav nav-pills" id="mainNav">
+                                        {% if extra_links %}
+                                        {% include extra_links %}
+                                        {% endif %}
+                                        <li class="dropdown">
+                                            <a class="dropdown-item dropdown-toggle active" href="/">
+                                                {% trans "Home" %}
+                                            </a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a class="dropdown-item dropdown-toggle" href="#">
+                                                {% trans "About" %}
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="{% url 'nhdp_page' %}">{% trans "NHDP" %}</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="{% url 'danam_page' %}">{% trans "DANAM" %}</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="{% url 'team' %}">{% trans "Team" %}</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="{% url 'how_we_work' %}">{% trans "How we work" %}</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="{% url 'how_to_find' %}">{% trans "DANAM Tutorials" %}</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="{% url 'feedback' %}">{% trans "Feedback" %}</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="{% url 'associated_project' %}">{% trans "Associated Projects" %}</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item"
+                                                        href="https://www.uni-heidelberg.de/en/data-protection-declaration"
+                                                        target="_blank">{% trans "Privacy Policy" %}</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a class="dropdown-item dropdown-toggle" href="#explore">
+                                                {% trans "DANAM - The Database" %}
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <!--<a class="dropdown-item" href="{% url 'search_home' %}" target="_blank">{% trans "Search" %}</a>-->
+                                                    <a class="dropdown-item"
+                                                        href="/search?paging-filter=1&tiles=true&format=tilecsv&reportlink=false&precision=6&total=1020&sort-results=asc&resource-type-filter=%5B%7B%22graphid%22%3A%22f35cc1ca-9322-11e9-a5cc-0242ac120006%22%2C%22name%22%3A%22Monument%22%2C%22inverted%22%3Afalse%7D%5D"
+                                                        target="_blank">Search Monuments</a>
+
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item"
+                                                        href="/search?paging-filter=1&advanced-search=%5B%7B%22op%22%3A%22or%22%2C%221fdfd3e4-b42b-11e9-8570-0242ac140006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc33458-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22fb507140-48e2-4bf5-8053-797ec0b709e3%22%7D%2C%222cc33764-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%222cc335fc-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc338c2-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%7D%2C%7B%22op%22%3A%22or%22%2C%221fdfd3e4-b42b-11e9-8570-0242ac140006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc33458-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%226002be89-fee0-42d8-bed6-5188ff2455be%22%7D%2C%222cc33764-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%222cc335fc-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc338c2-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%7D%2C%7B%22op%22%3A%22or%22%2C%221fdfd3e4-b42b-11e9-8570-0242ac140006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc33458-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22648ad3a0-1d57-4ccb-a2a8-39dd33a152e9%22%7D%2C%222cc33764-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%222cc335fc-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc338c2-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%7D%2C%7B%22op%22%3A%22or%22%2C%221fdfd3e4-b42b-11e9-8570-0242ac140006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc33458-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%227632515b-057f-4830-a6fb-8710ef220405%22%7D%2C%222cc33764-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%222cc335fc-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc338c2-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%7D%5D"
+                                                        target="_blank">{% trans "Monastic Buildings" %}</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item"
+                                                        href="/search?paging-filter=1&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%222cc33764-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%222cc335fc-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%221fdfd3e4-b42b-11e9-8570-0242ac140006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc33458-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22ef873ba2-29f8-49d7-a467-624e65539d55%22%7D%2C%222cc338c2-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%7D%2C%7B%22op%22%3A%22or%22%2C%222cc33764-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%222cc335fc-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%221fdfd3e4-b42b-11e9-8570-0242ac140006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc33458-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%2225f7a960-2985-49d5-9869-849333c307c4%22%7D%2C%222cc338c2-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%7D%2C%7B%22op%22%3A%22or%22%2C%222cc33764-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%222cc335fc-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%221fdfd3e4-b42b-11e9-8570-0242ac140006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc33458-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22e0a4ea82-b6d6-4016-b0bf-c466ae755952%22%7D%2C%222cc338c2-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%7D%2C%7B%22op%22%3A%22or%22%2C%222cc33764-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%222cc335fc-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%221fdfd3e4-b42b-11e9-8570-0242ac140006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc33458-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22b0c700a4-78ce-41cf-bcec-21f87ba97a22%22%7D%2C%222cc338c2-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%7D%5D"
+                                                        target="_blank">{% trans "Arcaded rest-houses" %}</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item"
+                                                        href="/search?paging-filter=1&advanced-search=%5B%7B%22op%22%3A%22or%22%2C%222cc33764-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%222cc335fc-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%221fdfd3e4-b42b-11e9-8570-0242ac140006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc33458-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%225bd29f84-636d-4180-8af0-f9712f1be412%22%7D%2C%222cc338c2-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%7D%5D"
+                                                        target="_blank">{% trans "Water Architecture" %}</a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="dropdown-item"
+                                                        href="/search?paging-filter=1&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%222cc33764-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%222cc335fc-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%221fdfd3e4-b42b-11e9-8570-0242ac140006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc33458-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22142f7311-52bc-4041-b911-32b4e418217f%22%7D%2C%222cc338c2-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%7D%5D"
+                                                        target="_blank">{% trans "Tiered Temples" %}</a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="dropdown-item"
+                                                        href="/search?paging-filter=1&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%222cc33764-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%222cc335fc-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%221fdfd3e4-b42b-11e9-8570-0242ac140006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc33458-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22aee3889e-01c3-4242-bd1e-6f98c07d19e4%22%7D%2C%222cc338c2-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%7D%5D"
+                                                        target="_blank">{% trans "Domed Temples" %}</a>
+                                                </li>
+                                                <li>
+                                                <li>
+                                                    <a class="dropdown-item"
+                                                        href="/search?paging-filter=1&advanced-search=%5B%7B%22op%22%3A%22and%22%2C%222cc33764-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%222cc335fc-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%221fdfd3e4-b42b-11e9-8570-0242ac140006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc33458-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22f5a0c41f-ff58-4768-999f-18f6e308a95a%22%7D%2C%222cc338c2-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%7D%5D"
+                                                        target="_blank">{% trans "Śikhara Temples" %}</a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="dropdown-item"
+                                                        href="/search?paging-filter=1&advanced-search=%5B%7B%22op%22%3A%22or%22%2C%221fdfd3e4-b42b-11e9-8570-0242ac140006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc33458-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22263213ea-00fa-43b8-a120-27b70d3e03f9%22%7D%2C%222cc33764-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22%22%2C%22val%22%3A%22%22%7D%2C%222cc335fc-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%2C%222cc338c2-9323-11e9-a3b4-0242ac120006%22%3A%7B%22op%22%3A%22~%22%2C%22val%22%3A%22%22%7D%7D%5D"
+                                                        target="_blank">{% trans "Stūpas and Caityas" %}</a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="dropdown-item"
+                                                        href="/search?paging-filter=1&tiles=true&format=tilecsv&precision=6&total=487&resource-type-filter=%5B%7B%22graphid%22%3A%226215ee02-990d-11ea-9766-0242ac130005%22%2C%22name%22%3A%22Edited%20Inscription%22%2C%22inverted%22%3Afalse%7D%5D"
+                                                        target="_blank">{% trans "Inscriptions" %}</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="{% url 'pdf-list' %}">{% trans "Reports" %}</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a class="dropdown-item dropdown-toggle" href="{% url 'news_list' %}">
+                                                {% trans "News" %}
+                                            </a>
+                                            {% if user.username != 'anonymous' %}
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="{% url 'upload_news' %}">{% trans "Upload News" %}</a>
+                                                </li>
+                                            </ul>
+                                            {% endif %}
+                                        </li>
+                                        <li class="dropdown">
+                                            <a class="dropdown-item dropdown-toggle" href="{% url 'list_glossary' %}" target="_blank">
+                                                {% trans "Glossary" %}
+                                            </a>
+                                        </li>
+                                        <li class="dropdown">
+                                            {% if user.username == 'anonymous' %}
+                                            <a class="dropdown-item" id="auth-link"
+                                                href="{% url 'auth' %}?next={% url 'home' %}{% if user.username != 'anonymous' %}&logout=true{% endif %}">
+                                                {% trans "login" %}
+                                            </a>
+                                            {% else %}
+                                        <li class="dropdown">
+                                            <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown"
+                                                role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="true">
+                                                {% trans "Welcome" %} {{ user.first_name|default:user.username }}
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item"
+                                                        href="{% url 'auth' %}?next={% url 'home' %}{% if user.username != 'anonymous' %}&logout=true{% endif %}">
+                                                        {% trans 'Logout' %}
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="{% url 'user_profile_manager' %}">
+                                                        {% trans 'User Profile' %}
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        {% endif %}
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <button class="btn header-btn-collapse-nav" data-toggle="collapse"
+                                data-target=".header-nav-main nav">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

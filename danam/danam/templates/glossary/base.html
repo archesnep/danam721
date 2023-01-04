@@ -1,0 +1,34 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    {% include 'partials/css.htm' %}
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'css/glossary/style.css' %}">
+    {% block css %}
+        <!--- some css that apply to all pages -->
+    {% endblock %}
+
+    <title>{% block title %} DANAM Glossary {% endblock %}</title>
+</head>
+
+<body>
+    {% block content %}
+    {% endblock %}
+
+    {% block scripts %}
+        <!--- some scripts that apply to all pages -->
+        {% include 'partials/javascript.htm' %}
+        <script type="text/javascript" src="{% static 'js/glossary/external/jquery-3.4.1.js' %}"></script>
+        
+    {% endblock %}
+</body>
+
+</html>

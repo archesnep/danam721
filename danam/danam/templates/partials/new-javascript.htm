@@ -1,0 +1,80 @@
+<!--
+ARCHES - a program developed to inventory and manage immovable cultural heritage.
+Copyright (C) 2013 J. Paul Getty Trust and World Monuments Fund
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+{% load static %}
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- Head Libs -->
+<script src="{% static 'vendor/modernizr/modernizr.min.js' %}"></script>
+<!-- Vendor -->
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.appear/jquery.appear.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.cookie/jquery.cookie.min.js' %}"></script>
+<script src="{% static 'vendor/popper/umd/popper.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'vendor/common/common.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.validation/jquery.validate.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.gmap/jquery.gmap.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.lazyload/jquery.lazyload.min.js' %}"></script>
+<script src="{% static 'vendor/isotope/jquery.isotope.min.js' %}"></script>
+<script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'vendor/vide/jquery.vide.min.js' %}"></script>
+<script src="{% static 'vendor/vivus/vivus.min.js' %}"></script>
+
+<!-- Theme Base, Components and Settings -->
+<script src="{% static 'vendor/js/theme.js' %}"></script>
+
+<!-- Current Page Vendor and Views -->
+<script src="{% static 'vendor/rs-plugin/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'vendor/rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
+
+<!-- Current Page Vendor and Views -->
+<script src="{% static 'vendor/js/views/view.contact.js' %}"></script>
+
+<!-- Theme Custom -->
+<script src="{% static 'vendor/js/custom.js' %}"></script>
+
+<!-- Theme Initialization Files -->
+<script src="{% static 'vendor/js/theme.init.js' %}"></script>
+
+<!-- knockout js -->
+<script src="{% static 'packages/knockout/build/output/knockout-latest.js' %}"></script>
+
+<!-- OTHER SCRIPTS -->
+
+<script>
+    var ViewModel = function (first, last) {
+        this.showAuthMenu = ko.observable(false);
+    };
+    ko.applyBindings(new ViewModel());
+
+    // $('.load-more-list').simpleLoadMore({
+    //     item: '.isotope-item',
+    //     count: 3,
+    //     itemsToLoad: 3
+    // });
+    function checkRegistration() {
+        submitted = confirm("Message sent successfully!");
+        if(submitted) {
+            document.location.href = "/";
+        }
+    }
+</script>

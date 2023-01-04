@@ -1,0 +1,1035 @@
+{% load static %}
+{% load template_tags %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Basic -->
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ app_settings.APP_NAME }} - Welcome</title>
+
+    <meta name="keywords" content="NHDP" />
+    <meta name="description" content="Nepal Heritage Documentation Project">
+    <meta name="author" content="NHDP">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
+        rel="stylesheet" type="text/css">
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="{% static 'css/design/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/design/vendor/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/design/vendor/animate/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/design/vendor/simple-line-icons/css/simple-line-icons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/design/vendor/owl.carousel/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/design/vendor/owl.carousel/assets/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/design/vendor/magnific-popup/magnific-popup.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/design/theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/design/theme-elements.css' %}">
+    <link rel="stylesheet" href="{% static 'css/design/theme-blog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/design/theme-shop.css' %}">
+    <link rel="stylesheet" href="{% static 'css/design/skins/default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/design.css' %}">
+
+    <!-- Head Libs -->
+    <script src="{% static 'js/design/vendor/modernizr/modernizr.min.js' %}"></script>
+</head>
+
+<body class="danam_home">
+    <header id="header" class="header-effect-shrink"
+        data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 120, 'stickyHeaderContainerHeight': 70}">
+        <div class="header-body">
+            <div class="header-container container">
+                <div class="header-row">
+                    <div class="header-column">
+                        <div class="header-row">
+                            <div class="header-logo">
+                                <a href="/">
+                                    <img alt="Porto" width="140" height="90" data-sticky-width="100"
+                                        data-sticky-height="66" src="{% static 'img/logo/logotextdown.jpg' %}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="body">
+
+        <div role="main" class="main">
+            <section
+                class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5"
+                style="background-image: url({% static 'img/patterns/random_grey_variations.png' %});">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12 align-self-center p-static order-2 text-center">
+
+                            <h1 class=" font-weight-bold text-8">Monument of the Month</h1>
+                        </div>
+
+                        <div class="col-md-12 align-self-center order-1">
+
+                            <!--	<ul class="breadcrumb d-block text-center">
+									<li><a href="#">Home</a></li>
+									<li class="active">Blog</li>
+								</ul> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-default mb-5">
+                <div class="container">
+                    <div class="row text-decoration-none text-justify">
+                        <div class="col">
+                            <div
+                                data-plugin-options="{'items': 1, 'autoHeight': true, 'loop': false, 'nav': true, 'dots': false}">
+                                <div>
+
+                                    <div class="testimonial testimonial-style-5 testimonial mb-0">
+                                        <blockquote>
+                                            <p class="text-justify">
+                                                Welcome to our series ‘Monuments of the Month’! Each month, we
+                                                select one monument that we want to highlight and bring close to
+                                                you. We hope that this feature makes you curious to tap into
+                                                DANAM in order to find your own ‘special sites’. Many of the
+                                                MOMs have been chosen by our team members. But we also invite
+                                                renowned heritage experts from Nepal and beyond, to take you to
+                                                ‘their’ MOM’s. Please stay tuned and watch out for our next
+                                                Monument of the Month! We also welcome your suggestions.
+                                            </p>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col">
+                        <div class="accordion" id="accordion">
+                            <!-- Monument of the month September 2021 -->
+                            <div class="card card-default">
+                                <div class="card-header">
+                                    <h4 class="card-title m-0">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse1One">
+                                            <p>
+                                                September 2021 - The Sāḥgaḥ Mandaḥ Phalcā (built in 1750 CE) || सा:ग:
+                                                मन्द: फल्चा<a
+                                                    href="https://danam.cats.uni-heidelberg.de/report/fe209a6f-0543-4c9d-96d6-d5bbb307c227"
+                                                    target="_blank" rel="noopener noreferrer">(DANAM ID: BKT0100)</a>
+                                            </p>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1One" class="collapse show">
+                                    <div class="card-body">
+                                        <div class="thumb-gallery justify-content-end">
+                                            <div class="monument owl-carousel owl-theme manual thumb-gallery-detail show-nav-hover"
+                                                id="thumbGalleryDetail">
+                                                <div>
+                                                    <span
+                                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                                        <span class="thumb-info-wrapper img-thumbnail monument-img">
+                                                            <a href="https://danam.cats.uni-heidelberg.de/report/fe209a6f-0543-4c9d-96d6-d5bbb307c227"
+                                                                target="_blank" rel="noopener noreferrer"
+                                                                class="text-decoration-none">
+                                                                <img alt="Project Image" loading="lazy"
+                                                                    src="{% static 'img/monument-of-month/KIR4056_P_20210811_01.webp' %}">
+                                                            </a>
+                                                        </span>
+                                                        <span class="thumb-info-caption">
+                                                            <span class="thumb-info-caption-text text-center">
+                                                                Sāḥgaḥ Mandaḥ Phalcā, view from E; photo by Bijay
+                                                                Basukala; 2021-08-11
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span
+                                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                                        <span class="thumb-info-wrapper img-thumbnail monument-img">
+                                                            <a href="https://danam.cats.uni-heidelberg.de/report/fe209a6f-0543-4c9d-96d6-d5bbb307c227"
+                                                                target="_blank" rel="noopener noreferrer"
+                                                                class="text-decoration-none">
+                                                                <img alt="Project Image" loading="lazy"
+                                                                    src="{% static 'img/monument-of-month/KIR4056_P_20210811_2.webp' %}">
+                                                            </a>
+                                                        </span>
+                                                        <span class="thumb-info-caption">
+                                                            <span class="thumb-info-caption-text text-center">
+                                                                Sāḥgaḥ Mandaḥ Phalcā, view from SE; photo by Bijay
+                                                                Basukala; 2021-08-11
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span
+                                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                                        <span class="thumb-info-wrapper img-thumbnail monument-img">
+                                                            <a href="https://danam.cats.uni-heidelberg.de/report/fe209a6f-0543-4c9d-96d6-d5bbb307c227"
+                                                                target="_blank" rel="noopener noreferrer"
+                                                                class="text-decoration-none">
+                                                                <img alt="Project Image" loading="lazy"
+                                                                    src="{% static 'img/monument-of-month/KIR4056_P_20210811_05.webp' %}">
+                                                            </a>
+                                                        </span>
+                                                        <span class="thumb-info-caption">
+                                                            <span class="thumb-info-caption-text text-center">
+                                                                Sāḥgaḥ Mandaḥ Phalcā, view from S; photo by Bijay
+                                                                Basukala; 2021-08-11
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p class="text-justify">
+                                                The Sāḥgaḥ Mandaḥ Phalcā, located at the Sāgaḥ Ṭola in Kirtipur, is a
+                                                very particular form of
+                                                arcaded platform. For one, it is free-standing and square, with 16
+                                                pillars on which the roof
+                                                rests. Because of this, it is also called the Sorhakhuṭṭe
+                                                “sixteen-legged” Phalcā. Moreover,
+                                                because the square structure is said to contain nine maṇdaḥs, it is also
+                                                known as Mandaḥ
+                                                Phalcā. Another unique feature is that a water tank for drinking water -
+                                                jaḥdhuṃ - is placed
+                                                on the platform under the roof. Normally, such a tank could be found
+                                                next to, but not in a
+                                                building. Below the jaḥdhuṃ&#39;s outlet is a statue of Bhagīratha.
+                                                A śivaliṅga is placed right
+                                                behind the jaḥdhuṃhiti.
+                                            </p>
+                                            <p class="text-justify">
+                                                Built in 1750 CE, the Sāḥgaḥ Mandaḥ Phalcā was constructed in memory of
+                                                a deceased
+                                                father from an Amatya family from the Dathu Ṭola. Probably, it collapsed
+                                                during the Great
+                                                Earthquake of 1934 CE. Since then, only a square plinth along with
+                                                the śivaliṅga and the
+                                                jaḥdhuṃ remained until, in 2008, the Department of Archaeology
+                                                reconstructed
+                                                the Phalcā under the supervision of Sukra Sagar Shrestha <a
+                                                    href="https://www.zotero.org/groups/2247442/nhdp-bibliography/items/2S8K64WV"
+                                                    target="_blank" rel="noopener noreferrer">(Shokoohy and others 2014,
+                                                    p.
+                                                    162).</a>
+                                            </p>
+                                            <p class="text-justify">
+                                                Pilgrims used to take the road in front of the Phalcā for their
+                                                pilgrimage to the Mātātīrtha on
+                                                Mātātīrtha Aũśī (the new moon day of the dark fortnight of Vaiśākha).
+                                                Until the late 1970s,
+                                                ocal youths used to fill up the jaḥdhuṃ to provide drinking water to the
+                                                pilgrims and also
+                                                ffered them pāṃti (a mixture of water and coarse brown sugar) on a
+                                                particular day. This
+                                                radition ended in the 1980s. The road also used to be a section of the
+                                                trade route for the
+                                                erchants of Citlāṅga (Chitlang) who travelled to Kathmandu and Patan via
+                                                Kirtipur until the
+                                                ate Rāṇā period. Travelers and merchants presumably used to take shelter
+                                                at this Phalcā and,
+                                                n this context, quenched their thirst from the jaḥdhuṃ.
+                                            </p>
+                                            <p class="text-justify">
+                                                For more information about Chusyā Bāhāḥ, please visit the <a
+                                                    href="/">DANAM</a> database
+                                                <a href="https://danam.cats.uni-heidelberg.de/report/fe209a6f-0543-4c9d-96d6-d5bbb307c227"
+                                                    target="_blank">(Sāḥgaḥ Mandaḥ Phalcā (built in 1750 CE) || सा:ग:
+                                                    मन्द: फल्चा ll KIR4056)</a>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Monument of the month August 2021  -->
+                            <div class="card card-default">
+                                <div class="card-header">
+                                    <h4 class="card-title m-0">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse1Two">
+                                            <p>
+                                                August 2021 - Vatsalā Mandira <a
+                                                    href="https://danam.cats.uni-heidelberg.de/report/75171568-d049-4c63-9fce-ddf40dc4e157"
+                                                    target="_blank" rel="noopener noreferrer">(DANAM ID: BKT0100)</a>
+                                            </p>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1Two" class="collapse">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="lightbox"
+                                                    data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+                                                    <figure>
+                                                        <a title="Chusyā Bāhāḥ, tympanum (toraṇa) above the main gate, view from N, photo by Thomas Schrom 2020-12-18"
+                                                            class="img-thumbnail d-inline-block img-thumbnail-hover-icon mb-1 mr-1"
+                                                            href="{% static 'img/monument-of-month/vastala_mandira_01.webp' %}">
+                                                            <img src="{% static 'img/monument-of-month/vastala_mandira_01.webp' %}"
+                                                                alt="NHDP Image Chusya Bahah" width="500" height="500">
+                                                            <figcaption class="text-center">
+                                                                Vatsalā Mandira; photo by Carl Pruscha; 1973–1974;
+                                                                courtesy of Carl Pruscha;
+                                                            </figcaption>
+                                                        </a>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="lightbox justify-content-end"
+                                                    data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+                                                    <figure>
+                                                        <a title="Chusyā Bāhāḥ, inscription, view from N, photo by Thomas Schrom 2020-12-18"
+                                                            class="img-thumbnail d-inline-block img-thumbnail-hover-icon mb-1 mr-1"
+                                                            href="{% static 'img/monument-of-month/vastala_mandira_02.webp' %}">
+                                                            <img src="{% static 'img/monument-of-month/vastala_mandira_02.webp' %}"
+                                                                alt="NHDP Image Chusya Bahah" width="500" height="500">
+                                                            <figcaption class="text-center">
+                                                                Vatsalā Mandira; photo by John C. Huntington; courtesy
+                                                                of the John C. and Susan L. Huntington Photographic
+                                                                Archive of Buddhist and Asian Art;
+                                                                2021-05-29
+                                                            </figcaption>
+                                                        </a>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-justify">
+                                            The deity Vatsalā is considered one of the Tantric manifestations of
+                                            goddess Parvatī. She is referred to as the clan deity of the Malla Kings
+                                            in an inscription (now lost) in Bhaktapur. There are three temples
+                                            dedicated to Vatsalā in the small perimeter of the Bhaktapur Darbar
+                                            Square. Among them, this south-facing Temple in discussion is located in
+                                            the centre of the square and is said to be built by King Bhūpatīndra
+                                            Malla in 1699 CE, i.e., NS 820 (cp. Nepālikabhūpavaṃśāvalī 19.1-73). It
+                                            stands out because of its artistic merits and is entirely constructed in
+                                            stone, except for the pinnacle. The Temple’s outer structure rests on 12
+                                            columns and has a three-level plinth. A bell supported by ornately
+                                            designed columns and lintel rests on the lowest plinth and a pair of
+                                            elephants and lions flank the entrance to the sanctum. Instead of a
+                                            statue, a stone kalaśa as the representation of the Tantric deity
+                                            Vatsalā is consecrated inside the sanctum. Most of the Vatsalā temples
+                                            in the Kathmandu Valley have such aniconic stones to represent her.
+                                            The local community believes that the deity was offered human sacrifice
+                                            as part of the Tantric rites (Gutschow 2014, 33). The Devamālāvaṃśāvalī
+                                            mentions that such rites were performed while consecrating goddess
+                                            Vatsalā and establishing her shrine in Pashupati (cited from M. Thāpā VS
+                                            2077, 183). Furthermore, residents of the area also believe that dogs
+                                            start crying when the Temple bell is rung. In the Vatsalā Temple at
+                                            Pashupati, dogs are said to be taken inside the sanctum during some
+                                            rituals, and members of a certain guṭhī howl like wolves while kneeling
+                                            and praying. There appear to be some connections between these rituals
+                                            and strongly held local beliefs.
+                                            The Temple’s structure, except its plinth, crumbled down in the 2015 CE
+                                            earthquakes, and the Bhaktapur Municipality completed its renovation in
+                                            2020 CE (VS 2077).
+                                            For more information about this monument, visit our
+                                            database <a
+                                                href="https://danam.cats.uni-heidelberg.de/report/75171568-d049-4c63-9fce-ddf40dc4e157"
+                                                target="_blank" rel="noopener noreferrer">here</a>.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Monument of the month July 2021  -->
+                            <div class="card card-default">
+                                <div class="card-header">
+                                    <h4 class="card-title m-0">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse1Three">
+                                            <p>
+                                                July 2021 - The Vajra Gaṇeśa Mandira <a
+                                                    href="https://danam.cats.uni-heidelberg.de/report/154297b7-c1ca-4eca-813e-774c28a7f805"
+                                                    target="_blank" rel="noopener noreferrer">(DANAM ID: BAL0004)</a>
+                                            </p>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1Three" class="collapse">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <figure>
+                                                    <a class="img-thumbnail d-block img-thumbnail-hover-icon lightbox"
+                                                        href="{% static 'img/monument-of-month/vajra-ganesha-1.webp' %}"
+                                                        data-plugin-options="{'type':'image'}">
+                                                        <img class="img-fluid"
+                                                            src="{% static 'img/monument-of-month/vajra-ganesha-1.webp' %}"
+                                                            alt="Project Image">
+                                                    </a>
+                                                    <a href="https://danam.cats.uni-heidelberg.de/report/154297b7-c1ca-4eca-813e-774c28a7f805"
+                                                        target="_blank" rel="noopener noreferrer"
+                                                        class="text-decoration-none">
+                                                        <figcaption class="text-center">
+                                                            Vajra Gaṇeśa, view from W; photo by Pankaj Nakarmi;
+                                                            2021-05-29
+                                                        </figcaption>
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                            <div class="col">
+                                                <figure>
+                                                    <a class="img-thumbnail d-block img-thumbnail-hover-icon lightbox"
+                                                        href="{% static 'img/monument-of-month/vajra-ganesha-2.webp' %}"
+                                                        data-plugin-options="{'type':'image'}">
+                                                        <img class="img-fluid"
+                                                            src="{% static 'img/monument-of-month/vajra-ganesha-2.webp' %}"
+                                                            alt="Project Image">
+                                                    </a>
+                                                    <a href="https://danam.cats.uni-heidelberg.de/report/154297b7-c1ca-4eca-813e-774c28a7f805"
+                                                        target="_blank" rel="noopener noreferrer"
+                                                        class="text-decoration-none">
+                                                        <figcaption class="text-center">
+                                                            Vajra Gaṇeśa, view from SW; photo by Pankaj Nakarmi;
+                                                            2021-05-29
+                                                        </figcaption>
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                        </div>
+
+                                        <p class="text-justify">
+                                            The Vajra Gaṇeśa Mandira <a
+                                                href="https://danam.cats.uni-heidelberg.de/report/154297b7-c1ca-4eca-813e-774c28a7f805"
+                                                target="_blank" rel="noopener noreferrer">(BAL0004)</a> is located
+                                            in Lāchi Ṭola, Balambu.
+                                            The west-facing Temple is built on a rectangular base and has
+                                            a phalcā like structure, i.e. its three sides are open and twenty wooden
+                                            columns support its roof. It is very likely that this monument was
+                                            previously a phalcā and later converted into a temple. Although the
+                                            reason(s) behind such a conversion is not clear, it shows how the
+                                            original structure and usages of cultural heritage sites change in due
+                                            course of time. This sets a good example for why (in)tangible heritage
+                                            should be preserved physically and digitally. Without proper
+                                            documentation, the historical origins and transformations of such
+                                            monument sites will remain unrecorded. To address these issues, since
+                                            2018, the <a href="https://danam.cats.uni-heidelberg.de/" target="_blank"
+                                                rel="noopener noreferrer">Nepal Heritage
+                                                Preservation Project</a> is focusing on ‘digital
+                                            preservation’ of the cultural heritage of the Kathmandu Valley and
+                                            beyond. For more information about this monument, visit our
+                                            database <a
+                                                href="https://danam.cats.uni-heidelberg.de/report/154297b7-c1ca-4eca-813e-774c28a7f805"
+                                                target="_blank" rel="noopener noreferrer">here</a>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Monument of the month June 2021  -->
+                            <div class="card card-default">
+                                <div class="card-header">
+                                    <h4 class="card-title m-0">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse1Four">
+                                            <p>
+                                                June 2021 - Tashi Thongmon Gumbā in Solukhumbu <a
+                                                    href="https://danam.cats.uni-heidelberg.de/report/be9d31f0-2cb2-40d0-8af9-3df0fcbb0040"
+                                                    target="_blank" rel="noopener noreferrer">(DANAM ID: SOL0010)</a>
+                                            </p>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1Four" class="collapse">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <figure>
+                                                    <a class="img-thumbnail d-block img-thumbnail-hover-icon lightbox"
+                                                        href="{% static 'img/monument-of-month/SOL0010_H_1971 Perry Letson.webp' %}"
+                                                        data-plugin-options="{'type':'image'}">
+                                                        <img class="img-fluid"
+                                                            src="{% static 'img/monument-of-month/SOL0010_H_1971 Perry Letson.webp' %}"
+                                                            alt="Project Image">
+                                                    </a>
+                                                    <a href="https://danam.cats.uni-heidelberg.de/report/be9d31f0-2cb2-40d0-8af9-3df0fcbb0040"
+                                                        target="_blank" rel="noopener noreferrer"
+                                                        class="text-decoration-none">
+                                                        <figcaption class="text-center">
+                                                            Tashi Thongmon Gumbā, view from S, photo by Perry
+                                                        Letson; 1971; courtesy of Nepal Peace Corps Photo
+                                                        Project
+                                                        </figcaption>
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <figure>
+                                                    <a class="img-thumbnail d-block img-thumbnail-hover-icon lightbox"
+                                                        href="{% static 'img/monument-of-month/SOL0010-001_P_20210504_02.webp' %}"
+                                                        data-plugin-options="{'type':'image'}">
+                                                        <img class="img-fluid"
+                                                            src="{% static 'img/monument-of-month/SOL0010-001_P_20210504_02.webp' %}"
+                                                            alt="Project Image">
+                                                    </a>
+                                                    <a href="https://danam.cats.uni-heidelberg.de/report/be9d31f0-2cb2-40d0-8af9-3df0fcbb0040"
+                                                        target="_blank" rel="noopener noreferrer"
+                                                        class="text-decoration-none">
+                                                        <figcaption class="text-center">
+                                                            Tashi Thongmon Gumbā, Buddha Śākyamuni, view from SE;
+                                                        photo by Thomas Schrom; 2021-05-04
+                                                        </figcaption>
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <figure>
+                                                    <a class="img-thumbnail d-block img-thumbnail-hover-icon lightbox"
+                                                        href="{% static 'img/monument-of-month/SOL0010_P_20210504_02.webp' %}"
+                                                        data-plugin-options="{'type':'image'}">
+                                                        <img class="img-fluid"
+                                                            src="{% static 'img/monument-of-month/SOL0010_P_20210504_02.webp' %}"
+                                                            alt="Project Image">
+                                                    </a>
+                                                    <a href="https://danam.cats.uni-heidelberg.de/report/be9d31f0-2cb2-40d0-8af9-3df0fcbb0040"
+                                                        target="_blank" rel="noopener noreferrer"
+                                                        class="text-decoration-none">
+                                                        <figcaption class="text-center">
+                                                            Tashi Thongmon Gumbā, view from SE; photo by Thomas
+                                                        Schrom; 2021-05-04
+                                                        </figcaption>
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <p class="text-justify">
+                                            <a href="https://danam.cats.uni-heidelberg.de/report/be9d31f0-2cb2-40d0-8af9-3df0fcbb0040"
+                                                target="_blank" rel="noopener noreferrer">Tashi Thongmon Gumbā</a>
+                                            in Junbesi (Dudhkunda, Solukhumbu) is considered
+                                            to be the oldest Sherpa monastery. Junbesi was the first permanent
+                                            settlement of the Sherpa people after they crossed over from Tibet in
+                                            the early 16th century. The original monastery may date to that time.
+                                            Other sources mention 1635 as the construction date. The monastery was
+                                            damaged by an earthquake in the 17th century and partly destroyed by
+                                            fire in 1914. Recent renovations include the replacement of the
+                                            timber-framed entry porch with a cement and concrete portico. In 2007,
+                                            the historic courtyard building was demolished and rebuilt as a stone
+                                            and concrete structure covered with a corrugated metal roof.
+                                        </p>
+                                        <p class="text-justify">
+                                            The three massive clay statues of Buddha Śākyamuni, Maitreya and
+                                            Padmasambhava are replacements that were made after the 1914 fire. Local
+                                            lore has it that the original statues escaped the fire by flying away to
+                                            an undisclosed location. The upstairs room features a niche with a group
+                                            of smaller statues representing Buddha Śākyamuni, Maitreya,
+                                            Padmasambhava, Śāriputra and Maudgalyāyana amongst others. The Gumbā
+                                            houses a set of the Kangyur and a set of the Tengyur.
+                                        </p>
+                                        <p class="text-justify">
+                                            The Gumbā is privately owned by a number of Sherpa families but looked
+                                            after by the Serlo Monastery. A resident monk is deputed to arrange for
+                                            necessary rituals and opens the Gumbā for visitors and pilgrims. The
+                                            monk also runs a small monastery gift shop in the new building. During
+                                            the yearly Dumje festival the birth of Guru Rinpoche is celebrated and
+                                            dances performed in the courtyard. Please visit the database <a
+                                                href="https://danam.cats.uni-heidelberg.de/report/be9d31f0-2cb2-40d0-8af9-3df0fcbb0040"
+                                                target="_blank" rel="noopener noreferrer">DANAM</a> for a
+                                            detailed documentation of this monument.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>  
+
+                            <!-- Monument of the month May 2021  -->
+                            <div class="card card-default">
+                                <div class="card-header">
+                                    <h4 class="card-title m-0">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse1Five">
+                                            May 2021 - Sarāḥ Phalcā <a
+                                                href="https://danam.cats.uni-heidelberg.de/report/69370820-1ef5-11ea-b74e-0242ac130002"
+                                                target="_blank">(LAL4198)</a>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1Five" class="collapse">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <span class="img-thumbnail d-block">
+                                                    <figure>
+                                                        <img class="img-fluid"
+                                                            src="{% static 'img/monument-of-month/LAL4198_P_20191022_03.webp' %}"
+                                                            alt="NHDP image Lamjī Pañcadevala">
+                                                        <figcaption class="text-center mb-0 my-0 mt-1">
+                                                            Sarāḥ Phalcā, view from South; photo by Thomas Schrom;;
+                                                            2019-11-04
+                                                        </figcaption>
+                                                    </figure>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <p class="text-justify">
+                                            One of the most distinct and yet often overseen rich and lived architectural
+                                            elements of Newari intangible and tangible heritage is the phalcā (Newari)
+                                            or pāṭī (Nepali). It is an arcaded platform with multiple functions for
+                                            social gatherings, inviting elderly people to spend their leisure time
+                                            sitting and chatting, men of all ages to play cards, read newspapers or
+                                            deposit temporarily loads, children to play. Pāṭīscan be used for religious
+                                            purposes in a neighbourhood, such as playing bhajanas (devotional songs) in
+                                            the mornings and evenings of particular auspicious days, and some selected
+                                            ones become crucial for the distribution of ritual food such as samaybaji,
+                                            devotional singing or community assembling during the religious chariot
+                                            processions (e.g., Indra Yātrā, Buṅgadyaḥ Yātrā, see <a
+                                                href="https://danam.cats.uni-heidelberg.de/report/69370820-1ef5-11ea-b74e-0242ac130002"
+                                                target="_blank">LAL4198</a>). Once a new
+                                            chariot is constructed, fragments of the old ones are placed in front of
+                                            selected pāṭīs and worshipped.
+                                        </p>
+                                        <p class="text-justify">
+                                            The history of the phalcā goes back to the Licchavi period, but their use,
+                                            and presence has changed over time, and with socio-spatial, demographic
+                                            dynamics. Whether endangered by encroachment or demolition, whether
+                                            cherished or even rejuvenated depends on the community/locality caring for
+                                            the phalcā. Though partly endangered, the phalcā is not on its ‚way out’.
+                                            Even today, communities invest in the construction of new pāṭīs.
+                                        </p>
+                                        <p class="text-justify">
+                                            <strong><a
+                                                    href="https://danam.cats.uni-heidelberg.de/report/69370820-1ef5-11ea-b74e-0242ac130002"
+                                                    target="_blank">DANAM LAL4198:</a></strong><br>
+                                            Sarāḥ Phalcā stands out for its remarkable pillar carvings. Located in
+                                            Ikhachen (Ikhācheṃ), to the east of Tapahiti, the original name of the
+                                            Phalcā is Sadāvarta Phalcā, most likely because it was constructed under the
+                                            Sadāvarta Guṭhī of Śreṣṭhas from Ikhachen. No evidence could be found with
+                                            which to date its initial construction. However, relying upon the wood
+                                            carvings of the monument, it appears that at least the pillars were
+                                            constructed during the late Malla period. Until the early 2000s, a library
+                                            was kept in the Sarāḥ Phalcā, but it was closed down. The Phalcā is in
+                                            severely endangered as it currently lacks a roof (covered by a large
+                                            tarpaulin). This was removed and has not yet been replaced, meaning that the
+                                            Phalcā is not appropriately protected from the heavy monsoon rains. In
+                                            November 2019, several of its side walls were dismantled and rebuilt.
+                                        </p>
+                                        <p class="text-justify">
+                                            <strong>
+                                                <a href="https://danam.cats.uni-heidelberg.de/report/81f57520-f0b7-11e9-a3c8-0242ac130002"
+                                                    target="_blank">DANAM SUN4210:</a>
+                                            </strong>
+                                        </p>
+                                        <div class="row">
+                                            <div class="col">
+                                                <span class="img-thumbnail d-block">
+                                                    <figure>
+                                                        <img class="img-fluid"
+                                                            src="{% static 'img/monument-of-month/SUN4210_P_20191017_08.webp' %}"
+                                                            alt="NHDP image Lamjī Pañcadevala">
+                                                        <figcaption class="text-center mb-0 my-0 mt-1">
+                                                            Dāphā Phalcā, view from SW (October 2019)
+                                                        </figcaption>
+                                                    </figure>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <p class="text-justify">
+                                            Dāphā Phalcā, also called Cībhāḥ Phalcā, is located at the side of a busy
+                                            road in the small town of Sunaguthi (or Sunakothi). It has finely carved
+                                            pillars, decorative cornices, and a three-bay window. However, it is in a
+                                            very neglected state and is missing its original roof. The roof currently
+                                            consists of corrugated metal sheets supported by a make-shift structure of
+                                            crudely shaped sticks. The window frames are damaged and sections of the
+                                            carved frames are missing. This once free-standing Phalcā is further
+                                            encroached upon by neighbouring private buildings. The floor and walls of
+                                            the Phalcā are covered with cement plaster, which has led to the spread
+                                            of damp. Two plywood door panels provide a way to the back room and have
+                                            been inserted into poorly carved frames.
+                                        </p>
+                                        <p class="text-justify">
+                                            The Phalcā is mainly related to the Caitya which stands in front of it.
+                                            During the anniversary celebration (varṣavarddhanapūjā) of the Caitya and
+                                            other ritual worships, people use the building as a resting place. The local
+                                            Jyāpu-community chants devotional songs at the Phalcā during the months
+                                            of <a
+                                                href="https://danam.cats.uni-heidelberg.de/glossary/meaning/17e908a4-676c-4503-82e0-b4e58b72496b/"
+                                                target="_blank">Gũlā</a> (Śrāvaṇa-Bhādra) and Kārtika. According to a
+                                            local elder, the
+                                            Nāmasaṅgīti is also recited here during some of the festivals. On the 8th
+                                            day of the bright fortnight of Śrāvaṇa, local residents from Sunaguthi offer
+                                            religious gifts to their Vajrācārya priests at the Phalcā.
+                                        </p>
+                                        <p>
+                                            <strong>
+                                                <a href="https://danam.cats.uni-heidelberg.de/report/8f55831e-9d6d-11ea-9766-0242ac130005"
+                                                    target="_blank">DANAM LAL4212</a>
+                                            </strong>
+                                        </p>
+                                        <div class="row">
+                                            <div class="col">
+                                                <span class="img-thumbnail d-block">
+                                                    <figure>
+                                                        <img class="img-fluid"
+                                                            src="{% static 'img/monument-of-month/LAL4212_P_20200524_02.webp' %}"
+                                                            alt="NHDP image Lamjī Pañcadevala">
+                                                        <figcaption class="text-center mb-0 my-0 mt-1">
+                                                            Kotalāchi Phalcā, view from NE; photo by Thomas Schrom;
+                                                            2020-05-24
+                                                        </figcaption>
+                                                    </figure>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <p class="text-justify">
+                                            This unusually shaped Phalcā dates back to the first half of the 19th
+                                            century. It has been converted into two small shops for some decades. The
+                                            rents support two different Guṭhīs from nearby Ṭolas. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Monument of the month April 2021  -->
+                            <div class="card card-default">
+                                <div class="card-header">
+                                    <h4 class="card-title m-0">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse1Six">
+                                            April 2021 - Lamjī Pañcadevala <a
+                                                href="https://danam.cats.uni-heidelberg.de/report/7eb10e0c-df75-4816-b1d3-5a541d6c7d19"
+                                                target="_blank">(DLK0320)</a>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1Six" class="collapse">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <span class="img-thumbnail d-block">
+                                                    <figure>
+                                                        <img class="img-fluid"
+                                                            src="{% static 'img/monument-of-month/Lamji Pancadevala.webp' %}"
+                                                            alt="NHDP image Lamjī Pañcadevala">
+                                                        <figcaption class="text-center mb-0 my-0 mt-1">
+                                                            Lamjī Pañcadevala, view from west; photo by David C.
+                                                            Andolfatto; 2014-10-02
+                                                        </figcaption>
+                                                    </figure>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <p class="text-justify">
+                                            The śikhara temples of Lamjī stand as unique monuments in the history of
+                                            west Nepal’s architecture. The temples are built following the concept of
+                                            a pañcāyatana (“five altars”) setting, thus creating a pañcadevala plan
+                                            (devala is the term used in western Nepal for śikhara temples).
+                                            While śikharas are usually constituted of a curvilinear tower (the
+                                            actual śikhara), the tower of the central temple in Lamjī Pañcadevala is
+                                            rectilinear. Elsewhere, this feature is only seen at the Dewal Bajh temple
+                                            in Bajhang District (<a
+                                                href="https://www.zotero.org/groups/2247442/nhdp-bibliography/search/sharma/titleCreatorYear/items/C5E2WSPS/item-list"
+                                                target="_blank">Sharma 2012:</a> 241, Pl. 65a). Another unique feature
+                                            of
+                                            the site is the presence of a finely carved śivaliṅga on top of the
+                                            northeastern śikhara. This śivaliṅga was most probably moved from one of the
+                                            temples’ sanctum to its current location.
+                                            The rectilinear tower of the central temple is an interesting indicator of
+                                            the creativity of medieval builders of western Nepal, who produced
+                                            variations on a well-established type of architecture. Thus, the Lamjī
+                                            Pañcadevala appears as an important historical site for the study of
+                                            Nepalese architecture.
+                                        <p>
+                                            Please visit the <a
+                                                href="https://danam.cats.uni-heidelberg.de/search?paging-filter=1&tiles=true&format=tilecsv&precision=6&total=636"
+                                                target="_blank">Digital Archive of Nepalese Arts and Monuments</a> for
+                                            more
+                                            information about the <a
+                                                href="https://danam.cats.uni-heidelberg.de/report/7eb10e0c-df75-4816-b1d3-5a541d6c7d19"
+                                                target="_blank">Lamjī Pañcadevala</a> and other west Nepal monuments.
+                                        </p>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Monument of the month March 2021 -->
+                            <div class="card card-default">
+                                <div class="card-header">
+                                    <h4 class="card-title m-0">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse1Seven">
+                                            March 2021 - Karnali bridges
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1Seven" class="collapse">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <span class="img-thumbnail d-block">
+                                                    <figure>
+                                                        <img class="img-fluid"
+                                                            src="{% static 'img/monument-of-month/JUM0420_P_2018-05-17.jpg' %}"
+                                                            alt="NHDP Image Chusya Bahah">
+                                                        <figcaption class="text-center mb-0 my-0 mt-1"><a
+                                                                href="https://danam.cats.uni-heidelberg.de/report/67f1cda0-9f96-4673-8502-6b706e34c465"
+                                                                target="_blank">Khalnā Sā̃ghu/खल्ना साँघु (JUM0420),</a>
+                                                            located in the Tila Nadi Valley (Jumla District); view from
+                                                            NW; photo by Dr. David Andolfatto (2018-05-17)
+                                                        </figcaption>
+                                                    </figure>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <p class="text-justify">
+                                            Bridges made of stone and wood punctuate the landscape of the Karnali
+                                            region. Especially found in the Jumla District of West Nepal, these
+                                            monuments are locally known as <i>sā̃ghu</i>. They are built on the
+                                            cantilever
+                                            principle that is met in other Himalayan regions. The Jumli bridges stand
+                                            out for the unique sculptural decorations found on vertical posts, with
+                                            iconographies ranging from images of soldiers with rifles, planes,
+                                            protectors or geometric shapes. Usually not older than fifty years, their
+                                            cyclical construction requires large trees (a material more and more rare to
+                                            procure) and a special knowledge of the technology. Although recently built
+                                            suspension bridges are sometimes built next to them, traditional bridges
+                                            often remain the preferred mode of crossing. One of the aims of the <a
+                                                href="/" target="_blank">NHDP</a>
+                                            project is to document these bridges and the knowledge of their builders, in
+                                            order to safeguard it for future generations.
+                                        </p>
+                                        <p class="text-justify">
+                                            For more information about such bridges, please visit the <a
+                                                href="https://danam.cats.uni-heidelberg.de/search?paging-filter=1&tiles=true&format=tilecsv&precision=6&total=489&resource-type-filter=%5B%7B%22graphid%22%3A%22f35cc1ca-9322-11e9-a5cc-0242ac120006%22%2C%22name%22%3A%22Monument%22%2C%22inverted%22%3Afalse%7D%5D"
+                                                target="_blank">DANAM</a> database.
+                                        </p>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="lightbox"
+                                                    data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+                                                    <a title="JUM0410 is located in Babiro, in the Tila Nadi valley (Jumla District); Photo by Dr. David C. ANDOLFATTO"
+                                                        class="img-thumbnail d-inline-block img-thumbnail-hover-icon mb-1 mr-1"
+                                                        href="{% static 'img/monument-of-month/JUM0410_P_2018-05-16.jpg' %}">
+                                                        <img src="{% static 'img/monument-of-month/JUM0410_P_2018-05-16.jpg' %}"
+                                                            alt="NHDP Image Chusya Bahah" width="300" height="300">
+                                                    </a>
+                                                    <a title="The bridge near Kodenga is located in the Sinja Nadi valley (Jumla District), picture from 30 September 2016; Photo by Dr. David C. ANDOLFATTO"
+                                                        class="img-thumbnail d-inline-block img-thumbnail-hover-icon mb-1 mr-1"
+                                                        href="{% static 'img/monument-of-month/bridge-near-Kodenga-(Sinja valley).jpg' %}">
+                                                        <img src="{% static 'img/monument-of-month/bridge-near-Kodenga-(Sinja valley).jpg' %}"
+                                                            alt="NHDP Image Chusya Bahah" width="300" height="300">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Monument of the month February 2021 -->
+                            <div class="card card-default">
+                                <div class="card-header">
+                                    <h4 class="card-title m-0">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse1Eight">
+                                            February 2021 - Chusyā Bāhāḥ
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1Eight" class="collapse">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <span class="img-thumbnail d-block">
+                                                    <figure>
+                                                        <img class="img-fluid"
+                                                            src="{% static 'img/monument-of-month/Chusyā-Bāhāḥ-view-of-the-courtyard-from-NW.JPG' %}"
+                                                            alt="NHDP Image Chusya Bahah">
+                                                        <figcaption class="text-center mb-0 my-0 mt-1">Chusyā Bāhāḥ,
+                                                            view of the courtyard from NW; photo by Thomas Schrom;
+                                                            2020-12-18</figcaption>
+                                                    </figure>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <p class="text-justify">
+                                            Chusyā Bāhāḥ, located in Jyāthā Ṭola, is one of the oldest bāhāḥs in
+                                            Kathmandu, which still retains its original architecture. There is some
+                                            debate about the Bāhāḥ's initial construction date. Karel Rijk van
+                                            Kooij (1977, 39-82) is of the opinion that the iconography and stylistic
+                                            details of the roof brackets are concurrent with drawings found in 11th
+                                            century manuscripts.  Shantaram Balchandra Deo (1969, 10-11) has dated the
+                                            struts to the 14th century
+                                        </p>
+                                        <p class="text-justify">
+                                            The earliest dated sources related to the Bāhāḥ are two stone inscriptions
+                                            issued during the reign of King Pratāpa Malla (r. 1641-74): A nicely
+                                            preserved inscription from NS 788 (1668 CE) and a damaged inscription, most
+                                            probably issued before NS 788 (1668 CE). The physical and palaeographical
+                                            features of these inscriptions suggest that they were issued by the same
+                                            person within a period of a few years.
+                                        </p>
+                                        <p class="text-justify">
+                                            The NS 788 (1668 CE) inscription records the consecration of Guṇākara
+                                            Mahāvihāra (Chusyā Bāhāḥ) ‘guṇākara mahāvihāra pratiṣṭhā saṃpūrṇa yāṅana’
+                                            and the installation of Harāhara Lokeśvara sponsored by a person named
+                                            Guṇajyoti (text: Guṇajoti) Vajrācārya together with his family members from
+                                            Dhvākhā Bāhāḥ; the damaged inscription mentions the completion of the Bāhāḥ
+                                            ‘thva vihara dayakā’.
+                                        </p>
+                                        <p class="text-justify">
+                                            A third inscription installed inside the sanctum of the Bāhāḥ also by
+                                            Guṇajyoti in NS 769 (1649 CE) records the renovation of a rest-house (capāḥ)
+                                            constructed by his father Jñānajyoti (text: Jñānajoti) in honour of their
+                                            clan deity, Maricī Devī. This indicates that there was a shrine or a pīṭha
+                                            (abode) dedicated to Maricī Devī nearby. Chusyā Bāhāḥ is not mentioned
+                                            in this inscription. If the expansive Mahāvihāra had existed here during
+                                            this time, it would probably have been mentioned in the inscription which
+                                            records the family tree of Guṇajyoti and the renovation of the capāḥ.
+                                        </p>
+                                        <p class="text-justify">
+                                            Thus, it is likely that the broken inscription was issued after NS 769 (1649
+                                            CE). We can then conclude that the Bāhāḥ must have been constructed sometime
+                                            after NS 769 (1649 CE), and was consecrated (probably after its renovation)
+                                            in NS 788 (1668 CE). One could even argue that Guṇajyoti converted the capāḥ
+                                            built by his father into a bāhāḥ and named it Guṇākara Mahāvihāra (Chusyā
+                                            Bāhāḥ) after him. Chusyā Bāhāḥ's saṅgha members believe that Guṇajyoti
+                                            constructed the Bāhāḥ by spending his income generated from his trade in
+                                            Tibet.
+                                        </p>
+                                        <p class="text-justify">
+                                            For more information about Chusyā Bāhāḥ, please visit the <a
+                                                href="/">DANAM</a>
+                                            database
+                                            <a href="https://danam.cats.uni-heidelberg.de/report/b92b7a0f-0268-43e8-bbe2-d83d39d6e54b"
+                                                target="_blank">(KAT0160 Chusyā Bāhāḥ)</a>
+
+                                        </p>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="lightbox"
+                                                    data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+                                                    <a title="Chusyā Bāhāḥ, tympanum (toraṇa) above the main gate, view from N, photo by Thomas Schrom 2020-12-18"
+                                                        class="img-thumbnail d-inline-block img-thumbnail-hover-icon mb-1 mr-1"
+                                                        href="{% static 'img/monument-of-month/Chusyā-Bāhāḥ-tympanum-above-the-main-gate.JPG' %}">
+                                                        <img src="{% static 'img/monument-of-month/Chusyā-Bāhāḥ-tympanum-above-the-main-gate.JPG' %}"
+                                                            alt="NHDP Image Chusya Bahah" width="300" height="300">
+                                                    </a>
+                                                    <a title="Chusyā Bāhāḥ, inscription, view from N, photo by Thomas Schrom 2020-12-18"
+                                                        class="img-thumbnail d-inline-block img-thumbnail-hover-icon mb-1 mr-1"
+                                                        href="{% static 'img/monument-of-month/Chusyā-Bāhāḥ-inscription-view-from-N_ photo.JPG' %}">
+                                                        <img src="{% static 'img/monument-of-month/Chusyā-Bāhāḥ-inscription-view-from-N_ photo.JPG' %}"
+                                                            alt="NHDP Image Chusya Bahah" width="300" height="300">
+                                                    </a>
+                                                    <a title="Chusyā Bāhāḥ, stone inscription dated NS 769 inside the sanctum, view from N, photo by Bharat Maharjan 2020-12-29"
+                                                        class="img-thumbnail d-inline-block img-thumbnail-hover-icon mb-1 mr-1"
+                                                        href="{% static 'img/monument-of-month/Chusyā-Bāhāḥ-inside-the-sanctum-view-from-N_ photo.jpg' %}">
+                                                        <img src="{% static 'img/monument-of-month/Chusyā-Bāhāḥ-inside-the-sanctum-view-from-N_ photo.jpg' %}"
+                                                            alt="NHDP Image Chusya Bahah" width="300" height="300">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer" class="fixed-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-ribbon">
+                        <span>Get in Touch</span>
+                    </div>
+                    <div class="col-md-7 col-lg-5 mb-0 mb-lg-0">
+                        <h5 class="text-3 mb-0 pb-1">CONTACT US</h5>
+                        <p class="mb-2">NEPAL HERITAGE DOCUMENTATION PROJECT</p>
+                        <p class="mb-2">Prof. Dr. Christiane Brosius</p>
+                        <p class="mb-2">Heidelberg Centre for Transcultural Studies</p>
+                        <ul class="list list-icons list-icons-lg">
+                            <li class="mb-1"><i class="fa fa-map-marker"></i>
+                                <p class="m-0">Voßstraße 2, Building 4400<br />
+                                    D-69115 Heidelberg</p>
+                            </li>
+                            <li class="mb-1"><i class="fa fa-envelope"></i>
+                                <p class="m-0"><a href="mailto:nhdp@asia-europe.uni-heidelberg.de"
+                                        target="_blank">nhdp@asia-europe.uni-heidelberg.de</a></p>
+                            </li>
+                        </ul>
+                        <ul class="social-icons mt-4 mb-1">
+                            <li class="social-icons-facebook"><a
+                                    href="https://www.facebook.com/Nepal-Heritage-Documentation-Project-104587164380873"
+                                    target="_blank" title="Nepal Heritage Documentation Project"><i
+                                        class="fa fa-facebook"></i></a></li>
+                            <li class="social-icons-linkedin"><a
+                                    href="https://www.linkedin.com/company/nepal-heritage-documentation-project/"
+                                    target="_blank" title="Nepal Heritage Documentation Project"><i
+                                        class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <h5 class="text-3 mb-0">DANAM is powered by</h5>
+                        <a href="https://www.archesproject.org/" target="_blank">
+                            <img src="{% static '/img/arches_white.png' %}" class="d-inline-block img-fluid"
+                                alt="archeslogo">
+                        </a>
+                    </div>
+                    <div class="col-lg-2">
+                        <h5 class="text-3 text-center mb-3">Scan here</h5>
+                        <img src="{% static 'img/DANAM.svg' %}" class="d-inline-block img-fluid" alt="DANAM qr code">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Vendor -->
+    <script src="{% static 'js/design/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/design/vendor/jquery.appear/jquery.appear.min.js' %}"></script>
+    <script src="{% static 'js/design/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/design/vendor/popper/umd/popper.min.js' %}"></script>
+    <script src="{% static 'js/design/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/design/vendor/common/common.min.js' %}"></script>
+    <script src="{% static 'js/design/vendor/jquery.validation/jquery.validation.min.js' %}"></script>
+    <script src="{% static 'js/design/vendor/jquery.lazyload/jquery.lazyload.min.js' %}"></script>
+    <script src="{% static 'js/design/vendor/isotope/jquery.isotope.min.js' %}"></script>
+    <script src="{% static 'js/design/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/design/vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/design/vendor/vide/vide.min.js' %}"></script>
+
+    <!-- Theme Base, Components and Settings -->
+    <script src="{% static 'js/design/theme.js' %}"></script>
+
+    <!-- Theme Custom -->
+    <script src="{% static 'js/design/custom.js' %}"></script>
+
+    <!-- Theme Initialization Files -->
+    <script src="{% static 'js/design/theme.init.js' %}"></script>
+    <!-- design js -->
+    <script src="{% static 'js/design.js' %}"></script>
+    <script src="{% static 'js/feature-search-gallery.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+{% load static %}
+{% load template_tags %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ app_settings.APP_NAME }} - News</title>
+
+    <meta name="keywords" content="DANAM NEWS" />
+    <meta name="description" content="Nepal Heritage Documentation Project">
+    <meta name="author" content="NHDP">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+
+    <!-- Vendor CSS -->
+    {% include 'partials/css.htm' %}
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
+        rel="stylesheet" type="text/css">
+
+
+    <!-- Head Libs -->
+    <script src="{% static 'js/vendor/modernizr/modernizr.min.js' %}"></script>
+
+</head>
+
+<body>
+
+    <div class="body">
+        {% include 'partials/danam_navbar.htm' %}
+        <div role="main" class="main">
+
+            <section
+                class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5"
+                style="background-image: url({% static 'img/patterns/wild_oliva.png' %});">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12 align-self-center p-static order-2 text-center">
+
+                            <h1 class="font-weight-bold text-8">Danam News</h1>
+                            <span class="sub-title">Check out our Latest News!</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container py-4">
+
+                <div class="row">
+                    <div class="col">
+                        <div class="blog-posts single-post">
+
+                            <article class="post post-large blog-single-post border-0 m-0 p-0">
+                                <div class="post-image ml-0">
+                                    <div class="lightbox"
+                                        data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+                                        <div class="row mx-0">
+                                            <div class="col-6 col-md-4 p-0">
+                                                <a href="{% static 'img/news-portal/extension1.jpeg' %}">
+                                                    <span
+                                                        class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+                                                        <span class="thumb-info-wrapper">
+                                                            <img src="{% static 'img/news-portal/extension1.jpeg' %}"
+                                                                class="img-fluid" alt="" />
+                                                            <span class="thumb-info-action">
+                                                                <span
+                                                                    class="thumb-info-action-icon thumb-info-action-icon-light"><i
+                                                                        class="fas fa-plus text-dark"></i></span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-md-4 p-0">
+                                                <a href="{% static 'img/news-portal/extension2.jpeg' %}">
+                                                    <span
+                                                        class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+                                                        <span class="thumb-info-wrapper">
+                                                            <img src="{% static 'img/news-portal/extension2.jpeg' %}"
+                                                                class="img-fluid" alt="" />
+                                                            <span class="thumb-info-action">
+                                                                <span
+                                                                    class="thumb-info-action-icon thumb-info-action-icon-light"><i
+                                                                        class="fas fa-plus text-dark"></i></span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="post-date ml-0">
+                                    <span class="day">04</span>
+                                    <span class="month">SEPTEMBER</span>
+                                </div>
+
+                                <div class="post-content ml-0">
+
+                                    <h2 class="font-weight-bold"><a href="#">NHDP Granted Six-Year Extension</a></h2>
+
+                                    <div class="post-meta">
+                                        <span><i class="far fa-user"></i> By <a href="#">NHDP</a> </span>
+                                    </div>
+                                    <p>
+                                        NHDP has received a grant to continue its work for six more years. The new grant
+                                        will allow us to continue the work in the Kathmandu valley, and expand it to
+                                        western Nepal and other places that are culturally and historically related to
+                                        the Kathmandu valley. NHDP is the first project to comprehensively photograph,
+                                        describe, survey, analyse these monuments, and make the records available in an
+                                        open database. The project aims to document and inventory more than 2,000
+                                        monuments (temples, monasteries, palaces, and other historic buildings), 2,500
+                                        inscriptions and 8,000 objects, as well as the unique intangible cultural
+                                        heritage associated with the monuments: rituals, festivals and other social and
+                                        religious events and practices. The project will also focus on the monuments
+                                        endangered by earthquakes and urban change that have not yet been thoroughly
+                                        documented. This initiative has already played an important role, for example,
+                                        in the reconstruction of monuments after the devastating earthquakes of 2015.
+                                        The data resulting from the documentation will be available on the Digital
+                                        Archive of Nepalese Arts and Architecture (<a
+                                            href="{% url 'home' %}">DANAM</a>) and Heidelberg University
+                                        Library’s image database, <a href="https://heidicon.ub.uni-heidelberg.de/"
+                                            target="_blank">HeidICON</a>.
+                                    </p>
+                                    <p>
+                                        The NHDP will collaborate again with the <a
+                                            href="http://thesaraffoundation.org/" target="_blank">Saraf</a> Foundation
+                                        for Himalayan
+                                        Traditions and Culture, the <a href="http://doa.gov.np/"
+                                            target="_blank">Department of Archaeology</a> of the Nepalese
+                                        government, the <a href="https://kvptnepal.org/" target="_blank">Kathmandu
+                                            Valley Preservation Trust</a> and <a
+                                            href="https://en.unesco.org/fieldoffice/kathmandu" target="_blank">UNESCO
+                                            Nepal</a> and other
+                                        partners. The project will continue to work with <a
+                                            href="https://www.ub.uni-heidelberg.de/Englisch/Welcome.html"
+                                            target="_blank">Heidelberg University Library</a>,
+                                        the Heidelberg Centre for Transcultural Studies (<a
+                                            href="https://www.asia-europe.uni-heidelberg.de/en/hcts.html"
+                                            target="_blank">HCTS</a>) and the Institute for
+                                        Spatial Information and Measurement Technology at <a
+                                            href="https://i3mainz.hs-mainz.de/" target="_blank">Mainz University of Applied Sciences</a>.
+                                    </p>
+
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'partials/javascript.htm' %}
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+table.dataTable{
+	clear: both;margin-top: 6px!important;margin-bottom: 6px!important;max-width: none!important;border-collapse: separate!important
+}table.dataTabletd,
+table.dataTableth{
+	-webkit-box-sizing: content-box;box-sizing: content-box
+}table.dataTabletd.dataTables_empty,
+table.dataTableth.dataTables_empty{
+	text-align: center
+}table.dataTable.nowrapth,
+table.dataTable.nowraptd{
+	white-space: nowrap
+}div.dataTables_wrapperdiv.dataTables_lengthlabel{
+	font-weight: normal;text-align: left;white-space: nowrap
+}div.dataTables_wrapperdiv.dataTables_lengthselect{
+	width: 75px;display: inline-block
+}div.dataTables_wrapperdiv.dataTables_filter{
+	text-align: right
+}div.dataTables_wrapperdiv.dataTables_filterlabel{
+	font-weight: normal;white-space: nowrap;text-align: left
+}div.dataTables_wrapperdiv.dataTables_filterinput{
+	margin-left: 0.5em;display: inline-block;width: auto
+}div.dataTables_wrapperdiv.dataTables_info{
+	padding-top: 8px;white-space: nowrap
+}div.dataTables_wrapperdiv.dataTables_paginate{
+	margin: 0;white-space: nowrap;text-align: right
+}div.dataTables_wrapperdiv.dataTables_paginateul.pagination{
+	margin: 2px0;white-space: nowrap
+}div.dataTables_wrapperdiv.dataTables_processing{
+	position: absolute;top: 50%;left: 50%;width: 200px;margin-left: -100px;margin-top: -26px;text-align: center;padding: 1em0
+}table.dataTablethead>tr>th.sorting_asc,
+table.dataTablethead>tr>th.sorting_desc,
+table.dataTablethead>tr>th.sorting,
+table.dataTablethead>tr>td.sorting_asc,
+table.dataTablethead>tr>td.sorting_desc,
+table.dataTablethead>tr>td.sorting{
+	padding-right: 30px
+}table.dataTablethead>tr>th: active,
+table.dataTablethead>tr>td: active{
+	outline: none
+}table.dataTablethead.sorting,
+table.dataTablethead.sorting_asc,
+table.dataTablethead.sorting_desc,
+table.dataTablethead.sorting_asc_disabled,
+table.dataTablethead.sorting_desc_disabled{
+	cursor: pointer;position: relative
+}table.dataTablethead.sorting: after,
+table.dataTablethead.sorting_asc: after,
+table.dataTablethead.sorting_desc: after,
+table.dataTablethead.sorting_asc_disabled: after,
+table.dataTablethead.sorting_desc_disabled: after{
+	position: absolute;bottom: 8px;right: 8px;display: block;font-family: 'GlyphiconsHalflings';opacity: 0.5;
+}table.dataTablethead.sorting: after{
+	opacity: 0.2;
+}table.dataTablethead.sorting_asc: after{
+	
+}table.dataTablethead.sorting_desc: after{
+	
+}table.dataTablethead.sorting_asc_disabled: after,
+table.dataTablethead.sorting_desc_disabled: after{
+	color: #eee;
+}div.dataTables_scrollHeadtable.dataTable{
+	margin-bottom: 0!important
+}div.dataTables_scrollBody>table{
+	border-top: none;margin-top: 0!important;margin-bottom: 0!important
+}div.dataTables_scrollBody>table>thead.sorting: after,
+div.dataTables_scrollBody>table>thead.sorting_asc: after,
+div.dataTables_scrollBody>table>thead.sorting_desc: after{
+	display: none
+}div.dataTables_scrollBody>table>tbody>tr: first-child>th,
+div.dataTables_scrollBody>table>tbody>tr: first-child>td{
+	border-top: none
+}div.dataTables_scrollFoot>.dataTables_scrollFootInner{
+	box-sizing: content-box
+}div.dataTables_scrollFoot>.dataTables_scrollFootInner>table{
+	margin-top: 0!important;border-top: none
+}@mediascreenand(max-width: 767px){
+	div.dataTables_wrapperdiv.dataTables_length,
+	div.dataTables_wrapperdiv.dataTables_filter,
+	div.dataTables_wrapperdiv.dataTables_info,
+	div.dataTables_wrapperdiv.dataTables_paginate{
+		text-align: center
+	}
+}table.dataTable.table-condensed>thead>tr>th{
+	padding-right: 20px
+}table.dataTable.table-condensed.sorting: after,
+table.dataTable.table-condensed.sorting_asc: after,
+table.dataTable.table-condensed.sorting_desc: after{
+	top: 6px;right: 6px
+}table.table-bordered.dataTableth,
+table.table-bordered.dataTabletd{
+	border-left-width: 0
+}table.table-bordered.dataTableth: last-child,
+table.table-bordered.dataTableth: last-child,
+table.table-bordered.dataTabletd: last-child,
+table.table-bordered.dataTabletd: last-child{
+	border-right-width: 0
+}table.table-bordered.dataTabletbodyth,
+table.table-bordered.dataTabletbodytd{
+	border-bottom-width: 0
+}div.dataTables_scrollHeadtable.table-bordered{
+	border-bottom-width: 0
+}div.table-responsive>div.dataTables_wrapper>div.row{
+	margin: 0
+}div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]: first-child{
+	padding-left: 0
+}div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]: last-child{
+	padding-right: 0
+}

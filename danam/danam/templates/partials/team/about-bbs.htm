@@ -1,0 +1,62 @@
+{% extends 'partials/page-team.htm' %}
+{% load static %}
+{% block team_detail %}
+<div class="body">
+	{% include 'partials/danam_navbar.htm' with extra_links='partials/monument-link.htm' %}
+	<div role="main" class="main">
+
+		<div class="container pt-5">
+
+			<div class="row py-4 mb-2">
+				<div class="col-md-7 order-2">
+					<div class="overflow-hidden">
+						<h2 class="text-color-dark font-weight-bold text-8 mb-0 pt-0 mt-0 appear-animation"
+							data-appear-animation="maskUp" data-appear-animation-delay="300">Bishwo Bijaya Shah</h2>
+					</div>
+					<div class="overflow-hidden mb-3">
+						<p class="font-weight-bold text-primary text-uppercase mb-2 appear-animation"
+							data-appear-animation="maskUp" data-appear-animation-delay="500">Developer</p>
+					</div>
+					<p class="lead appear-animation text-justify" data-appear-animation="fadeInUpShorter"
+						data-appear-animation-delay="700">After studying Computer Science and Engineering from VTU,
+						Belgaum, India,
+						Bishwo Bijaya Shah joined UNESCO, Kathmandu as an IT Consultant for the development and
+						implementation of Cultural Heritage Information & Management System for the Government of Nepal
+						called
+						<a href="http://www.heritage.gov.np/" target="_blank">CHIMS</a> using an open source framework
+						called <a href="https://www.archesproject.org/" target="_blank">Arches</a>.<br /> His expertise
+						is
+						built on work
+						for UNESCO & Department of Archaeology, Nepal and within the NHDP he is working as a full stack
+						developer.</p>
+
+					<hr class="solid my-4 appear-animation" data-appear-animation="fadeInUpShorter"
+						data-appear-animation-delay="800">
+					<div class="row align-items-center appear-animation" data-appear-animation="fadeInUpShorter"
+						data-appear-animation-delay="900">
+						<div class="col-lg-6">
+							<a href="mailto:iworld023@gmail.com" class="btn btn-modern btn-dark mt-3">Get In Touch</a>
+							<!--	<a href="#" class="btn btn-modern btn-primary mt-3">Website</a> -->
+						</div>
+						<div class="col-sm-6 text-lg-right my-4 my-lg-0">
+							<strong class="text-uppercase text-1 mr-3 text-dark">follow me</strong>
+							<ul class="social-icons d-none d-sm-block social-icons-clean float-lg-right">
+								<!---	<li class="social-icons-wikipedia-w"><a href="http://www.facebook.com/" target="_blank" title="Website"><i class="fab fa-wikipedia-w"></i></a></li> -->
+								<!---	<li class="social-icons-google"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-google"></i></a></li> -->
+								<li class="social-icons-linkedin"><a
+										href="https://www.linkedin.com/in/bishow-bijay-shah-20548b57/" target="_blank"
+										title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 order-md-2 mb-4 mb-lg-0 appear-animation"
+					data-appear-animation="fadeInRightShorter">
+					<img src="{% static 'img/team/BBS.jpg' %}" class="img-fluid mb-2" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% include 'partials/javascript.htm' %}
+{% endblock %}

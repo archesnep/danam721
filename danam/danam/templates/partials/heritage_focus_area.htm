@@ -1,0 +1,274 @@
+{% load static %}
+{% load template_tags %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Basic -->
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ app_settings.APP_NAME }} - Welcome</title>
+
+    <meta name="keywords" content="NHDP" />
+    <meta name="description" content="Nepal Heritage Documentation Project">
+    <meta name="author" content="NHDP">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
+        rel="stylesheet" type="text/css">
+
+    {% include 'partials/css.htm' %}
+    <link rel="stylesheet" href="{% static 'css/design/vendor/font-awesome/css/font-awesome.min.css' %}">
+</head>
+
+<body data-spy="scroll" data-target="#navSecondary" data-offset="172">
+    <div class="body">
+        {% include "partials/danam_navbar.htm" %}
+        <div role="main" class="main">
+            <section
+                class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5"
+                style="background-image: url({% static 'img/patterns/random_grey_variations.png' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 align-self-center p-static order-2 text-center">
+                            <h1>Heritage Focus Areas</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Heritage Focus Area  -->
+            <section class="section section-height-4 bg-light border-0 mb-0" id="ourprojects">
+                <div class="container mt-0">
+                    <div class="row portfolio-list sort-destination mb-1">
+                        <!-- Sundhara  -->
+                        <div class="col-lg-4 isotope-item mt-0">
+                            <div class="portfolio-item">
+                                <a href="{% url 'sundhara' %}"
+                                    rel="noopener noreferrer" target="_blank" class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info">
+                                            <img src="{% static 'img/feature_search/sundhara.jpg' %}"
+                                                class="img-fluid" alt="">
+                                        </span>
+                                </a>
+                                <span class="thumb-info-caption mt-0 mb-0">
+                                    <span class="thumb-info-caption-text text-center">Sundhara, Patan
+                                    </span>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bhurti Temple Complex  -->
+                        <div class="col-lg-4 isotope-item mt-0">
+                            <div class="portfolio-item">
+                                <a href="{% url 'bhurticomplex' %}"
+                                    rel="noopener noreferrer" target="_blank" class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info">
+                                            <img src="{% static 'img/feature_search/Bhurti_H_20140924.webp' %}"
+                                                class="img-fluid" alt="">
+                                        </span>
+                                </a>
+                                <span class="thumb-info-caption mt-0 mb-0">
+                                    <span class="thumb-info-caption-text text-center">Bhurtī Temple
+                                        Complex, Dailekh</span>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Patan Durbar Square  -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="{% url 'patan_durbar_square' %}"
+                                    target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info">
+                                            <img src="{% static 'img/feature_search/patan_durbar.webp' %}"
+                                                class="img-fluid" alt="">
+                                        </span>
+                                </a>
+                                <span class="thumb-info-caption mt-0 mb-0">
+                                    <span class="thumb-info-caption-text text-center">Patan Darbar Square, Patan</span>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Sinja Valley -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="{% url 'sinja_valley' %}"
+                                    rel="noopener noreferrer" target="_blank" class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info">
+                                            <img src="{% static 'img/feature_search/sinja.webp' %}" class="img-fluid"
+                                                alt="">
+                                        </span>
+                                </a>
+                                <span class="thumb-info-caption mt-0 mb-0">
+                                    <span class="thumb-info-caption-text text-center">Sinja Valley, Jumla</span>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Baghabhairava kirtipur area -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="{% url 'baghabhairava_kritipur' %}"
+                                    rel="noopener noreferrer" target="_blank" class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info">
+                                            <img src="{% static 'img/feature_search/kirtipur.webp' %}" class="img-fluid"
+                                                alt="">
+                                        </span>
+                                </a>
+                                <span class="thumb-info-caption mt-0 mb-0">
+                                    <span class="thumb-info-caption-text text-center">Bāghabhairava Complex, Kirtipur</span>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Devagala kirtipur area -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="{% url 'devagala_kritipur' %}"
+                                    rel="noopener noreferrer" target="_blank" class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info">
+                                            <img src="{% static 'img/feature_search/KIR0001_P_20201010_07.jpg' %}" class="img-fluid"
+                                                alt="">
+                                        </span>
+                                </a>
+                                <span class="thumb-info-caption mt-0 mb-0">
+                                    <span class="thumb-info-caption-text text-center">Devagala, Kirtipur</span>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Sunaguthi  -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="{% url 'sunaguthi' %}"
+                                    rel="noopener noreferrer" target="_blank" class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info">
+                                            <img src="{% static 'img/feature_search/suanaguthi.webp' %}"
+                                                class="img-fluid" alt="">
+                                        </span>
+                                </a>
+                                <span class="thumb-info-caption mt-0 mb-0">
+                                    <span class="thumb-info-caption-text text-center">Sunaguthi, Lalitpur</span>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bungamati  -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="{% url 'bungamati' %}"
+                                    rel="noopener noreferrer" target="_blank" class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info">
+                                            <img src="{% static 'img/feature_search/bungmati.webp' %}" class="img-fluid"
+                                                alt="">
+                                        </span>
+                                </a>
+                                <span class="thumb-info-caption mt-0 mb-0">
+                                    <span class="thumb-info-caption-text text-center">Bungamati, Lalitpur</span>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Ikalalkhu -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="{% url 'ikalakhu' %}"
+                                    rel="noopener noreferrer" target="_blank" class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info">
+                                            <img src="{% static 'img/feature_search/Ikalakhu.webp' %}" class="img-fluid"
+                                                alt="">
+                                        </span>
+                                </a>
+                                <span class="thumb-info-caption mt-0 mb-0">
+                                    <span class="thumb-info-caption-text text-center">Ikalakhu, Patan</span>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Pimbahal -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="{% url 'pimbahal' %}" rel="noopener noreferrer" target="_blank"
+                                    class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info">
+                                            <img src="{% static 'img/feature_search/pimbahal.webp' %}" class="img-fluid"
+                                                alt="Pimbahal">
+                                        </span>
+                                </a>
+                                <span class="thumb-info-caption mt-0 mb-0">
+                                    <span class="thumb-info-caption-text text-center">Pimbahal, Patan</span>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Cyāsal  -->
+                        <div class="col-lg-4 isotope-item">
+                            <div class="portfolio-item mb-0">
+                                <a href="{% url 'cyasal' %}" rel="noopener noreferrer" target="_blank"
+                                    class="text-decoration-none">
+                                    <span
+                                        class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear custom-thumb-info-style-1">
+                                        <span class="thumb-info">
+                                            <img src="{% static 'img/feature_search/cyasal.webp' %}" class="img-fluid"
+                                                alt="cyasal">
+                                        </span>
+                                </a>
+                                <span class="thumb-info-caption mt-0 mb-0">
+                                    <span class="thumb-info-caption-text text-center">Cyāsal, Patan</span>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of feature search -->
+            </section>
+            {% include 'partials/javascript.htm' %}
+        </div>
+    </div>
+
+</body>
+
+</html>

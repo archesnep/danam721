@@ -1,0 +1,106 @@
+{% load static %}
+{% load template_tags %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Basic -->
+	<!-- Basic -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>{{ app_settings.APP_NAME }} - Welcome</title>
+
+	<meta name="keywords" content="NHDP" />
+	<meta name="description" content="Nepal Heritage Documentation Project">
+	<meta name="author" content="NHDP">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+	<!-- Mobile Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+	<!-- Web Fonts  -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
+		rel="stylesheet" type="text/css">
+
+	{% include 'partials/css.htm' %}
+	<link rel="stylesheet" href="{% static 'css/design/vendor/font-awesome/css/font-awesome.min.css' %}">
+</head>
+
+<body data-spy="scroll" data-target="#navSecondary" data-offset="172">
+	<div class="body mb-10">
+		{% include "partials/danam_navbar.htm" %}
+		<div role="main" class="main">
+			<div role="main" class="main">
+
+				<section class="page-header">
+					<div class="container">
+						<div class="row">
+							<div class="col align-self-center p-static order-2 text-center">
+								<h1>Publications</h1>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="container">
+
+					<div class="row mb-5">
+						<div class="col">
+
+							<p class="mt-5 text-5">Here, you find publications related to the <strong>NHDP</strong>
+								written by our team members.</p>
+
+							<ol class="history list list-ordened list-ordened-style-3">
+								<li class="appear-animation" data-appear-animation="fadeInUp">
+									<p>
+										<a href="https://www.mdpi.com/2071-1050/12/20/8720" target="_blank">
+											Brosius, Christiane, and Axel Michaels. 2020. "Vernacular Heritage as Urban
+											Place-Making. Activities and Positions in the Reconstruction of Monuments
+											after the Gorkha Earthquake in Nepal, 2015–2020: The Case of Patan"
+											Sustainability 12, no. 20: 8720. https://doi.org/10.3390/su12208720
+										</a>
+									</p>
+								</li>
+								<li class="appear-animation" data-appear-animation="fadeInUp">
+									<p>
+										<a href="{% static 'articles/Oslo-dipankarayatra.pdf' %}" target="_blank">
+											Michaels, Axel. “From Syncretism to Transculturality: The Dīpaṅkara
+											Procession in the Kathmandu Valley.” In South Asian Festivals on the Move,
+											edited by Ute Hüsken and Axel Michaels, 317–42. Wiesbaden: Harrassowitz,
+											2013.
+										</a>
+									</p>
+								</li>
+								<li class="appear-animation" data-appear-animation="fadeInUp">
+									<p>
+										<a href="https://heiup.uni-heidelberg.de/catalog/book/769?lang=en"
+											target="_blank">
+											Khatiwoda, Rajan, Cubelic, Simon and Michaels, Axel: The "Mulukī Ain" of
+											1854: Nepal’s First Legal Code , Heidelberg: Heidelberg University
+											Publishing, 2021 (Documenta Nepalica – Book Series, Vol. 2).
+											https://doi.org/10.17885/heiup.769
+										</a>
+									</p>
+								</li>
+							</ol>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+
+	{% include 'partials/javascript.htm' %}
+</body>
+
+</html>

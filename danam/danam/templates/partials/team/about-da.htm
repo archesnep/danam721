@@ -1,0 +1,53 @@
+{% extends 'partials/page-team.htm' %}
+{% load static %}
+{% block team_detail %}
+<div class="body">
+    {% include 'partials/danam_navbar.htm' with extra_links='partials/monument-link.htm' %}
+    <div role="main" class="main">
+        <div class="container pt-5">
+            <div class="row py-4 mb-2">
+                <div class="col-md-7 order-2">
+                    <div class="overflow-hidden">
+                        <h2 class="text-color-dark font-weight-bold text-8 mb-0 pt-0 mt-0 appear-animation"
+                            data-appear-animation="maskUp" data-appear-animation-delay="300">Dr. David Cornélius
+                            Andolfatto
+                        </h2>
+                    </div>
+                    <div class="overflow-hidden mb-3">
+                        <p class="font-weight-bold text-primary text-uppercase mb-2 appear-animation"
+                            data-appear-animation="maskUp" data-appear-animation-delay="500">Heidelberg team</p>
+                    </div>
+                    <p class="lead appear-animation text-justify" data-appear-animation="fadeInUpShorter"
+                        data-appear-animation-delay="700">
+                        David C. Andolfatto studied Asian archaeology at Marc Bloch University, Strasbourg (BA) and at
+                        Paris Sorbonne University (MA and PhD). His research focuses on the archaeology, history and art
+                        history of Nepal, especially in the Kathmandu Valley and in West Nepal. <br>
+                        From 2015 to 2018, Andolfatto worked as a consultant for the UNESCO Kathmandu Office. During
+                        this period, he conducted archaeological excavations on heritage sites and coordinated different
+                        preservation projects. <br>
+                        His PhD thesis on the archaeology of West Nepal led him to document historical sites and
+                        artefacts in this largely overlooked part of the country. As a part of NHDP, Andolfatto
+                        provides data on heritage sites of the area comprised between Jumla and the Mahakali river
+                        (Nepal-India border).
+                    </p>
+
+                    <hr class="solid my-4 appear-animation" data-appear-animation="fadeInUpShorter"
+                        data-appear-animation-delay="800">
+                    <div class="row align-items-center appear-animation" data-appear-animation="fadeInUpShorter"
+                        data-appear-animation-delay="900">
+                        <div class="col-lg-6">
+                            <a href="mailto:andolfatto.david@gmail.com" class="btn btn-modern btn-dark mt-3">Get In
+                                Touch</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 order-md-2 mb-4 mb-lg-0 appear-animation"
+                    data-appear-animation="fadeInRightShorter">
+                    <img src="{% static 'img/team/DA.jpeg' %}" class="img-fluid mb-2" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'partials/javascript.htm' %}
+{% endblock %}

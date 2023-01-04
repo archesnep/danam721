@@ -1,0 +1,134 @@
+{% load i18n %}
+<!-- ko if: $data.search -->
+<div class="col-md-4 col-lg-3">
+    <select 
+        class="resources" 
+        tabindex="-1" 
+        style="display: none;" 
+        data-bind="
+            value: op, 
+            chosen: {width: '100%', disable_search_threshold: 15},
+            optionsText: 'text',
+            optionsValue: 'value',
+            options: [
+                { text: $root.translations.overlaps, value: 'overlaps' },
+                { text: '=', value: 'eq' },
+                { text: '&gt;', value: 'gt' },
+                { text: '&lt;', value: 'lt' },
+                { text: '&ge;', value: 'gte' },
+                { text: '&le;', value: 'lte' },
+                { text: $root.translations.hasNoValue, value: 'null' },
+                { text: $root.translations.hasAnyValue, value: 'not_null' },
+            ],
+        "
+    ></select>
+</div>
+<div class="col-md-8 col-lg-9" data-bind="visible: op() !== 'null' && op() !== 'not_null'">
+    <input 
+        type="text" 
+        class="form-control input-lg" 
+        style="height: 36px;" 
+        data-bind="
+            attr: {placeholder: $root.translations.name},
+            textInput: searchValue
+        "
+    >
+</div>
+<!-- /ko -->
+
+<!-- ko ifnot: $data.search -->
+<div class="node-widget-label concept-label">
+
+    <div class="control-label">
+        <span data-bind="text: $root.translations.fuzzyYearPadding"></span>
+    </div>
+    <div class="edtf-input">
+        <input 
+            type="number" 
+            class="form-control input-md widget-input" 
+            data-bind="
+                attr: {placeholder: $root.translations.fuzzyYearPadding},
+                textInput: config.fuzzy_year_padding
+            "
+        >
+    </div>
+    <div class="control-label">
+        <span data-bind="text: $root.translations.fuzzyMonthPadding"></span>
+    </div>
+    <div  class="edtf-input">
+        <input 
+            type="number" 
+            class="form-control input-md widget-input" 
+            data-bind="
+                attr: {placeholder: $root.translations.fuzzyMonthPadding},
+                textInput: config.fuzzy_month_padding
+            "
+        >
+    </div>
+    <div class="control-label">
+        <span data-bind="text: $root.translations.fuzzyDayPadding"></span>
+    </div>
+    <div class="edtf-input">
+        <input 
+            type="number" 
+            class="form-control input-md widget-input" 
+            data-bind="
+                attr: {placeholder: $root.translations.fuzzyDayPadding},
+                textInput: config.fuzzy_day_padding
+            "
+        >
+    </div>
+    <div class="control-label">
+        <span data-bind="text: $root.translations.fuzzySeasonPadding"></span>
+    </div>
+    <div class="edtf-input">
+        <input 
+            type="number" 
+            class="form-control input-md widget-input" 
+            data-bind="
+                attr: {placeholder: $root.translations.fuzzySeasonPadding},
+                textInput: config.fuzzy_season_padding
+            "
+        >
+    </div>
+    <div class="control-label">
+        <span data-bind="text: $root.translations.multiplierIfDateIsUncertain"></span>
+    </div>
+    <div class="edtf-input">
+        <input 
+            type="number" 
+            class="form-control input-md widget-input" 
+            data-bind="
+                attr: {placeholder: $root.translations.multiplierIfDateIsUncertain},
+                textInput: config.multiplier_if_uncertain
+            "
+        >
+    </div>
+    <div class="control-label">
+        <span data-bind="text: $root.translations.multiplierIfDateIsApproximate"></span>
+    </div>
+    <div class="edtf-input">
+        <input 
+            type="number" 
+            class="form-control input-md widget-input" 
+            data-bind="
+                attr: {placeholder: $root.translations.multiplierIfDateIsApproximate},
+                textInput: config.multiplier_if_approximate
+            "
+        >
+    </div>
+    <div class="control-label">
+        <span data-bind="text: $root.translations.multiplierIfBoth"></span>
+    </div>
+    <div class="edtf-input">
+        <input 
+            type="number" 
+            class="form-control input-md widget-input" 
+            data-bind="
+                attr: {placeholder: $root.translations.multiplierIfBoth},
+                textInput: config.multiplier_if_both
+            "
+        >
+    </div>
+</div>
+<!-- /ko -->

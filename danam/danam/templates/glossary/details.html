@@ -1,0 +1,57 @@
+{% extends 'glossary/base.html' %}
+
+{% load static %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block title %} {{ block.super }} | {{ preflabel }} {% endblock %}
+
+{% block content %}
+{% include 'partials/danam_navbar.htm' %}
+<section
+  class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5"
+  style="background-image: url({% static 'img/patterns/random_grey_variations.png' %});">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12 align-self-center p-static order-2 text-center">
+
+        <h1 class=" font-weight-bold text-8">NHDP Glossary</h1>
+      </div>
+    </div>
+  </div>
+</section>
+{% csrf_token %}
+<center>
+	<section id="two" class="wrapper style2 alt">
+		<div class="inner">
+			<div class="spotlight">
+							
+							
+							
+				<div class="image">
+				
+					
+						<a id="image" href="#" target="_blank"><img id="thumb" alt="" /></a>
+						<div class ="div-heidicon"></div>
+					
+				
+				</div>
+				<div id="content">
+					<h2 id = "prefLabel"></h2>
+					<h3 id = "altLabel"></h3>
+					<p id = "definition"><br></p>
+				</div>
+			</div>
+		</div>
+	</section>
+</center>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/glossary/jquery.min.js' %}"></script>
+<script src="{% static 'js/glossary/data-display.js' %}"></script> 
+
+{% endblock %}

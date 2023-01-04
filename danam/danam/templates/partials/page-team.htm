@@ -1,0 +1,948 @@
+{% load static %} {% load template_tags %} {% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en" />
+
+    <title>{{ app_settings.APP_NAME }} - Team</title>
+
+    <meta name="keywords" content="DANAM team" />
+    <meta name="description" content="Nepal Heritage Documentation Project">
+    <meta name="author" content="NHDP">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <!-- Vendor CSS -->
+    {% include 'partials/css.htm' %}
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    {% block team_detail %}
+    <div class="body">
+        {% include 'partials/danam_navbar.htm' with extra_links='partials/monument-link.htm' %}
+        <div role="main" class="main">
+
+            <section class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5" style="background-image: url({% static 'img/patterns/random_grey_variations.png' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 align-self-center p-static order-2 text-center">
+                            <h1>Meet the <strong>Team</strong></h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container py-4">
+
+                <ul class="nav nav-pills sort-source justify-content-center" data-sort-id="team" data-option-key="filter">
+                    <li class="nav-item active" data-option-value="current"><a class="nav-link text-1 text-uppercase active" href="#">Show All</a></li>
+                    <li class="nav-item" data-option-value=".coordinators"><a class="nav-link text-1 text-uppercase" href="#">Directorate and Coordination</a></li>
+                    <li class="nav-item" data-option-value=".heidelberg"><a class="nav-link text-1 text-uppercase" href="#">Heidelberg Team</a></li>
+                    <li class="nav-item" data-option-value=".associates"><a class="nav-link text-1 text-uppercase" href="#">Associates</a></li>
+                    <li class="nav-item" data-option-value=".nepal"><a class="nav-link text-1 text-uppercase" href="#">Nepal Team</a></li>
+                    <li class="nav-item" data-option-value=".former"><a class="nav-link text-1 text-uppercase" href="#">Former Team Members</a></li>
+                </ul>
+
+                <div class="sort-destination-loader sort-destination-loader-showing mt-4 pt-2">
+                    <div class="row team-list sort-destination" data-sort-id="team">
+
+                        <!-- ----------------------------Directors and coordinators--------------------------- -->
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current coordinators">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_cb' %}">
+										<img src="{% static 'img/team/CB.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Prof. Dr. Christiane Brosius</h3>
+
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current coordinators">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_rk' %}">
+										<img src="{% static 'img/team/RK.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Rajan Khatiwoda</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current coordinators">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_rmh' %}">
+										<img src="{% static 'img/team/RMH.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Radha Malkar</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current coordinators">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_am' %}">
+										<img src="{% static 'img/team/AM.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Prof. Dr. Axel Michaels</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current coordinators">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_rm' %}">
+										<img src="{% static 'img/team/RM.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Roshan Mishra</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current coordinators">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_vs' %}">
+										<img src="{% static 'img/team/VS.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Varun Saraf</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+
+                        <!-- ----------------------------------Heidelberg team members------------------------ -->
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current heidelberg">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_da' %}">
+										<img src="{% static 'img/team/DA.jpeg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Dr. David Cornélius Andolfatto</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item heidelberg">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_cb' %}">
+										<img src="{% static 'img/team/CB.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Prof. Dr. Christiane Brosius</h3>
+
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current heidelberg">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_ld' %}">
+										<img src="{% static 'img/team/LD.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Lily Djami</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current heidelberg">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_dk' %}">
+										<img src="{% static 'img/team/DK.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Dikshya Karki</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item heidelberg">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_rk' %}">
+										<img src="{% static 'img/team/RK.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Rajan Khatiwoda</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item heidelberg">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_rmh' %}">
+										<img src="{% static 'img/team/RMH.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Radha Malkar</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item heidelberg">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_am' %}">
+										<img src="{% static 'img/team/AM.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Prof. Dr. Axel Michaels</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current heidelberg">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_em' %}">
+										<img src="{% static 'img/team/Elias Michael.JPG' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Elias Michaels</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <!---------------- Associates team members ------------------>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current associates">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_mb' %}">
+										<img src="{% static 'img/team/MB.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Dr. Manik Bajracharya</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current associates">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_ng' %}">
+										<img src="{% static 'img/team/NG.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Prof. Dr. Niels Gutschow</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current associates">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_ak' %}">
+										<img src="{% static 'img/team/AK.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Dr. Ashish Karmacharya</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current associates">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_mmn' %}">
+										<img src="{% static 'img/team/Monalisanew.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Dr. Monalisa Maharjan</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current associates">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_ar' %}">
+										<img src="{% static 'img/team/AR.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Ashesh Rajbansh</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current associates">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_ns' %}">
+										<img src="{% static 'img/team/NS.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Dr. Nutandhar Sharma
+									</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+                            </span>
+                            </span>
+                        </div>
+                        <!-- ---------------------------------------Nepal team members------------------------ -->
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current nepal">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_pb' %}">
+										<img src="{% static 'img/team/PB.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Pabitra Bajracharya</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current nepal">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_ab' %}">
+										<img src="{% static 'img/team/AB.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Anil Basukala</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current nepal">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_vb' %}">
+										<img src="{% static 'img/team/VB.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Bibek Basukala </h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current nepal">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_bb' %}">
+										<img src="{% static 'img/team/BB.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Bijay Basukala</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current nepal">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_yb' %}">
+										<img src="{% static 'img/team/YB.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Yogesh Budathoki</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current nepal">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_ag' %}">
+										<img src="{% static 'img/team/AG.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Ashish Gautam</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current nepal">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_jlama' %}">
+										<img src="{% static 'img/team/JLama.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Jagat Lama</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current nepal">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_bm' %}">
+										<img src="{% static 'img/team/BM.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Bharat Maharjan</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item nepal">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_rm' %}">
+										<img src="{% static 'img/team/RM.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Roshan Mishra</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current nepal">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_pn' %}">
+										<img src="{% static 'img/team/PN.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Pankaj Nakarmi </h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item nepal">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_vs' %}">
+										<img src="{% static 'img/team/VS.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Varun Saraf</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current nepal">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_ts' %}">
+										<img src="{% static 'img/team/TS.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Thomas Schrom</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current nepal">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_bbs' %}">
+										<img src="{% static 'img/team/BBS.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Bishwo Bijaya Shah</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current nepal">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_rsk' %}">
+										<img src="{% static 'img/team/RSK.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Rajendra Shakya</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item current nepal">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_rs' %}">
+										<img src="{% static 'img/team/RS.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Ravi Shakya</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+
+                        <!-- ------------------------Former team members------------------------ -->
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_ra' %}">
+										<img src="{% static 'img/team/RA.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Rabi Acharya</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_aa' %}">
+										<img src="{% static 'img/team/AA.jpg' %}" class="img-fluid" alt="">
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Ashma Adhikari</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_ma' %}">
+										<img src="{% static 'img/team/MA.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Matthias Arnold</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_ib' %}">
+										<img src="{% static 'img/team/IB.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Ina Buchholz</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_hd' %}">
+										<img src="{% static 'img/team/HD.jpg' %}" class="img-fluid" alt="">
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Hrijata Dahal</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_sad' %}">
+										<img src="{% static 'img/team/SAD.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Sabrina Dangol </h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+						<div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_bishal_diganta' %}">
+										<img src="{% static 'img/team/bishal-diganta.jpeg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Bishal Diganta</h3>
+
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_sd' %}">
+										<img src="{% static 'img/team/SD.jpg' %}" class="img-fluid" alt="">
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Shekhar Dongol</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_mg' %}">
+										<img src="{% static 'img/team/MG.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Manvi Gautam</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_nk' %}">
+										<img src="{% static 'img/team/NK.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Nashib Kafle</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_pm' %}">
+										<img src="{% static 'img/team/PM.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Padma Sundar Maharjan</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_jm' %}">
+										<img src="{% static 'img/team/JM.jpg' %}" class="img-fluid" alt="">
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Julia Meckl</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_mm' %}">
+										<img src="{% static 'img/team/MM.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Mhairi Montgomery</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_lo' %}">
+										<img src="{% static 'img/team/LO.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Lizeth Ortiz</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_st' %}">
+										<img src="{% static 'img/team/ST.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Sabina Tandukar</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_rt' %}">
+										<img src="{% static 'img/team/RT.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Dr. Ramhari Timalsina</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_jl' %}">
+										<img src="{% static 'img/team/JL.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Jennifer Landes</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_cw' %}">
+										<img src="{% static 'img/team/CW.jpg' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Charlotte von Waitz</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 isotope-item former">
+                            <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+								<span class="thumb-info-wrapper">
+									<a href="{% url 'about_rga' %}">
+										<img src="{% static 'img/team/RGA.png' %}" class="img-fluid" alt="">
+
+									</a>
+								</span>
+                            <span class="thumb-info-caption">
+									<h3 class="text-color-dark text-3 line-height-1 mt-3 mb-0">
+										Rishi Govinda Amatya</h3>
+									<span class="thumb-info-caption-text pt-1"></span>
+
+                            </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor -->
+    {% include 'partials/javascript.htm' %}
+    <script>
+        $(document).ready(function() {
+            window.location.href = "https://danam.cats.uni-heidelberg.de/team/#current";
+        });
+    </script>
+
+    {% endblock %}
+</body>
+
+</html>

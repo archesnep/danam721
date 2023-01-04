@@ -1,0 +1,177 @@
+/* resource editor card help section  */
+.card-help-panel {
+    width: 388px !important;
+}
+
+/* resource editor card help icon  */
+.editable-help {
+    margin-right: 0px;
+    padding: 34px 5px;
+}
+
+/*###########################################################################################################*/
+/*--------- Report page ----------- */
+/* report page branch title section  */
+.rp-tile-title {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    padding: 0px 0 5px 0px;
+    color:  #007fff;;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* report inner paragraph attributes */
+@media (min-width: 768px) {
+    .dl-horizontal dt {
+        white-space: pre-wrap;
+        margin-bottom: 5px;
+        width: 200px;
+        color: #030303d9;
+    } }
+/*###########################################################################################################*/
+/*--------- Print feautre ---------- */
+.resource-component-abstract {
+    /*-- overflow-y: hidden; --*/
+     height: 100%;
+} 
+
+@media print {
+    header,
+    nav,
+    footer,
+    button,
+    aside,
+    .print-btn,
+    .ep-tools,
+    .geocode-container,
+    .geometry-tools-container,
+    .geometry-editing-notifications,
+    #map-widget-container>.map-widget-container {
+        display: none;
+    }
+    #content-container {
+        padding: 0 !important;
+    }
+    .scroll-y {
+        height: auto;
+    }
+    dt {
+        text-decoration: underline;
+        font-weight: bold;
+        color: #808080 !important;
+    }
+    dd {
+        margin-left: 2px;
+    }
+    a[href]:after {
+        content: none;
+    }
+    .dl-horizontal dd {
+        margin-left: 280px;
+        padding-right: 100px;
+        justify-content: center;
+    }
+    
+    img {
+        vertical-align: middle;
+        border-style: ridge;
+        height: 280px;
+    }
+    .dl-horizontal dt {
+        float: left;
+        width: 260px;
+        overflow: hidden;
+        clear: left;
+        text-align: right;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .rp-report-section {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    }
+    
+    .print-map-container {
+        width: 576px;
+        height: 400px;
+    }
+
+    .print-map {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .print-hide {
+        display: none;
+        height: 0;
+    }
+    .ep-form-toolbar-tools {
+        display: none;
+        
+    }  
+}
+/*###########################################################################################################*/
+
+/* search result popup box customization reviesed  */
+.mapboxgl-popup-content {
+    width: 415px;
+}
+
+.hover-feature-title-bar {
+    max-width: 376px;
+    height: auto !important;
+    padding: 7px;
+}
+.hover-feature-title {
+    font-size: 13px;
+    font-weight: bold;
+    max-width: 536px;
+    color: #25476A;
+    white-space: normal !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-height: 1.2em;
+    max-height: 12em;
+    min-height: 3em;
+}
+
+.hover-feature-body {
+    border-right: none !important;
+}
+
+.mapboxgl-popup-close-button {
+    height: 55px;
+}
+
+/*----------Cursor styling to hover ---------------*/
+.card-summary-section .card-summary .card-summary-add:hover {
+    cursor: pointer;
+}
+
+/*-------------------------Try for footnotes -----------------*/
+.footnotes {
+    border: ridge 2px;
+    font-size: 13px;
+    font-style: normal;
+    font-family: system-ui;
+}
+
+.footnotes h2 {
+    font-size: 17px;
+    margin-top: 2px;
+}
+
+.footnotes cite {
+    font-style: normal;
+}
+
+.footnotes ol, ul, li {
+    font-style: normal;
+}
+

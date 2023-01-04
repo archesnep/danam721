@@ -1,0 +1,15 @@
+*.pyc
+*.log
+danam/logs
+danam/export_deliverables
+danam/cantaloupe/*
+danam/staticfiles
+danam/media/packages
+danam/media/node_modules
+danam/media/build/*
+danam/uploadedfiles/*
+*danam/settings_local.py
+*danam/webpack/webpack-stats.json
+*danam/webpack/webpack-user-config.js
+.vscode/
+CACHE

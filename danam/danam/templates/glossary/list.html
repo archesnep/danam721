@@ -1,0 +1,67 @@
+{% extends 'glossary/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+<link rel="stylesheet" href="{% static 'css/glossary/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/glossary/dataTables.bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/glossary/glossaries.css' %}">
+<script type="text/javascript" src="{% static 'js/glossary/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/glossary/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/glossary/jquery.dataTables.min.js' %}"></script>
+
+
+<script type="text/javascript" src="{% static 'js/glossary/list_glossary.js' %}"></script>
+
+
+{% endblock %}
+
+{% block title %} {{ block.super }} | Terminologies {% endblock %}
+
+{% block content %}
+{% include 'partials/danam_navbar.htm' %}
+<section
+	class="page-header page-header-modern page-header-background page-header-background-pattern page-header-background-sm overlay overlay-color-dark overlay-show overlay-op-5"
+	style="background-image: url({% static 'img/patterns/random_grey_variations.png' %});">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 align-self-center p-static order-2 text-center">
+
+				<h1 class=" font-weight-bold text-8">NHDP Glossary</h1>
+			</div>
+		</div>
+	</div>
+</section>
+		
+	{% comment %} vertical layout {% endcomment %}
+	{{ request.user.username|json_script:"user_name" }}
+	
+	<div class="mainbody">
+		{% if user.username != 'anonymous' %}
+			<a href="/glossary/" target="_blank">+</a><hr>
+	
+		{% endif %}
+		{% csrf_token %}		
+		<table id="dynamictable" border="1" class="listTable">
+			<thead class="thead-dark">
+				<tr>
+					<th>Terms in diacritics</th>
+					<th>Terms in Devanagari</th>
+					<th>Definitions</th>
+					<th>Thumbnail</th>
+					{% if user.username != 'anonymous' %}
+					
+						<th></th>
+					{% endif %}
+				</tr>
+			</thead>
+			<tbody>
+				</tr></tr>
+			</tbody>
+		</table>
+	  <div class="loader">Loading...</div>
+	</div>	
+{% endblock %}
+{% block scripts %}
+{% endblock %}
