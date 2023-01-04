@@ -94,21 +94,20 @@ services:
       env_file:
         - ./docker/env_file.env
 
-    geoserver:
-      image: kartoza/geoserver:2.17.0
-      container_name: geoserver
-      volumes:
-        - ../docker-geoserver/data_dir:/opt/geoserver/data_dir
-      ports:
-        - "127.0.0.1:8080:8080"
-      restart: on-failure
-      env_file:
-        - ../docker-geoserver/docker-env/geoserver.env
-      healthcheck:
-        test: curl --fail -s http://localhost:8080/ || exit 1
-        interval: 1m30s
-        timeout: 10s
-        retries: 3
+#  image: kartoza/geoserver:2.17.0
+#   container_name: geoserver
+#   volumes:
+#     - ../docker-geoserver/data_dir:/opt/geoserver/data_dir
+#   ports:
+#     - "127.0.0.1:8080:8080"
+#   restart: on-failure
+#   env_file:
+#     - ../docker-geoserver/docker-env/geoserver.env
+#   healthcheck:
+#     test: curl --fail -s http://localhost:8080/ || exit 1
+#     interval: 1m30s
+#     timeout: 10s
+#     retries: 3
     
 volumes:
   arches-log:
