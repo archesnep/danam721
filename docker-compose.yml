@@ -112,43 +112,13 @@ services:
     
 volumes:
   arches-log:
-    driver: local-persist
-    driver_opts:
-      mountpoint: /media/volumes/arches_arches-log
   arches-static:
-    driver: local-persist
-    driver_opts:
-      mountpoint: /media/static
   arches-uploadedfiles: 
-    driver: local-persist
-    driver_opts:
-      mountpoint: /srv/uploadedfiles
   postgres-data:
-    driver: local-persist
-    driver_opts:
-      mountpoint: /media/volumes/arches_postgres-data
   postgres-log:
-    driver: local-persist
-    driver_opts:
-      mountpoint: /media/volumes/arches_postgres-log
   elasticsearch-data:
-    driver: local-persist
-    driver_opts:
-      mountpoint: /media/volumes/arches_elasticsearch-data
   rabbitmq-data:
-    driver: local-persist
-    driver_opts:
-      mountpoint: /media/volumes/arches_rabbitmq-data
   rabbitmq-log:
-    driver: local-persist
-    driver_opts:
-      mountpoint: /media/volumes/arches_rabbitmq-log
   letsencrypt:
-    driver: local-persist
-    driver_opts:
-      mountpoint: /media/volumes/arches_letsencrypt
   letsencrypt-log:
   letsencrypt-acme-challenge:
-    driver: local-persist
-    driver_opts:
-      mountpoint: /media/volumes/arches_letsencrypt_acme-challenge
