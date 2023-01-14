@@ -15,7 +15,7 @@ services:
         #- ./docker/settings_local.py:/web_root/danam/settings_local.py
         #- ./archesssss:/web_root/arches/
         - ./docker:/web_root/docker
-        - arches-uploadedfiles:/web_root/danam/danam/uploadedfiles
+        - ../uploadedfiles:/web_root/danam/danam/uploadedfiles
         - ./docker/entrypoint.sh:/web_root/entrypoint.sh
       env_file:
         - ./docker/env_file.env

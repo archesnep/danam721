@@ -5,7 +5,6 @@ define([
     'knockout-mapping',
     'arches',
     'viewmodels/report',
-    'reports/map-header',
     'bindings/chosen',
 ], function($, _, ko, koMapping, arches, ReportViewModel) {
     return function(params) {
