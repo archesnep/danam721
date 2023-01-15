@@ -328,7 +328,7 @@ collect_static(){
 	cd_app_folder
 
 	#pip install django-crispy-forms django-tinymce django-multiselectfield
-	python manage.py build_production --noinput
+	python manage.py collectstatic --noinput
 }
 
 run_celery(){
