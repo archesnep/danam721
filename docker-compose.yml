@@ -37,6 +37,7 @@ services:
         - arches-uploadedfiles:/www/media
         - arches-static:/www/static
         - letsencrypt-acme-challenge:/var/www
+        - ./danam/danam/danam-cms:/www/danam-cms
         - letsencrypt:/etc/letsencrypt
         - ../install:/install
       env_file:

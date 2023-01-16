@@ -451,11 +451,11 @@ run_arches() {
 		run_celery
 		run_django_server
 	elif [[ "${DJANGO_MODE}" == "PROD" ]]; then
-		
+		collect_static
 		run_celery
 		run_json_dump
 		run_gunicorn_server
-		collect_static
+		
 		
 	fi
 }
